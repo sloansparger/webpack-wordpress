@@ -1,0 +1,42 @@
+{
+  "name": "intro-to-webpack",
+  "version": "1.0.0",
+  "description": "This is an example project to demonstrate how to get started with webpack",
+  "main": "index.js",
+  "dependencies": {
+    "babel-core": "^6.13.2",
+    "bootstrap": "^3.3.2",
+    "lodash": "^3.2.0",
+    "url-loader": "^0.5.7"
+  },
+  "devDependencies": {
+    "babel-loader": "^6.2.5",
+    "babel-preset-es2015": "^6.14.0",
+    "css-loader": "^0.23.1",
+    "file-loader": "^0.9.0",
+    "node-sass": "^3.8.0",
+    "sass-loader": "^4.0.0",
+    "style-loader": "^0.13.1",
+    "webpack": "^1.13.2",
+    "webpack-dashboard": "^0.1.8",
+    "webpack-dev-server": "^1.14.0"
+  },
+  "scripts": {
+    "build": "webpack --build -p --colors",
+    "dev": "webpack-dashboard -- webpack-dev-server --config ./webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/kentcdodds/intro-to-webpack.git"
+  },
+  "keywords": [
+    "webpack",
+    "egghead.io"
+  ],
+  "author": "Kent C. Dodds <kent@doddsfamily.us> (http://kent.doddsfamily.us)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kentcdodds/intro-to-webpack/issues"
+  },
+  "homepage": "https://github.com/kentcdodds/intro-to-webpack"
+}
