@@ -23,7 +23,7 @@
   },
   "scripts": {
     "build": "webpack --build -p --colors",
-    "dev": "webpack-dashboard -- webpack-dev-server --config ./webpack.config.js"
+    "dev": "webpack-dashboard -- webpack-dev-server --inline --hot --port=3000"
   },
   "repository": {
     "type": "git",

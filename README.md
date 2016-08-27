@@ -25,5 +25,8 @@
 - added wordpress install using "wp core download" (using wp-cli)
 - installed wordpress
   - created new database in mySQL and then just went through the normal wordpress install
-- added proxying for wordpress front end, script handles rewriting all links on the page so that
-  the developer stays within the proxying of webpack dev server
+- finish webpack set up
+- development
+  - get webpack dev server working with mamp (hot/live/whatever reloading)
+  - added proxying for wordpress front end, script handles rewriting all links on the page so that
+    the developer stays within the proxying of webpack dev server
