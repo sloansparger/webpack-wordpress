@@ -18,7 +18,7 @@ exports.compiler = {
     loaders: [
       { test: /\.js$/, loader: 'babel?presets=es2015', exclude: /node_modules/ },
       { test: /\.sass$/, loaders: ['style', 'css', 'postcss?sourceMap=inline', 'sass'], exclude: /node_modules/, },
-      { test: /\.(png|jpg)$/, loader: 'url', exclude: /node_modules/, }
+      { test: /\.(png|jpg)$/, loader: 'url?limit=10000', exclude: /node_modules/, }
     ]
   },
 
