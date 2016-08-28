@@ -4,12 +4,7 @@
     - finish adding all the packages that would be useful to development (see todoist list)
   - production
     - install image compressor
-    - minify
-    - turn of sourcemaps
-  - staging
-    - same as setup for prod, except still have file mapping for debugging purposes
-- npm scripts
-  - create script that checks on the status of the webpack setup
+    - code splitting for css, add conditional need for css link in header.php (we don't want errors in the console all the time)
 - deployment setup
   - make sure
 - would love to be able to move the entire theme folder up only ever have it move down when it is needed for building...
@@ -29,3 +24,7 @@
     the developer stays within the proxying of webpack dev server
 - production
   - minification
+  - turned off source maps
+- staging
+  - same as setup for prod, except still have file mapping for debugging purposes
+  - create script

@@ -25,7 +25,8 @@
   },
   "scripts": {
     "build": "webpack --config webpack-configs/webpack.prod.js",
-    "dev": "webpack-dashboard -- webpack-dev-server --inline --hot --port=3000 --config webpack-configs/webpack.dev.js"
+    "dev": "webpack-dashboard -- webpack-dev-server --inline --hot --port=3000 --config webpack-configs/webpack.dev.js",
+    "stage": "webpack --config webpack-configs/webpack.stage.js"
   },
   "repository": {
     "type": "git",

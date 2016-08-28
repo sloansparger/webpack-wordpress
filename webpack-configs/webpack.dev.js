@@ -14,14 +14,6 @@ const proxyConfig = {
 }
 
 compiler.devtool = 'eval-source-map'
-compiler.module.loaders.push({
-  test: /\.js$/,
-  loader: 'babel',
-  exclude: /node_modules/,
-  query: {
-    presets: ['es2015']
-  },
-})
 compiler.plugins.push(new DashboardPlugin())
 compiler.devServer = {
   contentBase: './wordpress/wp-content/themes/' + THEME_NAME + '/assets',
