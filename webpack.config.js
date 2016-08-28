@@ -1,6 +1,9 @@
-const webpack = require('webpack')
-const THEME_NAME = 'logical-solutions'
+const webpack      = require('webpack')
+const autoprefixer = require('autoprefixer')
+
+const THEME_NAME   = 'logical-solutions'
 exports.THEME_NAME = THEME_NAME
+
 
 exports.compiler = {
   entry: './' + THEME_NAME + '/index.js',
@@ -23,7 +26,7 @@ exports.compiler = {
       },
       {
         test: /\.sass$/,
-        loader: 'style!css!sass',
+        loaders: ['style', 'css', 'postcss?sourceMap=inline', 'sass'],
         exclude: /node_modules/,
       },
       {
@@ -32,6 +35,10 @@ exports.compiler = {
         exclude: /node_modules/,
       }
     ]
+  },
+
+  postcss: function () {
+    return [autoprefixer({ browsers: ['last 2 versions', '> 5%', 'Firefox ESR'] })]
   },
 
   plugins: []

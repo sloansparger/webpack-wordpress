@@ -1,4 +1,4 @@
 require('./dev-env')
-require('./index.sass')
+require('./styles/index.sass')
 
 console.log("hey ho let's go");

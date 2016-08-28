@@ -2,7 +2,6 @@
 - finish webpack setup
   - development
     - finish adding all the packages that would be useful to development (see todoist list)
-    - autoprefixer
   - production
     - install image compressor
     - minify and other file reduction techniques
@@ -11,10 +10,11 @@
     - same as setup for prod, except still have file mapping for debugging purposes
 - npm scripts
   - create script that checks on the status of the webpack setup
-
 - deployment setup
   - make sure
-
+- would love to be able to move the entire theme folder up only ever have it move down when it is needed for building...
+  not really sure  this is possible with php..
+- is there a better way to get css to load with sourcemaps... though everything works, there has to be a better way...
 
 
 # Completed
