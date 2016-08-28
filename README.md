@@ -4,7 +4,7 @@
     - finish adding all the packages that would be useful to development (see todoist list)
   - production
     - install image compressor
-    - minify and other file reduction techniques
+    - minify
     - turn of sourcemaps
   - staging
     - same as setup for prod, except still have file mapping for debugging purposes
@@ -27,3 +27,5 @@
   - get webpack dev server working with mamp (hot/live/whatever reloading)
   - added proxying for wordpress front end, script handles rewriting all links on the page so that
     the developer stays within the proxying of webpack dev server
+- production
+  - minification

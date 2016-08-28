@@ -24,7 +24,7 @@
     "webpack-dev-server": "^1.14.0"
   },
   "scripts": {
-    "build": "webpack --build -p --colors",
+    "build": "webpack --config webpack-configs/webpack.prod.js",
     "dev": "webpack-dashboard -- webpack-dev-server --inline --hot --port=3000 --config webpack-configs/webpack.dev.js"
   },
   "repository": {
