@@ -1,8 +1,9 @@
-const webpack      = require('webpack')
-const autoprefixer = require('autoprefixer')
+const webpack           = require('webpack')
+const autoprefixer      = require('autoprefixer')
+const CopyWebpackPlugin = require('copy-webpack-plugin')
 
-const THEME_NAME   = 'logical-solutions'
-exports.THEME_NAME = THEME_NAME
+const THEME_NAME        = 'logical-solutions'
+exports.THEME_NAME      = THEME_NAME
 
 
 exports.compiler = {
@@ -26,5 +27,9 @@ exports.compiler = {
     return [autoprefixer({ browsers: ['last 2 versions', '> 5%', 'Firefox ESR'] })]
   },
 
-  plugins: []
+  plugins: [
+    new CopyWebpackPlugin([
+      {context: __dirname + '/logical-solutions/theme-files', from: './**/*', to: '../'}
+    ], {ignore: ['./styles', './js', './index.js']})
+  ],
 }
