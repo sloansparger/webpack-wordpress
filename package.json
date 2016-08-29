@@ -1,8 +1,8 @@
 {
-  "name": "intro-to-webpack",
-  "version": "1.0.0",
-  "description": "This is an example project to demonstrate how to get started with webpack",
-  "main": "index.js",
+  "name": "logical-solutions",
+  "version": "0.0.0",
+  "description": "Wordpress install for Logical Solutions",
+  "main": "logical-solutions/index.js",
   "dependencies": {
     "babel-core": "^6.13.2",
     "bootstrap": "^3.3.2",
@@ -34,14 +34,5 @@
     "type": "git",
     "url": "git://github.com/kentcdodds/intro-to-webpack.git"
   },
-  "keywords": [
-    "webpack",
-    "egghead.io"
-  ],
-  "author": "Kent C. Dodds <kent@doddsfamily.us> (http://kent.doddsfamily.us)",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/kentcdodds/intro-to-webpack/issues"
-  },
-  "homepage": "https://github.com/kentcdodds/intro-to-webpack"
+  "author": "Sloan Sparger"
 }
