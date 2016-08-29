@@ -1,15 +1,14 @@
 # TODO
-- finish webpack setup
-  - development
-    - finish adding all the packages that would be useful to development (see todoist list)
-  - production
-    - install image compressor
-    - code splitting for css, add conditional need for css link in header.php (we don't want errors in the console all the time)
-- deployment setup
-  - make sure
-- would love to be able to move the entire theme folder up only ever have it move down when it is needed for building...
-  not really sure  this is possible with php..
-- is there a better way to get css to load with sourcemaps... though everything works, there has to be a better way...
+- webpack production config
+  - install image/svg compressor, would love this to be opt in depending on file name or something?
+  - code splitting for css, add conditional need for css link in header.php (we don't want errors in the console all the time)
+- webpack development config
+  - would love when files in the theme-files directory are saved that webpack-dev-server refreshed the page
+- finish deployment set up
+  - finish writing npm scripts that can be run by deploybot
+- better way to do sass compilation so that we get source maps for development
+- linting set up so that we are using same code style
+
 
 
 # Completed
@@ -28,3 +27,4 @@
 - staging
   - same as setup for prod, except still have file mapping for debugging purposes
   - create script
+- moved theme folder up into development directory
