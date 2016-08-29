@@ -1,6 +1,7 @@
 const DashboardPlugin = require('webpack-dashboard/plugin')
 const compiler = require('../webpack.config.js').compiler
 const THEME_NAME = require('../webpack.config.js').THEME_NAME
+const join = require('path').join
 
 const proxyConfig = {
   "target": {
@@ -13,10 +14,13 @@ const proxyConfig = {
   secure: false
 }
 
+compiler.context = join(__dirname, '../')
 compiler.devtool = 'eval-source-map'
 compiler.plugins.push(new DashboardPlugin())
 compiler.devServer = {
   contentBase: './wordpress/wp-content/themes/' + THEME_NAME + '/assets',
+
+  outputPath: join(__dirname, '../wordpress/wp-content/themes/logical-solutions/assets'),
 
   proxy: {
     '/': proxyConfig,
