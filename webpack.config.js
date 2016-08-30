@@ -1,8 +1,7 @@
 const webpack           = require('webpack')
 const autoprefixer      = require('autoprefixer')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
-const WriteFilePlugin = require('write-file-webpack-plugin')
-
+const WriteFilePlugin   = require('write-file-webpack-plugin')
 
 const THEME_NAME        = 'logical-solutions'
 exports.THEME_NAME      = THEME_NAME
