@@ -1,3 +1,5 @@
 node_modules
 wordpress/wp-content/themes/logical-solutions/
 /wordpress/wp-content/themes/logical-solutions
+wordpress/wp-config.php
+/wordpress/wp-config.php
