@@ -27,8 +27,10 @@
   },
   "scripts": {
     "build": "npm install && webpack --config webpack-configs/webpack.prod.js && find . ! -name 'wordpress' -maxdepth 1 -type d -exec rm -rf {} + && find . -type f -maxdepth 1 -exec rm {} + && mv wordpress/* .",
+    "build-test": "webpack --config webpack-configs/webpack.prod.js",
     "dev": "webpack-dashboard -- webpack-dev-server --inline --hot --port=3000 --config webpack-configs/webpack.dev.js",
-    "stage": "npm install && webpack --config webpack-configs/webpack.stage.js && find . ! -name 'wordpress' -maxdepth 1 -type d -exec rm -rf {} + && find . -type f -maxdepth 1 -exec rm {} + && mv wordpress/* ."
+    "stage": "npm install && webpack --config webpack-configs/webpack.stage.js && find . ! -name 'wordpress' -maxdepth 1 -type d -exec rm -rf {} + && find . -type f -maxdepth 1 -exec rm {} + && mv wordpress/* .",
+    "stage-test": "webpack --config webpack-configs/webpack.stage.js"
   },
   "repository": {
     "type": "git",
