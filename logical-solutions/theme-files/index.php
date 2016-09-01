@@ -22,7 +22,7 @@ get_header(); ?>
 
 			if ( is_home() && ! is_front_page() ) : ?>
 				<header>
-					Sloan <h1 class="page-title screen-reader-text"><?php single_post_title(); ?></h1>
+					Sloan <h1 class="page-title screen-reader-text">Sloan <?php single_post_title(); ?></h1>
 				</header>
 
 			<?php
