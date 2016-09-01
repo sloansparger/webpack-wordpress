@@ -1,0 +1,67 @@
+.slide-header
+  height: 10rem
+  background-color: $light-grey
+  padding: 0 15rem
+  display: flex
+  justify-content: space-between
+  align-items: center
+  position: absolute
+  top: 0
+  width: 100%
+
+  &--logo
+    height: 7rem
+
+  &--menu
+    ul
+      list-style-type: none
+      margin-bottom: 0
+      padding: calc(.25rem + 2px) 0 .25rem
+      border-bottom: 2px solid $brand-green
+
+    .current-menu-item
+      border-bottom: 2px solid $light-grey
+      position: relative
+
+      &::before
+        content: ''
+        position: absolute
+        top: -.75rem
+        left: 0
+        right: 0
+        height: 2px
+        background: $brand-green
+
+      &::after
+        content: ''
+        position: absolute
+        height: calc(100% + 1rem)
+        width: 100%
+        left: 0
+        top: calc(-.75rem + 2px)
+        background: transparent
+        border-left: 2px solid $brand-green
+        border-right: 2px solid $brand-green
+
+    li
+      display: inline-block
+
+    a
+      font-size: 1.6rem
+      text-transform: uppercase
+      padding: 1.5rem
+
+      &:hover
+        text-decoration: none
+
+    .current-menu-item a
+      font-weight: 900
+
+      &::before
+        content: ''
+        position: absolute
+        bottom: -1rem
+        left: 2px
+        right: 2px
+        height: 10px
+        background: $light-grey

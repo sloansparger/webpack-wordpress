@@ -12,13 +12,10 @@
 ?>
 
 	</div><!-- #content -->
-
 	<footer id="footer" class="site-footer" role="contentinfo">
-		<div class="site-info">
-			<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'logical-solutions' ) ); ?>"><?php printf( esc_html__( 'Proudly powered by %s', 'logical-solutions' ), 'WordPress' ); ?></a>
-			<span class="sep"> | </span>
-			<?php printf( esc_html__( 'Theme: %1$s by %2$s.', 'logical-solutions' ), 'logical-solutions', '<a href="http://square205.com" rel="designer">Square 205</a>' ); ?>
-		</div><!-- .site-info -->
+
+		
+
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
