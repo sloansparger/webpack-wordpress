@@ -19,7 +19,7 @@
 <body <?php body_class(); ?>>
 <div id="page" class="site">
 
-	<header id="masthead" class="header" role="banner">
+	<header id="masthead" class="header header__grey-bg" role="banner">
 		<?php get_template_part('template-parts/header'); ?>
 	</header><!-- #masthead -->
 
