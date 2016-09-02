@@ -120,3 +120,27 @@
         right: 2px
         height: 10px
         background: transparent
+
+
+@media screen and (max-width: 1439px)
+  .header
+    padding: 0 7.5rem
+
+@media screen and (max-width: 1200px)
+  .header
+    padding: 0 3rem
+
+@media screen and (max-width: 1024px)
+  .header
+    padding: 0 3rem
+
+    &--logo-wrapper::before
+        bottom: calc(50% - 12px)
+
+@media screen and (max-width: 991px)
+  .header
+    &--logo-wrapper::before
+      display: none
+
+    &--menu
+      display: none
