@@ -1,13 +1,30 @@
 .slide-header
-  height: 10rem
+  height: 9.5rem
   background-color: $light-grey
   padding: 0 15rem
-  display: flex
-  justify-content: space-between
-  align-items: center
   position: absolute
+  transform: translateY(-100%)
   top: 0
   width: 100%
+  transition: transform .5s ease
+
+  &__active
+    transform: translate(0)
+
+  &--container
+    width: 100%
+    height: 100%
+    display: flex
+    justify-content: space-between
+    align-items: center
+    overflow: hidden
+
+  &--logo-wrapper
+    height: 100%
+    padding-right: 1rem
+    background: $light-grey
+    z-index: 1
+    @include flex-center
 
   &--logo
     height: 7rem
@@ -16,8 +33,17 @@
     ul
       list-style-type: none
       margin-bottom: 0
-      padding: calc(.25rem + 2px) 0 .25rem
       border-bottom: 2px solid $brand-green
+      position: relative
+
+      &::before
+        content: ''
+        position: absolute
+        right: 100%
+        bottom: -2px
+        width: 200%
+        height: 2px
+        background: $brand-green
 
     .current-menu-item
       border-bottom: 2px solid $light-grey
@@ -35,7 +61,7 @@
       &::after
         content: ''
         position: absolute
-        height: calc(100% + 1rem)
+        height: calc(100% + .75rem)
         width: 100%
         left: 0
         top: calc(-.75rem + 2px)
@@ -50,12 +76,13 @@
       font-size: 1.6rem
       text-transform: uppercase
       padding: 1.5rem
+      font-weight: 100
 
       &:hover
         text-decoration: none
 
     .current-menu-item a
-      font-weight: 900
+      font-weight: 600
 
       &::before
         content: ''

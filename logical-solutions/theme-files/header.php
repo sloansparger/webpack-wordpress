@@ -30,10 +30,13 @@
 
 
 	<header class="slide-header">
-		<img class="slide-header--logo" src="/wp-content/themes/logical-solutions/images/brand-assets/lsi-logo-color.svg" alt="logo" />
+		<div class="slide-header--container">
+			<div class="slide-header--logo-wrapper">
+				<img class="slide-header--logo" src="/wp-content/themes/logical-solutions/images/brand-assets/lsi-logo-color.svg" alt="logo" />
+			</div>
 
-		<div class="slide-header--menu"><?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?></div>
-
+			<div class="slide-header--menu"><?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu' ) ); ?></div>
+		</div>
 	</header>
 
 	<div id="content" class="site-content">
