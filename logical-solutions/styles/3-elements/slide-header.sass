@@ -14,7 +14,6 @@
 
   &--logo-wrapper
     height: 100%
-    padding-right: 1rem
     z-index: 1
     @include flex-center
 
@@ -22,7 +21,7 @@
       content: ''
       position: absolute
       left: 25rem
-      bottom: calc(50% - 1rem - 3px)
+      bottom: calc(50% - 13px)
       right: 50rem
       height: 2px
       background: $brand-green
@@ -95,7 +94,7 @@
 .slide-header
   background-color: $light-grey
   position: absolute
-  // transform: translateY(-100%)
+  transform: translateY(-100%)
   top: 0
   transition: transform .33s $ease-out-quad
   z-index: 1
