@@ -1,15 +1,7 @@
-.slide-header
+.header
   height: 9.5rem
-  background-color: $light-grey
   padding: 0 15rem
-  position: absolute
-  transform: translateY(-100%)
-  top: 0
   width: 100%
-  transition: transform .5s ease
-
-  &__active
-    transform: translate(0)
 
   &--container
     width: 100%
@@ -18,35 +10,40 @@
     justify-content: space-between
     align-items: center
     overflow: hidden
+    position: relative
 
   &--logo-wrapper
     height: 100%
     padding-right: 1rem
-    background: $light-grey
     z-index: 1
     @include flex-center
 
+    &::before
+      content: ''
+      position: absolute
+      left: 25rem
+      bottom: calc(50% - 1rem - 3px)
+      right: 50rem
+      height: 2px
+      background: $brand-green
+
   &--logo
     height: 7rem
+
+    &__color
+      display: none
+
+    &__white
+      display: block
 
   &--menu
     ul
       list-style-type: none
       margin-bottom: 0
-      border-bottom: 2px solid $brand-green
       position: relative
 
-      &::before
-        content: ''
-        position: absolute
-        right: 100%
-        bottom: -2px
-        width: 200%
-        height: 2px
-        background: $brand-green
-
     .current-menu-item
-      border-bottom: 2px solid $light-grey
+      border-bottom: 2px solid transparent
       position: relative
 
       &::before
@@ -71,6 +68,8 @@
 
     li
       display: inline-block
+      border-bottom: 2px solid $brand-green
+      float: left
 
     a
       font-size: 1.6rem
@@ -91,4 +90,24 @@
         left: 2px
         right: 2px
         height: 10px
-        background: $light-grey
+        background: transparent
+
+.slide-header
+  background-color: $light-grey
+  position: absolute
+  // transform: translateY(-100%)
+  top: 0
+  transition: transform .33s $ease-out-quad
+  z-index: 1
+
+  &__active
+    transform: translate(0)
+
+  .header--logo-wrapper
+    background: $light-grey
+
+  .header--logo
+    &__color
+      display: block
+    &__white
+      display: none
