@@ -8,7 +8,7 @@
   - finish writing npm scripts that can be run by deploybot
 - better way to do sass compilation so that we get source maps for development
 - linting set up so that we are using same code style
-
+- add composer to handle the plugins (php)
 
 
 # Completed
