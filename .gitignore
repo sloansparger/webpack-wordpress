@@ -3,3 +3,6 @@ wordpress/wp-content/themes/logical-solutions/
 /wordpress/wp-content/themes/logical-solutions
 wordpress/wp-config.php
 /wordpress/wp-config.php
+wp-content/uploads
+wordpress/wp-content/uploads
+.DS_Store
