@@ -68,6 +68,25 @@ p
   column-gap: 9rem
 
 @media screen and (max-width: 991px)
-  .section-title::after,
+  .section-title
+    font-size: 3rem
+
+  .section-title::after
+    right: 17.5rem
+    left: auto
+
   .section-title__right::after
-      right: 17.5rem
+    left: 17.5rem
+    right: auto
+
+@media screen and (max-width: 768px)
+  .split-paragraph
+    column-count: 1
+
+  .section-title::after
+    right: 20%
+    left: auto
+
+  .section-title__right::after
+    left: 20%
+    right: auto

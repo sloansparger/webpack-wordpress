@@ -22,6 +22,7 @@ get_header();
 
 			<section class="section-lg bg-cool-light-grey">
 				<div class="container">
+					<div class="awards--stray-line"></div>
 					<div class="awards">
 						<div class="award">
 							<img class="award--image" src="http://fillmurray.com/g/300/150" alt="">

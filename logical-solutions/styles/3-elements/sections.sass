@@ -1,5 +1,6 @@
 .section-sm, .section-md, .section-lg, .section-xl
   overflow-x: hidden
+  position: relative
 
 .section-sm
   padding-top: 5rem
@@ -16,3 +17,20 @@
 .section-xl
   padding-top: 16rem
   padding-bottom: 16rem
+
+@media screen and (max-width: 768px)
+  .section-sm
+    padding-top: 3rem
+    padding-bottom: 3rem
+
+  .section-md
+    padding-top: 7rem
+    padding-bottom: 7rem
+
+  .section-lg
+    padding-top: 10rem
+    padding-bottom: 10rem
+
+  .section-xl
+    padding-top: 14rem
+    padding-bottom: 14rem

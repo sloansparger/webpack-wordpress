@@ -3,6 +3,27 @@
   justify-content: center
   align-items: flex-start
 
+  &--stray-line
+    height: 1px
+    width: 100%
+    position: relative
+    top: -6rem
+    overflow: visible
+
+    &::after
+      content: ''
+      position: absolute
+      right: 37.5rem
+      height: 4px
+      width: 200rem
+      background-color: $brand-green
+
+      @media screen and (max-width: 991px)
+        right: 17.5rem
+
+      @media screen and (max-width: 768px)
+        right: 20%
+
 .award
   display: flex
   flex-direction: column
