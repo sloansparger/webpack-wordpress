@@ -5,7 +5,8 @@ wordpress/wp-config.php
 /wordpress/wp-config.php
 wp-content/uploads
 wordpress/wp-content/uploads
+wordpress/dashboard
 .DS_Store
 /wordpress/dashboard/
 wordpress/dashboard/
-/wordpress/wp-content/plugins
+wordpress/wp-content/plugins
