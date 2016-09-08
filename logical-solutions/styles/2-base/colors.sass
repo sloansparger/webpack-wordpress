@@ -3,6 +3,7 @@ $brand-mid-blue: #222167
 $brand-dark-blue: #0D2042
 $brand-green: #19CE6B
 $brand-mid-green: #35A761
+$cool-light-grey: #F0F7FB
 $light-grey: #E4E4EA
 $mid-light-grey: #9F9EA3
 $mid-grey: #56545B
@@ -16,6 +17,9 @@ a
 .text-black
   color: black
 
+.bg-cool-light-grey
+  background-color: $cool-light-grey
+
 .bg-white
   background-color: white
 
@@ -27,6 +31,16 @@ a
 
 .bg-mid-grey
   background-color: $mid-grey
-  
+
 .bg-black
   background-color: black
+
+.repeatable-building-bg
+  background: white url('/wp-content/themes/logical-solutions/images/repeatable-building-bg.svg') repeat-y
+  background-position: left -6rem top -4.5rem
+  background-size: 24rem
+
+@media screen and (max-width: 1200px)
+  .repeatable-building-bg
+    background-position: left -6rem top -4.5rem
+    background-size: 20rem

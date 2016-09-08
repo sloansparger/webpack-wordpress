@@ -1,12 +1,13 @@
 .awards
   display: flex
   justify-content: center
-  align-items: center
+  align-items: flex-start
 
 .award
   display: flex
   flex-direction: column
   align-items: center
+  justify-content: flex-start
   width: 30rem
   margin: 0 10rem
 
@@ -20,3 +21,23 @@
     border-bottom: 5px solid $brand-green
     width: 100%
     margin-bottom: 1rem
+
+@media screen and (max-width: 1200px)
+  .award
+    margin: 0 4rem
+
+@media screen and (max-width: 600px)
+  .awards
+    flex-direction: column
+    align-items: center
+    justify-content: flex-start
+
+  .award
+    margin: 4rem 0
+    width: 32rem
+
+    &:first-child
+      margin-top: 0
+
+    &:last-child
+      margin-bottom: 0

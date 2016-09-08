@@ -57,6 +57,17 @@ p
     bottom: 0
     right: 37.5rem
 
+  &__right
+    text-align: center
+
+    &::after
+      left: 30rem
+
 .split-paragraph
   column-count: 2
   column-gap: 9rem
+
+@media screen and (max-width: 991px)
+  .section-title::after,
+  .section-title__right::after
+      right: 17.5rem

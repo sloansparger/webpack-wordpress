@@ -1,0 +1,45 @@
+.team-members
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+
+.team-member
+  width: 25rem
+  margin-bottom: 4.5rem
+
+  &--image
+    width: 100%
+    border-bottom: 5px solid $brand-green
+
+  &--info
+    background: $cool-light-grey
+    overflow: hidden
+    padding: 0 1rem
+
+  &--name
+    font-size: 1.8rem
+    font-weight: 700
+    letter-spacing: .5px
+    margin-bottom: 0
+
+  &--position
+    font-size: 1.8rem
+    margin: .25rem 0 .75rem
+
+
+@media screen and (max-width: 1200px)
+  .team-members
+    justify-content: center
+
+  .team-member
+    margin: 0 2rem 4rem
+    width: 20rem
+
+@media screen and (max-width: 768px)
+  .team-members
+    justify-content: center
+
+@media screen and (max-width: 415px)
+  .team-member
+    margin: 0 1rem 1.75rem
+    width: 16rem
