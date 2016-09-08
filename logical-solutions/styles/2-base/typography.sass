@@ -9,6 +9,7 @@ html
 
 body
   font-family: 'Amelia'
+  font-weight: 500
 
 h1
   font-size: 3.6rem
@@ -22,6 +23,8 @@ h3
 p, li, a
   font-size: 1.8rem
 
+p
+  letter-spacing: 1.25px
 
 .uppercase
   text-transform: uppercase
@@ -34,3 +37,56 @@ p, li, a
 
 .text-extra-bold
   font-weight: 900
+
+.section-title
+  font-size: 4.5rem
+  color: $brand-mid-blue
+  padding-bottom: 1rem
+  margin-bottom: 5rem
+  position: relative
+  font-weight: 600
+  text-transform: uppercase
+  letter-spacing: 3px
+
+  &::after
+    content: ''
+    width: 200rem
+    height: 4px
+    background: $brand-green
+    position: absolute
+    bottom: 0
+    right: 37.5rem
+
+  &__right
+    text-align: center
+
+    &::after
+      left: 30rem
+
+.split-paragraph
+  column-count: 2
+  column-gap: 9rem
+
+@media screen and (max-width: 991px)
+  .section-title
+    font-size: 3rem
+
+  .section-title::after
+    right: 17.5rem
+    left: auto
+
+  .section-title__right::after
+    left: 17.5rem
+    right: auto
+
+@media screen and (max-width: 768px)
+  .split-paragraph
+    column-count: 1
+
+  .section-title::after
+    right: 20%
+    left: auto
+
+  .section-title__right::after
+    left: 20%
+    right: auto
