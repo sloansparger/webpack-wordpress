@@ -1,0 +1,20 @@
+.capabilities--arrow-link
+  padding-left: 3rem
+  position: relative
+  display: inline-block
+  margin-bottom: 3.5rem
+  height: 45px
+
+  &::before
+    content: ''
+    position: absolute
+    top: 0.5rem
+    left: 0
+    height: 1.5rem
+    width: 1.5rem
+    background: url('/wp-content/themes/logical-solutions/images/arrow-link-inactive.svg')
+    background-size: contain
+
+  &:hover::before
+    background: url('/wp-content/themes/logical-solutions/images/arrow-link-active.svg')
+    background-size: contain
