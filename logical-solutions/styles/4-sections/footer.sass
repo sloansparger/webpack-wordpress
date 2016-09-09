@@ -1,2 +1,52 @@
-footer
+$brand-blue: $brand-blue
+$brand-green: $brand-green
+$brand-mid-blue: $brand-mid-blue
+$brand-dark-blue: $brand-dark-blue
+$cool-light-grey: $cool-light-grey
+
+.subfooter
+  margin-top: 20rem
   background: $brand-green
+  color: white
+  padding-top: 4rem
+  padding-bottom: 4rem
+  vertical-align: middle
+  text-align: center
+  &--text
+    font-size: larger
+    font-weight: bold
+  .cta
+    margin-top: 1rem
+
+.footer
+  background: $brand-mid-blue
+  padding-top: 3rem
+  @media only screen and (max-width: 991px)
+    padding-top: 0
+  p
+    font-size: 1.25rem
+    color: white
+    white-space: nowrap
+    margin-bottom: 0
+  &--links
+    font-size: 1.25rem
+    color: white
+    white-space: nowrap
+    &:hover
+      color: $brand-blue
+  &--logo
+    min-width: 6rem
+    float: left
+    padding-top: .5rem
+    margin-right: 2rem
+  &--tel
+    padding-left: 2rem
+  &--copyright
+    text-align: center
+    color: $brand-blue
+    padding-top: 1rem
+    padding-bottom: .25rem
+    @media only screen and (max-width: 991px)
+      color: white
+      padding-top: .25rem
+
