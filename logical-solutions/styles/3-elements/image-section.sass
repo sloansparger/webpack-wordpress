@@ -1,0 +1,34 @@
+.image-section
+  padding: 8rem 0
+  overflow-x: hidden
+  position: relative
+
+  &--title
+    margin-top: 0 !important
+
+    &__right::after
+        left: -21rem
+
+  &--image
+    position: absolute
+    width: 45%
+    height: 100%
+    top: 0
+    background-color: $mid-light-grey
+
+    &__right
+      right: 0
+
+@media screen and (max-width: 991px)
+  .image-section
+
+    &--title
+      margin-top: 0 !important
+      margin-bottom: 47.5rem
+
+    &--image
+      width: 100%
+      top: 0
+      left: 0
+      right: 0
+      height: 56.25rem

@@ -62,8 +62,8 @@ get_header('grey');
 		</section>
 
 
-    <section class="studies--study">
-      <div class="studies--image">
+    <section class="image-section">
+      <div class="image-section--image">
         <div class="capabilities--image" style="background: pink" v-show="slideNumber === 1">
           <p class="capabilities--image-text">Doloremque laudantium, totam rem aperiam, eaqu e ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
         </div>
@@ -77,7 +77,7 @@ get_header('grey');
       <div class="container">
         <div class="row">
           <div class="col-md-6 col-md-offset-6">
-            <h3 class="section-title studies--title studies--title__right">Featured Products</h3>
+            <h3 class="section-title image-section--title image-section--title__right">Featured Products</h3>
             <div class="capabilities--options">
               <div class="capabilities--option" v-on:click="showSlide(1)" v-bind:class="{ 'active': slideNumber === 1 }">
                 <div class="capabilities--option-dot"></div>
@@ -198,4 +198,4 @@ get_header('grey');
   </main><!-- #main -->
 </div><!-- #primary -->
 <?php
-get_footer(); t
+get_footer();
