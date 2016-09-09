@@ -4,7 +4,7 @@ Template Name: Our Capabilities
 */
 get_header('grey');
 ?>
-<div id="primary" class="content-area">
+<div id="capabilities" class="content-area">
   <main id="main" class="site-main" role="main">
 
     <?php
@@ -62,7 +62,7 @@ get_header('grey');
 		</section>
 
 
-    <section class="studies--study" id="capabilities">
+    <section class="studies--study">
       <div class="studies--image">
         <div class="capabilities--image" style="background: pink" v-show="slideNumber === 1">
           <p class="capabilities--image-text">Doloremque laudantium, totam rem aperiam, eaqu e ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
@@ -92,7 +92,7 @@ get_header('grey');
                 <h4 class="capabilities--option-text">EnergyReports Package</h4>
               </div>
             </div>
-            <a href="/products" class="studies--btn btn btn__blue">View All Products</a>
+            <a href="/products" class="btn btn__blue">View All Products</a>
           </div>
         </div>
       </div>
@@ -120,7 +120,21 @@ get_header('grey');
             <p>We offer four comprehensive programs tailored to suit your needs, beginning with the simple annual Preventative Support Program, or the all-inclusive Premium All-Inclusive Support Program. </p>
           </div>
           <div class="col-xs-12 col-md-7">
-            <h4 class="text-bold text-brand-mid-blue mt0 mb3">Each program offers scaled and discounted rates for:</h4>
+            <h3 class="text-bold text-brand-mid-blue mt0 mb3">Each program offers scaled and discounted rates for:</h3>
+            <div class="row">
+              <div class="col-xs-12 col-md-7">
+                <p>Telephone Support</p>
+                <p>Preventative Maintenance Inspections</p>
+                <p>ALC Parts Pricing</p>
+                <p>Time & Material Rates</p>
+              </div>
+              <div class="col-xs-12 col-md-5">
+                <p>Labor for Onsite Repair Service</p>
+                <p>Priority Onsite Response</p>
+                <p>Software Upgrade</p>
+                <p>Operator Training</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -143,12 +157,38 @@ get_header('grey');
         <h3 class="section-title">Training</h3>
         <div class="row">
           <div class="col-xs-12 col-md-6">
+            <div class="capabilities--options">
+              <div class="capabilities--option" v-on:click="showTraining(1)" v-bind:class="{ 'active': trainingNumber === 1 }">
+                <div class="capabilities--option-dot"></div>
+                <h4 class="capabilities--option-text">WebCTRL Basic Operator Training</h4>
+              </div>
+              <div class="capabilities--option" v-on:click="showTraining(2)" v-bind:class="{ 'active': trainingNumber === 2 }">
+                <div class="capabilities--option-dot"></div>
+                <h4 class="capabilities--option-text">WebCTRL Advanced Operator Training</h4>
+              </div>
+              <div class="capabilities--option" v-on:click="showTraining(3)" v-bind:class="{ 'active': trainingNumber === 3 }">
+                <div class="capabilities--option-dot"></div>
+                <h4 class="capabilities--option-text">Customized Training</h4>
+              </div>
+            </div>
             <a href="/products" class="btn btn__blue">Learn More about Training</a>
           </div>
           <div class="col-xs-12 col-md-6">
-            <p>Held monthly, operators of WebCTRL are invited to join our formal classroom training for an overview of the system, as well as specific feature sets. </p>
-            <br>
-            <p>Utilizing individual User Manuals and hands-on computer workstations, the curriculum includes an introduction to WebCTRL system navigation; establishing setpoints; creating, modifying, and deleting schedules; creating trend graphs and reports; managing alarms; creating and modifying operator privileges - and more. The class runs from 9:00am to approximately 3:30pm at LSi, and meals are included. </p>
+            <div v-show="trainingNumber === 1">
+              <p>Held monthly, operators of WebCTRL are invited to join our formal classroom training for an overview of the system, as well as specific feature sets. </p>
+              <br>
+              <p>Utilizing individual User Manuals and hands-on computer workstations, the curriculum includes an introduction to WebCTRL system navigation; establishing setpoints; creating, modifying, and deleting schedules; creating trend graphs and reports; managing alarms; creating and modifying operator privileges - and more. The class runs from 9:00am to approximately 3:30pm at LSi, and meals are included. </p>
+            </div>
+            <div v-show="trainingNumber === 2">
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi, quasi, a. Fugit labore voluptatibus eos commodi, adipisci molestiae voluptatem pariatur nisi repudiandae. Ullam fugit, similique, animi modi error voluptatum consequuntur.</p>
+              <br>
+              <p>Ea, eligendi tempore voluptate, libero sunt nihil distinctio molestias aperiam quae placeat eaque labore, qui quo voluptatem deleniti? Dolorem doloribus voluptas accusamus.</p>
+            </div>
+            <div v-show="trainingNumber === 3">
+              <p>Ea, vitae possimus, numquam cupiditate atque id, illo dolorum ipsum exercitationem debitis doloribus hic sint delectus inventore rerum iste. Ut, repellendus, iusto.</p>
+              <br>
+              <p>Nemo repellendus, dolore non, odit architecto ratione excepturi maiores est suscipit eaque magni nulla dolorum quaerat asperiores similique ab laborum possimus tempore!</p>
+            </div>
           </div>
         </div>
       </div>
@@ -158,4 +198,4 @@ get_header('grey');
   </main><!-- #main -->
 </div><!-- #primary -->
 <?php
-get_footer();
+get_footer(); t
