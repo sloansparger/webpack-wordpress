@@ -1,51 +1,57 @@
-$brand-blue: $brand-blue
-$brand-green: $brand-green
-$brand-mid-blue: $brand-mid-blue
-$brand-dark-blue: $brand-dark-blue
-$cool-light-grey: $cool-light-grey
-
 .subfooter
-  margin-top: 20rem
-  background: $brand-green
+  background: $brand-mid-green
   color: white
   padding-top: 4rem
   padding-bottom: 4rem
   vertical-align: middle
   text-align: center
+
   &--text
     font-size: larger
     font-weight: bold
+
   .cta
     margin-top: 1rem
 
 .footer
   background: $brand-mid-blue
   padding-top: 3rem
+
   @media only screen and (max-width: 991px)
     padding-top: 0
-  p
-    font-size: 1.25rem
-    color: white
-    white-space: nowrap
-    margin-bottom: 0
+
   &--links
-    font-size: 1.25rem
+    font-size: 1.6rem
     color: white
     white-space: nowrap
+    letter-spacing: 1px
+    line-height: 1.6
+
     &:hover
       color: $brand-blue
+
+  &--addr
+    font-size: 1.6rem
+    white-space: nowrap
+
   &--logo
-    min-width: 6rem
-    float: left
+    width: 7rem
     padding-top: .5rem
-    margin-right: 2rem
+
   &--tel
     padding-left: 2rem
+
+    .footer--links
+      line-height: 1
+
   &--copyright
     text-align: center
     color: $brand-blue
     padding-top: 1rem
     padding-bottom: .25rem
+    margin-bottom: 0
+    font-size: 1.4rem
+
     @media only screen and (max-width: 991px)
       color: white
-      padding-top: .25rem
+      padding: .5rem 0
