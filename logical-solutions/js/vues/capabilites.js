@@ -1,6 +1,6 @@
 import Vue from 'vue'
 
-document.addEventListener('DOMContentLoaded', function() {
+module.exports = document.addEventListener('DOMContentLoaded', function() {
   new Vue({
     el: '#capabilities',
     data: {

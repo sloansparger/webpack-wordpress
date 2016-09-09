@@ -1,7 +1,3 @@
-require('./styles/index.sass')
-require('./js/dev-env')
-require('./js/vues')
-
 var map
 
 function initMap() {
@@ -9,6 +5,5 @@ function initMap() {
     center: {lat: -34.397, lng: 150.644},
     zoom: 8
   })
+  console.log('hiiiii sloan');
 }
-
-window.initMap = initMap
