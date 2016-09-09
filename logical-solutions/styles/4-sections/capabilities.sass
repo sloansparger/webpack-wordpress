@@ -1,20 +1,96 @@
-.capabilities--arrow-link
-  padding-left: 3rem
-  position: relative
-  display: inline-block
-  margin-bottom: 3.5rem
-  height: 45px
+.capabilities
 
-  &::before
-    content: ''
+
+  &--arrow-link
+    padding-left: 3rem
+    position: relative
+    display: inline-block
+    margin-bottom: 3.5rem
+    height: 45px
+
+    &::before
+      content: ''
+      position: absolute
+      top: 0.5rem
+      left: 0
+      height: 1.5rem
+      width: 1.5rem
+      background: url('/wp-content/themes/logical-solutions/images/arrow-link-inactive.svg')
+      background-size: contain
+
+    &:hover::before
+      background: url('/wp-content/themes/logical-solutions/images/arrow-link-active.svg')
+      background-size: contain
+
+
+  &--image
     position: absolute
-    top: 0.5rem
+    top: 0
+    right: 0
+    bottom: 0
     left: 0
-    height: 1.5rem
-    width: 1.5rem
-    background: url('/wp-content/themes/logical-solutions/images/arrow-link-inactive.svg')
-    background-size: contain
+    background-position: center
+    background-size: cover
 
-  &:hover::before
-    background: url('/wp-content/themes/logical-solutions/images/arrow-link-active.svg')
-    background-size: contain
+  &--image-text
+    position: absolute
+    bottom: 8rem
+    right: 0
+    background: white
+    padding: 2rem 1.5rem
+    color: $brand-dark-blue
+    width: 47rem
+
+  &--options
+
+  &--option
+    display: flex
+    align-items: center
+    margin-bottom: 2rem
+
+  &--option-text
+    color: $mid-light-grey
+    transition: color .33s $ease-out-back
+    letter-spacing: 1px
+
+  &--option-dot
+    height: 4rem
+    width: 4rem
+    margin-right: 2.75rem
+    position: relative
+
+    &::before
+      content: ''
+      border-radius: 50%
+      background-color: $brand-green
+      height: 3rem
+      width: 3rem
+      position: absolute
+      @include absolute-center
+      transition: all .33s $ease-out-circ
+      // change all to height and width when transition has been decided on
+
+    &::after
+      content: ''
+      border-radius: 50%
+      background-color: white
+      height: 2rem
+      width: 2rem
+      position: absolute
+      @include absolute-center
+      transition: all .33s $ease-out-back
+      // change all to height and width when transition has been decided on
+
+.active
+  .capabilities--option-text
+    color: $brand-green
+    font-weight: 700
+
+  .capabilities--option-dot
+    &::before
+      height: 4rem
+      width: 4rem
+
+    &::after
+      height: 0
+      width: 0

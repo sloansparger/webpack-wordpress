@@ -61,15 +61,37 @@ get_header('grey');
 			</div>
 		</section>
 
-    <section class="studies--study">
-      <div class="studies--image">
 
+    <section class="studies--study" id="capabilities">
+      <div class="studies--image">
+        <div class="capabilities--image" style="background: pink" v-show="slideNumber === 1">
+          <p class="capabilities--image-text">Doloremque laudantium, totam rem aperiam, eaqu e ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+        </div>
+        <div class="capabilities--image" style="background: honeydew" v-show="slideNumber === 2">
+          <p class="capabilities--image-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad veniam accusamus non ducimus, pariatur fugit harum quod.</p>
+        </div>
+        <div class="capabilities--image" style="background: tomato" v-show="slideNumber === 3">
+          <p class="capabilities--image-text">Nisi odit inventore id dolores possimus sint tempore dignissimos, saepe quas eveniet. Veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+        </div>
       </div>
       <div class="container">
         <div class="row">
           <div class="col-md-6 col-md-offset-6">
             <h3 class="section-title studies--title studies--title__right">Featured Products</h3>
-            <p class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <div class="capabilities--options">
+              <div class="capabilities--option" v-on:click="showSlide(1)" v-bind:class="{ 'active': slideNumber === 1 }">
+                <div class="capabilities--option-dot"></div>
+                <h4 class="capabilities--option-text">WebCTRL System</h4>
+              </div>
+              <div class="capabilities--option" v-on:click="showSlide(2)" v-bind:class="{ 'active': slideNumber === 2 }">
+                <div class="capabilities--option-dot"></div>
+                <h4 class="capabilities--option-text">Eco-screen Kiosk</h4>
+              </div>
+              <div class="capabilities--option" v-on:click="showSlide(3)" v-bind:class="{ 'active': slideNumber === 3 }">
+                <div class="capabilities--option-dot"></div>
+                <h4 class="capabilities--option-text">EnergyReports Package</h4>
+              </div>
+            </div>
             <a href="/products" class="studies--btn btn btn__blue">View All Products</a>
           </div>
         </div>
