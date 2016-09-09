@@ -1,6 +1,9 @@
 .studies
   margin-bottom: 20rem
 
+  &--blurb-section
+    padding: 9rem 0
+
   &--study
     padding: 8rem 0
     position: relative
@@ -24,3 +27,37 @@
 
     &__right
       right: 0
+
+
+@media screen and (max-width: 991px)
+  .studies
+    margin-bottom: 5rem
+
+    &--image
+      width: 100%
+      top: 0
+      left: 0
+      right: 0
+      height: 56.25rem
+
+    &--title
+      margin-top: 0 !important
+      margin-bottom: 47.5rem
+
+    &--btn-container
+      width: 100%
+      display: flex
+      justify-content: center
+
+    &--btn
+      margin: 3rem auto 0 !important
+      width: auto
+      display: inline-block
+
+
+@media screen and (max-width: 768px)
+  .studies
+    margin-bottom: 0
+
+    &--blurb-section
+      padding: 3rem 0

@@ -14,11 +14,16 @@ get_header();
 		}
 		?>
 
-		<section class="section-md bg-cool-light-grey">
-			<blockquote class="text-center">
-				"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed<br>
-				do eiusmod tempor incididunt ut labore et dolore magna”
-			</blockquote>
+		<section class="studies--blurb-section bg-cool-light-grey">
+			<div class="container">
+				<div class="row">
+					<div class="col-xs-12 col-md-10 col-lg-8 col-md-offset-1 col-lg-offset-2">
+						<blockquote class="text-center">
+							"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna”
+						</blockquote>
+					</div>
+				</div>
+			</div>
 		</section>
 
 		<div class="studies">
@@ -29,7 +34,9 @@ get_header();
 					<div class="row">
 						<div class="col-md-6">
 							<p class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-							<a href="#" class="studies--btn btn btn__blue">View Full Case Study PDF</a>
+							<div class="studies--btn-container">
+								<a href="#" class="studies--btn btn btn__blue">View Full Case Study PDF</a>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -42,7 +49,9 @@ get_header();
 						<div class="col-md-6 col-md-offset-6">
 							<h3 class="section-title studies--title studies--title__right">8333 Douglas</h3>
 							<p class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-							<a href="#" class="studies--btn btn btn__blue">View Full Case Study PDF</a>
+							<div class="studies--btn-container">
+								<a href="#" class="studies--btn btn btn__blue">View Full Case Study PDF</a>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -55,7 +64,9 @@ get_header();
 					<div class="row">
 						<div class="col-md-6">
 							<p class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-							<a href="#" class="studies--btn btn btn__blue">View Full Case Study PDF</a>
+							<div class="studies--btn-container">
+								<a href="#" class="studies--btn btn btn__blue">View Full Case Study PDF</a>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -68,7 +79,9 @@ get_header();
 						<div class="col-md-6 col-md-offset-6">
 							<h3 class="section-title studies--title studies--title__right">8333 Douglas</h3>
 							<p class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-							<a href="#" class="studies--btn btn btn__blue">View Full Case Study PDF</a>
+							<div class="studies--btn-container">
+								<a href="#" class="studies--btn btn btn__blue">View Full Case Study PDF</a>
+							</div>
 						</div>
 					</div>
 				</div>
