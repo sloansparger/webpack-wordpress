@@ -1,7 +1,8 @@
-const DashboardPlugin = require('webpack-dashboard/plugin')
-const compiler = require('../webpack.config.js').compiler
-const THEME_NAME = require('../webpack.config.js').THEME_NAME
-const join = require('path').join
+const DashboardPlugin   = require('webpack-dashboard/plugin')
+const OpenBrowserPlugin = require('open-browser-webpack-plugin')
+const compiler          = require('../webpack.config.js').compiler
+const THEME_NAME        = require('../webpack.config.js').THEME_NAME
+const join              = require('path').join
 
 const proxyConfig = {
   "target": {
@@ -17,6 +18,7 @@ const proxyConfig = {
 compiler.context = join(__dirname, '../')
 compiler.devtool = 'eval-source-map'
 compiler.plugins.push(new DashboardPlugin())
+compiler.plugins.push(new OpenBrowserPlugin({ url: 'http://localhost:3000' }))
 compiler.devServer = {
   contentBase: './wordpress/wp-content/themes/' + THEME_NAME + '/assets',
 
