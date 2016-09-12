@@ -22,7 +22,7 @@ function initMap() {
     fullscreenControl: false,
     draggable: false,
     scrollwheel: false,
-    styles: [{"stylers":[{"hue":"#26355B"},{"saturation":35}]},{"featureType":"road","elementType":"geometry","stylers":[{"lightness":50},{"visibility":"simplified"}]},{"featureType":"road","elementType":"labels","stylers":[{"visibility":"off"}]}]
+    styles: [{"stylers":[{"hue":"#26355B"},{"saturation":15}]},{"featureType":"road","elementType":"geometry","stylers":[{"lightness":50},{"visibility":"simplified"}]},{"featureType":"road","elementType":"labels","stylers":[{"visibility":"off"}]}]
   })
 
   marker = new google.maps.Marker({
