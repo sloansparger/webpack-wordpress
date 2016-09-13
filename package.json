@@ -4,9 +4,11 @@
   "description": "Wordpress install for Logical Solutions",
   "main": "logical-solutions/index.js",
   "dependencies": {
+    "axios": "^0.14.0",
     "babel-core": "^6.13.2",
     "bootstrap": "^3.3.2",
     "lodash": "^3.2.0",
+    "timeago.js": "^1.1.0",
     "url-loader": "^0.5.7",
     "vue": "^1.0.26"
   },

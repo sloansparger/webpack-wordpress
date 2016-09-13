@@ -134,4 +134,103 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+/***** MY CUSTOM POSTS CODE *****/
+add_action('init', 'new_post_types');
+
+function new_post_types() {
+
+  register_post_type( 'lsi_product',
+      array(
+        'labels'            => array(
+          'name'            => 'Products',
+          'singular_name'   => 'Product',
+          ),
+        'public'            => true,
+        'has_archive'       => false,
+        'menu_position'     => 5,
+        'show_in_rest'      => true,
+        'rest_base'         => 'products-api',
+        'rest_controller_class' => 'WP_REST_Posts_Controller',
+        'supports'          => array('title', 'thumbnail'),
+        )
+      );
+
+  register_post_type( 'lsi_job',
+      array(
+        'labels'            => array(
+          'name'            => 'Jobs',
+          'singular_name'   => 'Job',
+          ),
+        'public'            => true,
+        'has_archive'       => false,
+        'menu_position'     => 5,
+        'show_in_rest'      => true,
+        'rest_base'         => 'jobs-api',
+        'rest_controller_class' => 'WP_REST_Posts_Controller',
+				'rewrite'           => array('slug' => 'careers'),
+        'supports'          => array('title', 'thumbnail'),
+        )
+      );
+
+  register_post_type( 'lsi_training_session',
+      array(
+        'labels'            => array(
+          'name'            => 'Training Sessions',
+          'singular_name'   => 'Training Session',
+          ),
+        'public'            => true,
+        'has_archive'       => false,
+        'menu_position'     => 5,
+        'show_in_rest'      => true,
+        'rest_base'         => 'training-api',
+        'rest_controller_class' => 'WP_REST_Posts_Controller',
+				'rewrite'           => array('slug' => 'training'),
+        'supports'          => array('title', 'thumbnail'),
+        )
+      );
+}
+
+/***** MY CUSTOM TAXONOMIES CODE *****/
+add_action('init', 'new_taxonomies');
+
+function new_taxonomies() {
+
+  /* REGISTER CUSTOM TAXONOMIES */
+  register_taxonomy(
+    'product-category',
+    'lsi_product',
+    array(
+          'label'     => 'Product Category',
+          'rewrite'   => array('slug' => 'product-category'),
+          'hierarchical' => true,
+          'show_ui'   => false,
+    )
+  );
+
+  register_taxonomy(
+    'job-category',
+    'lsi_job',
+    array(
+		      'label'     => 'Job Category',
+		      'rewrite'   => array('slug' => 'job-category'),
+		      'hierarchical' => true,
+    )
+  );
+
+  register_taxonomy(
+    'training-category',
+    'lsi_training_session',
+    array(
+          'label'     => 'Training Category',
+          'rewrite'   => array('slug' => 'training-category'),
+          'hierarchical' => true,
+    )
+  );
+
+  /* CREATE PRE-BUILT TERMS -- USER CANNOT ADD FROM ADMIN PANEL*/
+  wp_insert_term('hardware', 'product-category');
+  wp_insert_term('software', 'product-category');
+
+}
 ?>

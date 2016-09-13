@@ -11,34 +11,37 @@ var zoomLevel = function() {
 
 
 function initMap() {
-  map = new google.maps.Map(document.getElementById('map'), {
-    center: latLng,
-    zoom: zoomLevel(),
-    zoomControl: false,
-    mapTypeControl: false,
-    scaleControl: false,
-    streetViewControl: false,
-    rotateControl: false,
-    fullscreenControl: false,
-    draggable: false,
-    scrollwheel: false,
-    styles: [{"stylers":[{"hue":"#26355B"},{"saturation":35}]},{"featureType":"road","elementType":"geometry","stylers":[{"lightness":50},{"visibility":"simplified"}]},{"featureType":"road","elementType":"labels","stylers":[{"visibility":"off"}]}]
-  })
+  var mapNode = document.getElementById('map')
+  if (mapNode) {
+    map = new google.maps.Map(mapNode, {
+      center: latLng,
+      zoom: zoomLevel(),
+      zoomControl: false,
+      mapTypeControl: false,
+      scaleControl: false,
+      streetViewControl: false,
+      rotateControl: false,
+      fullscreenControl: false,
+      draggable: false,
+      scrollwheel: false,
+      styles: [{"stylers":[{"hue":"#26355B"},{"saturation":35}]},{"featureType":"road","elementType":"geometry","stylers":[{"lightness":50},{"visibility":"simplified"}]},{"featureType":"road","elementType":"labels","stylers":[{"visibility":"off"}]}]
+    })
 
-  marker = new google.maps.Marker({
-    position: latLng,
-    map: map,
-    title: 'Hello World!'
-  })
+    marker = new google.maps.Marker({
+      position: latLng,
+      map: map,
+      title: 'Hello World!'
+    })
 
-  google.maps.event.addDomListener(window, "resize", function() {
-		var center = map.getCenter();
-		google.maps.event.trigger(map, "resize");
-		map.setZoom(zoomLevel())
-		// google.maps.event.trigger(map.zoom, zoomLevel());
-		map.setCenter(center);
+    google.maps.event.addDomListener(window, "resize", function() {
+  		var center = map.getCenter();
+  		google.maps.event.trigger(map, "resize");
+  		map.setZoom(zoomLevel())
+  		// google.maps.event.trigger(map.zoom, zoomLevel());
+  		map.setCenter(center);
 
-	});
+  	});
+  }
 }
 
 module.exports = initMap
