@@ -2,10 +2,24 @@
   &--category
     display: inline-block
     color: $mid-light-grey
+    transition: all .75s $ease-out-quint
+    position: relative
+
+    &::after
+      content: ''
+      position: absolute
+      top: 100%
+      left: 0
+      width: 0
+      height: 2px
+      background-color: $brand-green
+      transition: all .5s $ease-out-quint
 
     &:not(:last-child)
       margin-right: 15rem
 
     &__active
       color: $brand-blue
-      border-bottom: 2px solid $brand-green
+
+      &::after
+        width: 100%

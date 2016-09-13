@@ -28,16 +28,23 @@ get_header();
 					<h3 class="section-title">Open Positions</h3>
 					<div class="row mb10">
 						<div class="col-md-3">
-							<a href="#" class="job--category job--category__active">All Categories  <span class="job--category-count">(<?php echo $totalJobs ?>)</span></a>
+							<p class="job--category" @click="changeCatFilter('all')" v-bind:class="{'job--category__active': isCurrentFilter('all')}">
+								All Categories  <span class="job--category-count">(<?php echo $totalJobs ?>)</span>
+							</p>
 						</div>
 
 						<?php
-						for($i = 0; $i < count($mainCategories); $i++) { ?>
+						for($i = 0; $i < count($mainCategories); $i++) {
+							$currentCategory = $mainCategories[$i]
+							?>
 							<div class="col-md-3">
-								<a href="#" class="job--category">
-									<?php echo $mainCategories[$i]; ?>
-									<span class="job--category-count">(<?php echo $categoryCounts[$mainCategories[$i]]; ?>)</span>
-								</a>
+								<p class="job--category"
+									 @click="changeCatFilter('<?php echo strtolower($currentCategory) ?>')"
+									 v-bind:class="{'job--category__active': isCurrentFilter('<?php echo strtolower($currentCategory) ?>')}"
+									 >
+									<?php echo $currentCategory; ?>
+									<span class="job--category-count">(<?php echo $categoryCounts[$currentCategory]; ?>)</span>
+								</p>
 							</div>
 						<?php } ?>
 
@@ -45,7 +52,7 @@ get_header();
 					<div class="row">
 
 						<?php if ( $jobs->have_posts() ) : while ( $jobs->have_posts() ) : $jobs->the_post();?> <!-- start nested loop -->
-									<div class="col-md-4">
+									<div class="col-md-4" v-show="matchesCurrentFilter('<?php echo strtolower(get_the_terms(get_the_ID(), 'job-category')[0]->name) ?>')">
 										<div class="job--preview">
 											<h4 class="job--preview-title mb0"><?php the_title(); ?></h4>
 											<span v-text="'<?php the_date(); ?>' | timeago"></span><br>
