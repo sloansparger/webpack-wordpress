@@ -16,7 +16,7 @@
 		<?php wp_head(); ?>
 	</head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class(); ?> id="app" v-bind:class="{'modal-is-open': modalOpen}">
 <div id="page" class="site">
 
 	<header id="masthead" class="header" role="banner">

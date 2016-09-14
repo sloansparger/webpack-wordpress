@@ -1,12 +1,13 @@
-import { get } from 'axios'
 import Vue from 'vue'
 
 module.exports = document.addEventListener('DOMContentLoaded', function() {
   if (document.getElementById('jobs')) {
     const jobsVue = new Vue({
-      el: '#jobs',
+      el: '#app',
       data: {
-        catFilter: 'all'
+        catFilter: 'all',
+        modalOpen: false,
+        activeModal: ''
       },
       methods: {
         changeCatFilter: function(filter) {
@@ -20,8 +21,10 @@ module.exports = document.addEventListener('DOMContentLoaded', function() {
           if (this.catFilter === category) return true
           else return false
         },
+        toggleModal: function() {
+          this.modalOpen = !this.modalOpen
+        }
       }
     })
-
   }
 })
