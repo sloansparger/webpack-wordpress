@@ -189,6 +189,23 @@ function new_post_types() {
         'supports'          => array('title', 'thumbnail'),
         )
       );
+
+  register_post_type( 'lsi_resource',
+      array(
+        'labels'            => array(
+          'name'            => 'Resources',
+          'singular_name'   => 'Resource',
+          ),
+        'public'            => true,
+        'has_archive'       => false,
+        'menu_position'     => 5,
+        'show_in_rest'      => true,
+        'rest_base'         => 'resource-api',
+        'rest_controller_class' => 'WP_REST_Posts_Controller',
+				'rewrite'           => array('slug' => 'resources'),
+        'supports'          => array('title', 'thumbnail'),
+        )
+      );
 }
 
 /***** MY CUSTOM TAXONOMIES CODE *****/
@@ -223,6 +240,16 @@ function new_taxonomies() {
     'lsi_training_session',
     array(
           'label'     => 'Training Category',
+          'rewrite'   => array('slug' => 'training-category'),
+          'hierarchical' => true,
+    )
+  );
+
+  register_taxonomy(
+    'resource-category',
+    'lsi_resource',
+    array(
+          'label'     => 'Resource Category',
           'rewrite'   => array('slug' => 'training-category'),
           'hierarchical' => true,
     )
