@@ -206,6 +206,23 @@ function new_post_types() {
         'supports'          => array('title', 'thumbnail'),
         )
       );
+
+  register_post_type( 'lsi_capabilities',
+      array(
+        'labels'            => array(
+          'name'            => 'Capabilities',
+          'singular_name'   => 'Capability',
+          ),
+        'public'            => true,
+        'has_archive'       => false,
+        'menu_position'     => 5,
+        'show_in_rest'      => true,
+        'rest_base'         => 'capability-api',
+        'rest_controller_class' => 'WP_REST_Posts_Controller',
+				'rewrite'           => array('slug' => 'capabilities'),
+        'supports'          => array('title', 'thumbnail'),
+        )
+      );
 }
 
 /***** MY CUSTOM TAXONOMIES CODE *****/
@@ -251,6 +268,16 @@ function new_taxonomies() {
     array(
           'label'     => 'Resource Category',
           'rewrite'   => array('slug' => 'training-category'),
+          'hierarchical' => true,
+    )
+  );
+
+  register_taxonomy(
+    'capability-category',
+    'lsi_capability',
+    array(
+          'label'     => 'Capability Category',
+          'rewrite'   => array('slug' => 'capability-category'),
           'hierarchical' => true,
     )
   );

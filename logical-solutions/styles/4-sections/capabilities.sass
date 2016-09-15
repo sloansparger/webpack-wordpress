@@ -1,6 +1,5 @@
 .capabilities
 
-
   &--arrow-link
     padding-left: 3rem
     position: relative
@@ -81,6 +80,43 @@
       @include absolute-center
       transition: all .33s $ease-out-back
       // change all to height and width when transition has been decided on
+
+  &--include-section
+    height: 200vh
+    max-height: 43rem
+    padding-bottom: 3rem
+    position: relative
+
+  &--includes
+    list-style-type: none
+
+  &--include
+    margin-bottom: 2rem
+
+  &--modal-nav
+    position: absolute
+    bottom: 0
+
+  &--modal-button
+    background: none
+    border: none
+    letter-spacing: 2px
+    font-weight: 100
+    outline: none
+    transition: color .3s $ease-out-quint
+
+    &:first-child
+      margin-right: 1.5rem
+
+    &:last-child
+      margin-left: 1.5rem
+
+    &:hover
+      color: $brand-mid-green
+
+    &__disabled
+      color: $mid-light-grey !important
+      cursor: not-allowed
 
 .active
   .capabilities--option-text
