@@ -233,7 +233,7 @@ get_header();
               <div class="product--image"  style="background-image: url(http://fillmurray.com/250/290)">
 								<div class="product--overlay"></div>
                 <h3 class="product--name text-white">Product Murray</h3>
-								button.btn.btn__white
+								<a href="#" class="product--learn-more btn btn__white">Learn More</a>
               </div>
               <div class="product--info-container">
                 <h5 class="product--info text-white">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi </h5>
@@ -244,7 +244,7 @@ get_header();
               <div class="product--image"  style="background-image: url(http://fillmurray.com/250/290)">
 								<div class="product--overlay"></div>
                 <h3 class="product--name text-white">Product Murray</h3>
-								button.btn.btn__white
+								<a href="#" class="product--learn-more btn btn__white">Learn More</a>
               </div>
               <div class="product--info-container">
                 <h5 class="product--info text-white">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi </h5>

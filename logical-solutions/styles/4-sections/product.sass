@@ -1,3 +1,24 @@
+.products-hero
+
+  &--image-container
+    position: absolute
+    bottom: 0
+    left: 40%
+    z-index: 1
+
+@media screen and (max-width: 1199px)
+  .products-hero
+
+    &--image-container
+      max-width: 60%
+
+    &--image
+      max-width: 100%
+@media screen and (max-width: 767px)
+  .products-hero
+    &--image-container
+      display: none
+
 .products
 
   display: flex
@@ -12,6 +33,7 @@
     position: absolute
     bottom: 0
     width: 90%
+
 
 .product
 
