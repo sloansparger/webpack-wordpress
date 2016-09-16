@@ -11,6 +11,7 @@ var zoomLevel = function() {
 
 
 function initMap() {
+
   var mapNode = document.getElementById('map')
   if (mapNode) {
     map = new google.maps.Map(mapNode, {
