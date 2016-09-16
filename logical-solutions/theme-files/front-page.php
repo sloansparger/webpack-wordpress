@@ -14,13 +14,31 @@
 
 get_header(); ?>
 
+<div class="page-hero">
+  <div class="page-hero--image" style="bakcground-image: url()">
+  </div>
+  <div class="container">
+    <div class="home-hero">
+      <div class="home-hero--choose-container">
+        <p class="home-hero--choose-container--choose uppercase text-bold">Choose</p>
+      </div>
+      <div class="home-hero--white-box">
+        <p class="home-hero--white-box--logical-solution uppercase text-bold">A Logical Solution</p>
+      </div>
+      <div class="home-hero--blue-box">
+        <p class="home-hero--blue-box--subtitle text-bold">For your energy management and control systems</p>
+      </div>
+    </div>
+  </div>
+</div>
 
-<?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-	<?php the_content(); ?>
-<?php endwhile; else : ?>
-<p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
-<?php endif; ?>
-
+<div class="container">
+  <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+    <?php the_content(); ?>
+  <?php endwhile; else : ?>
+  <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
+  <?php endif; ?>
+</div>
 
 
 <?php
