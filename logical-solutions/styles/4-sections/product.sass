@@ -20,7 +20,6 @@
       display: none
 
 .products
-
   display: flex
   flex-wrap: wrap
   justify-content: flex-start
@@ -169,42 +168,52 @@
     left: 50%
     transform: translate(calc(-50%), -50%)
 
-@media screen and (min-width: 415px) and (max-width: 767px)
-  $product_margin: 0 2rem 3rem 0
-  $product_width: calc(50% - 1rem)
+@media screen and (max-width: 767px)
+  $product_width: 27rem
+
+  .products
+    justify-content: center
 
   .product, .products--contact-btn-container
     width: $product_width
-    margin: $product_margin
+    margin: 1rem
 
-    &:nth-child(2n)
-      margin-right: 0
-
-  .products--contact-btn-container:nth-child(2n+1)
-    width: 100%
-    &.products--contact-btn
-    width: $product_width
-    left: 50%
-    transform: translateX(calc(-50%))
+  .products--contact-btn-container
+    margin-top: 0
+    margin-bottom: 7.5rem
 
   .products--contact-btn
     width: 100%
-    bottom: auto
-    top: 50%
-    left: 50%
-    transform: translate(calc(-50%), -50%)
+
+@media screen and (min-width: 415px) and (max-width: 767px)
+  $product_margin: 0 2rem 3rem 0
+  $product_width: 27rem
+
+  .products
+    &--contact-btn-container:nth-child(2n+1)
+      width: 100%
+
+      &.products--contact-btn
+        width: $product_width
+        left: 50%
+        transform: translateX(calc(-50%))
+
+    &--contact-btn
+      width: 100%
+      bottom: auto
+      top: 50%
+      left: 50%
+      transform: translate(calc(-50%), -50%)
 
 @media screen and (max-width: 414px)
   $product_margin: 0 0 3rem 0
-  $product_width: 100%
 
-  .product, .products--contact-btn-container
+  .product
     margin: $product_margin
-    width: $product_width
 
-  .products--contact-btn
-    width: 100%
-    bottom: auto
-    top: 50%
-    left: 50%
-    transform: translate(calc(-50%), -50%)
+  .products
+    &--contact-btn
+      bottom: auto
+      top: 50%
+      left: 50%
+      transform: translate(calc(-50%), -50%)
