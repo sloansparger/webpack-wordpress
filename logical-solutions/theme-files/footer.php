@@ -35,7 +35,7 @@
         <div class="col-md-2">
           <div class="footer--tel">
             <a class="footer--links" href="tel:+9724375500">Tel: 972.437.5500</a>
-            <a class="footer--links" href="tel:+9724373318">Fax: 972.437.3318</a>
+            <a class="footer--links" href="fax:+9724373318">Fax: 972.437.3318</a>
           </div>
         </div>
 				<div class="col-md-1 col-md-offset-1">
@@ -43,11 +43,11 @@
 					<a class="footer--links" href="/careers">Careers</a>
 				</div>
 				<div class="col-md-1">
-					<a class="footer--links" href="#">Past Work</a>
+					<a class="footer--links" href="/case-studies">Past Work</a>
 					<a class="footer--links" href="/products">Products</a>
 				</div>
 				<div class="col-md-1">
-					<a class="footer--links" href="/resource">Resources</a>
+					<a class="footer--links" href="/resources">Resources</a>
 					<a class="footer--links" href="/training">Training</a>
 				</div>
 				<div class="col-md-1">
