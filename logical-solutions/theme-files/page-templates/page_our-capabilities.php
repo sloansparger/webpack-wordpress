@@ -19,7 +19,22 @@ get_header('grey');
         <div class="container">
           <h3 class="text-center information-title">We’re proud to exceed expectations<br class="hidden-lg hidden-md"> within a variety of markets, including:</h3>
           <div class="row">
-            <div class="col-xs-5 col-md-3 col-xs-offset-1 col-md-offset-0">
+            <?php $capabilities = new WP_Query( array( 'post_type' => 'lsi_capabilities' ) );
+                  $count = 0;
+                  if ( $capabilities->have_posts() ) : while ( $capabilities->have_posts() ) : $capabilities->the_post();
+                  $desc = get_field('description', false, false);
+                  $includes = get_field('includes', false, false);
+            ?>
+              <div class="col-xs-5 col-md-3">
+                <p id="modal<?php echo $count + 1; ?>"
+                   @click="openModal(`<?php the_title(); ?>`, `<?php echo $desc; ?>`, `<?php echo $includes; ?>`, <?php echo $count + 1; ?>)"
+                   class="capabilities--arrow-link">
+                   <?php the_title(); ?>
+                </p>
+              </div>
+            <?php $count++;
+                  endwhile; else: endif; ?>
+            <!-- <div class="col-xs-5 col-md-3 col-xs-offset-1 col-md-offset-0">
               <p id="modal1"
                  @click="openModal('Commercial Office Buildings and Campuses',
                                    'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi aliquam voluptatibus quas debitis, provident officiis sit esse enim iusto, quaerat quam libero laborum quia reprehenderit eveniet fuga voluptas numquam repellat.',
@@ -99,7 +114,7 @@ get_header('grey');
                 Critical Systems/Data Centers
               </p>
             </div>
-          </div>
+          </div> -->
           <p class="text-brand-green text-sm text-thin text-center">Click on a category above to learn more</p>
         </div>
       </section>
