@@ -1,16 +1,19 @@
 <?php
-/* Template Name: Inner Page w/ Transparent Header */
-get_header();
+/* Template Name: Inner Page */
+get_header('grey');
 ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
-			<?php
-			while ( have_posts() ) : the_post();
-				// get_template_part( 'template-parts/content', 'page' );
+			<section class="section-md section__lead">
+				<div class="container">
+					<?php
+						echo '<h1 class="section-title">' . get_the_title() . '</h1>';
+						echo '<p>' . get_page(get_the_ID())->post_content . '</p>';
+					?>
 
-			endwhile; // End of the loop.
-			?>
+				</div>
+			</section>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
