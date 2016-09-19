@@ -14,8 +14,8 @@
 
 get_header(); ?>
 
-<div class="page-hero">
-  <div class="page-hero--image" style="bakcground-image: url()">
+<div class="page-hero page-hero__home-page">
+  <div class="page-hero--image" style="background-image: url()">
   </div>
   <div class="container">
     <div class="home-hero">
@@ -28,6 +28,9 @@ get_header(); ?>
       <div class="home-hero--blue-box">
         <p class="home-hero--blue-box--subtitle text-bold">For your energy management and control systems</p>
       </div>
+    </div>
+    <div class="home-hero--see-our-process-container">
+      <a class="home-hero--see-our-process-container--see-our-process uppercase text-bold">See our process below</a>
     </div>
   </div>
 </div>

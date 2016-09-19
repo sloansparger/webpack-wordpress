@@ -68,6 +68,60 @@
       width: 200rem
       z-index: 1
 
+.page-hero__home-page
+  height: 95rem
+
+.home-hero
+  position: relative
+  left: auto
+  top: 33rem
+
+  &--choose-container
+    float: left
+
+    &--choose
+      color: white
+      font-size: 5.5rem
+      line-height: 3.5rem
+      margin: 0
+      padding: 0 0 0 3rem
+      float: left
+
+  &--white-box
+    color: $brand-blue
+    background-color: white
+    float: left
+    clear: both
+    width: 64rem
+
+    &--logical-solution
+      font-size: 6rem
+      line-height: 6rem
+      margin: 0
+      padding: .6rem 2rem 1rem 3rem
+      display: inline-block
+      float: left
+      clear: both
+    
+  &--blue-box
+    color: white
+    background-color: $brand-blue
+    padding: .5rem 1.4rem 0rem 1.6rem
+    margin-left: 18rem
+    float: left
+    
+    &--subtitle
+      margin: 0
+
+  &--see-our-process-container
+    position: absolute
+    top: 78.5rem
+    left: 50%
+    transform: translateX(-50%)
+
+    &--see-our-process
+      font-size: 2.2rem
+
 @media screen and (max-width: 767px)
   .page-hero
     height: 60rem
@@ -99,51 +153,61 @@
       &::after
         content: none
 
+  .page-hero__home-page
+    height: 100vh
+
+  .home-hero
+    left: 0
+
+    &--choose-container
+      background-color: white
+      width: 64rem
+
+      &--choose
+        color: $brand-blue
+        padding: 2rem 2rem 0rem 3rem
+        font-weight: normal
+        font-size: 3.5rem
+
+    &--white-box
+      &--logical-solution
+        padding-top: 0
+
+    &--blue-box
+      transform: translateY(-1rem)
+      margin-left: 3rem
+      right: 15px
+
+      &--subtitle
+        font-size: 4rem
+        font-weight: normal
+        letter-spacing: 3px
+
+@media screen and (max-width: 599px)
+  .home-hero
+    &--choose-container
+      width: 40rem
+      &--choose
+        font-size: 2.5rem
+        line-height: 2.5rem
+        padding-left: 1.5rem
+        padding-top: 1.5rem
+
+    &--white-box
+      width: 40rem
+      &--logical-solution
+        font-size: 3rem
+        line-height: 3rem
+        padding-left: 1.5rem
+
+    &--blue-box
+      transform: translateY(-0.75rem)
+      margin-left: 1.5rem
+      &--subtitle
+        font-size: 2rem
+        letter-spacing: 1.5px
 
 @media screen and (max-width: 400px)
   .page-hero
     &--title
       padding-right: 8rem
-
-.home-hero
-  position: relative
-
-  &--choose-container
-    color: white
-    _background: transparent
-    float: left
-    margin-top: 10rem
-
-    &--choose
-      font-size: 6rem
-      margin: 0
-      padding: 0 0 0 3rem
-      line-height: 4rem
-      float: left
-
-  &--white-box
-    color: $brand-blue
-    background-color: white
-    padding: 1.8rem 2rem 1.8rem 3rem
-    float: left
-    clear: both
-    _left: 0%
-
-    &--logical-solution
-      font-size: 6rem
-      margin: 0
-      padding: 0
-      line-height: 6rem
-      display: inline-block
-      float: left
-      clear: both
-    
-  &--blue-box
-    color: white
-    background-color: $brand-blue
-    padding: .5rem 1rem
-    margin-left: 18rem
-    float: left
-    
-    &--subtitle
-      margin: 0
