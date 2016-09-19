@@ -73,8 +73,10 @@
 
 .home-hero
   position: relative
+  float: left
   left: auto
-  top: 33rem
+  margin-top: calc(50vh - 11rem)
+  transform: translateY(-50%)
 
   &--choose-container
     float: left
@@ -121,6 +123,7 @@
 
     &--see-our-process
       font-size: 2.2rem
+      letter-spacing: 1.5px
 
 @media screen and (max-width: 767px)
   .page-hero
@@ -161,32 +164,49 @@
 
     &--choose-container
       background-color: white
-      width: 64rem
+      width: 46rem
 
       &--choose
         color: $brand-blue
         padding: 2rem 2rem 0rem 3rem
         font-weight: normal
-        font-size: 3.5rem
+        font-size: 3rem
+        line-height: 2.5rem
+        letter-spacing: 0px
 
     &--white-box
+      width: 46rem
+
       &--logical-solution
         padding-top: 0
+        font-size: 4rem
+        line-height: 3.5rem
 
     &--blue-box
-      transform: translateY(-1rem)
+      transform: translateY(-.75rem)
       margin-left: 3rem
       right: 15px
+      padding: 0rem 1rem
 
       &--subtitle
-        font-size: 4rem
+        font-size: 3rem
         font-weight: normal
-        letter-spacing: 3px
+        letter-spacing: 2px
 
-@media screen and (max-width: 599px)
+    &--see-our-process-container
+      top: 80vh
+      min-width: 35rem
+
+      &--see-our-process
+        font-size: 4rem
+        letter-spacing: 1.5px
+
+@media screen and (max-width: 479px)
   .home-hero
+
     &--choose-container
-      width: 40rem
+      width: 35rem
+
       &--choose
         font-size: 2.5rem
         line-height: 2.5rem
@@ -194,17 +214,27 @@
         padding-top: 1.5rem
 
     &--white-box
-      width: 40rem
+      width: 35rem
+
       &--logical-solution
         font-size: 3rem
         line-height: 3rem
         padding-left: 1.5rem
 
     &--blue-box
-      transform: translateY(-0.75rem)
       margin-left: 1.5rem
+      right: 15px
+      max-width: 40rem
+
       &--subtitle
-        font-size: 2rem
+        font-size: 2.25rem
+        letter-spacing: 1.5px
+
+    &--see-our-process-container
+      min-width: 23rem
+
+      &--see-our-process
+        font-size: 2.5rem
         letter-spacing: 1.5px
 
 @media screen and (max-width: 400px)
