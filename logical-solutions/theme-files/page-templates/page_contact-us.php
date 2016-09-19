@@ -18,11 +18,13 @@ get_header('grey');
 					  <div class="col-xs-10 col-sm-4 col-md-3 col-xs-offset-1 col-sm-offset-0 col-md-offset-1">
               <h3 class="text-bold">Address</h3>
               <p class="contact--address-name">Logical Solutions, Inc.</p>
-              <address><p>
-                407 Internation Pkwy<br/>
-                Suite 406<br/>
-                Richardson, Texas 75801
-              </p></address>
+              <a class="contact--address" href="https://www.google.com/maps/place/407+International+Pkwy+%23406,+Richardson,+TX+75081/@32.9548219,-96.7122626,17z/data=!3m1!4b1!4m5!3m4!1s0x864c1f0332305ac3:0x12c5f11a6424ee1!8m2!3d32.9548219!4d-96.7100739">
+                <address><p>
+                  407 Internation Pkwy<br/>
+                  Suite 406<br/>
+                  Richardson, Texas 75801
+                </p></address>
+              </a>
 					  </div>
 					  <div class="col-xs-10 col-sm-4 col-md-3 col-xs-offset-1 col-sm-offset-0 col-md-offset-1">
               <h3 class="text-bold">Phone Number</h3>

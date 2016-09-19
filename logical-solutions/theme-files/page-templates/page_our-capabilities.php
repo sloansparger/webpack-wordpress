@@ -19,87 +19,21 @@ get_header('grey');
         <div class="container">
           <h3 class="text-center information-title">We’re proud to exceed expectations<br class="hidden-lg hidden-md"> within a variety of markets, including:</h3>
           <div class="row">
-            <div class="col-xs-5 col-md-3 col-xs-offset-1 col-md-offset-0">
-              <p id="modal1"
-                 @click="openModal('Commercial Office Buildings and Campuses',
-                                   'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi aliquam voluptatibus quas debitis, provident officiis sit esse enim iusto, quaerat quam libero laborum quia reprehenderit eveniet fuga voluptas numquam repellat.',
-                                   'Desc 1\n\nDesc 2\n\nDesc 3\n\nDesc 4',
-                                   1)"
-                class="capabilities--arrow-link">
-                Commercial Office Buildings and Campuses
-              </p>
-            </div>
-            <div class="col-xs-5 col-md-3">
-              <p id="modal2"
-                 @click="openModal('Religious Institutions',
-                                   'Worship services, spaghetti suppers, weddings, Mothers&quot; Morning Out, Sunday school, choir practice, and the list goes on. Make your place of worship&quot;s complex schedule simple again - with LSi. From any computer with an Internet connection, you can set schedules, control, and monitor your building, all with a click of the mouse. Find out how we can help you simplify - contact us today.',
-                                   'Desc 1\n\nDesc 2\n\nDesc 3\n\nDesc 4',
-                                   2)"
-                class="capabilities--arrow-link">
-                Religious Institutions
-              </p>
-            </div>
-            <div class="col-xs-5 col-md-3 col-xs-offset-1 col-md-offset-0">
-              <p id="modal3"
-                 @click="openModal('Educational Facilities',
-                                   'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi iure, voluptas tempora? Eaque blanditiis necessitatibus sunt est enim, inventore iste rem, amet suscipit praesentium corporis qui, itaque eligendi fugiat repudiandae.',
-                                   'Desc 1\n\nDesc 2\n\nDesc 3\n\nDesc 4',
-                                   3)"
-                class="capabilities--arrow-link">
-                Educational Facilities
-              </p>
-            </div>
-            <div class="col-xs-5 col-md-3">
-              <p id="modal4"
-                 @click="openModal('Healthcare Buildings and Campuses',
-                                   'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi ab esse quisquam nemo eaque, culpa et mollitia veniam est, qui laborum nesciunt voluptates itaque ipsam, quam perferendis repellat! Assumenda, commodi.',
-                                   'Desc 1\n\nDesc 2\n\nDesc 3\n\nDesc 4',
-                                   4)"
-                class="capabilities--arrow-link">
-                Healthcare Buildings and Campuses
-              </p>
-            </div>
-            <div class="col-xs-5 col-md-3 col-xs-offset-1 col-md-offset-0">
-              <p id="modal5"
-                 @click="openModal('Hospitality and Entertainment Venues',
-                                   'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos eius nisi nostrum, molestiae, illum voluptate! Doloremque molestias laboriosam quod nulla doloribus obcaecati repellendus delectus quos fugiat unde, praesentium, rerum ullam!',
-                                   'Desc 1\n\nDesc 2\n\nDesc 3\n\nDesc 4',
-                                   5)"
-                class="capabilities--arrow-link">
-                Hospitality and Entertainment Venues
-              </p>
-            </div>
-            <div class="col-xs-5 col-md-3">
-              <p id="modal6"
-                 @click="openModal('Industrial Sites',
-                                   'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nobis cumque, non ratione. Laboriosam, dignissimos amet aliquid similique, et illum nemo voluptatum animi labore sed provident eligendi, ipsam odit a distinctio.',
-                                   'Desc 1\n\nDesc 2\n\nDesc 3\n\nDesc 4',
-                                   6)"
-                class="capabilities--arrow-link">
-                Industrial Sites
-              </p>
-            </div>
-            <div class="col-xs-5 col-md-3 col-xs-offset-1 col-md-offset-0">
-              <p id="modal7"
-                 @click="openModal('Pharmaceutical Facilities',
-                                   'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea aut laborum, consectetur, tempora, suscipit necessitatibus architecto quisquam est veritatis ipsa quo iusto sunt laboriosam ipsum voluptatem odit ratione distinctio eius?',
-                                   'Desc 1\n\nDesc 2\n\nDesc 3\n\nDesc 4',
-                                   7)"
-                class="capabilities--arrow-link">
-                Pharmaceutical Facilities
-              </p>
-            </div>
-            <div class="col-xs-5 col-md-3">
-              <p id="modal8"
-                 @click="openModal('Critical Systems/Data Centers',
-                                   'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda quia dolore repellendus exercitationem recusandae est deserunt sit repudiandae harum voluptatum, officiis aperiam quaerat ducimus beatae error quis ipsam doloremque earum.',
-                                   'Desc 1\n\nDesc 2\n\nDesc 3\n\nDesc 4',
-                                   8)"
-                class="capabilities--arrow-link">
-                Critical Systems/Data Centers
-              </p>
-            </div>
-          </div>
+            <?php $capabilities = new WP_Query( array( 'post_type' => 'lsi_capabilities' ) );
+                  $count = 0;
+                  if ( $capabilities->have_posts() ) : while ( $capabilities->have_posts() ) : $capabilities->the_post();
+                  $desc = get_field('description', false, false);
+                  $includes = get_field('includes', false, false);
+            ?>
+              <div class="col-xs-5 col-md-3">
+                <p id="modal<?php echo $count + 1; ?>"
+                   @click="openModal(`<?php the_title(); ?>`, `<?php echo $desc; ?>`, `<?php echo $includes; ?>`, <?php echo $count + 1; ?>)"
+                   class="capabilities--arrow-link">
+                   <?php the_title(); ?>
+                </p>
+              </div>
+            <?php $count++;
+                  endwhile; else: endif; ?>
           <p class="text-brand-green text-sm text-thin text-center">Click on a category above to learn more</p>
         </div>
       </section>

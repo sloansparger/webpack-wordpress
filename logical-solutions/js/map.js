@@ -17,7 +17,6 @@ function initMap() {
     map = new google.maps.Map(mapNode, {
       center: latLng,
       zoom: zoomLevel(),
-      zoomControl: false,
       mapTypeControl: false,
       scaleControl: false,
       streetViewControl: false,
