@@ -33,6 +33,25 @@
         color: $brand-green
 
   &--optional
+
+    &::before
+      content: ""
+      display: block
+      position: absolute
+      background-color: #20499E
+      height: 1px
+      width: calc(100% - 30px)
+      transform: translateY(-1.5rem)
+
+    &::after
+      content: ""
+      display: block
+      position: absolute
+      background-color: #20499E
+      height: 1px
+      width: calc(100% - 30px)
+      transform: translateY(-2rem)
+
     input, textarea, select
       color: $mid-light-grey
 
@@ -41,3 +60,9 @@
 
   &--submit
     float: right
+
+@media screen and (min-width: 992px)
+  .form-container
+    &--optional
+      &::after
+        display: none
