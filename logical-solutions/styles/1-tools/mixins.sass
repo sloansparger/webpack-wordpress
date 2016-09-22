@@ -8,3 +8,20 @@
   top: 50%
   left: 50%
   transform: translate(-50%, -50%)
+
+@mixin size($w, $h)
+  @if unitless($w)
+    @error "$w may not be unitless, was #{$w}."
+
+  @if unitless($h)
+    @error "$h may not be unitless, was #{$h}."
+
+  width: $w
+  height: $h
+
+@mixin square($length)
+  @if unitless($length)
+    @error "$length may not be unitless, was #{$length}."
+
+  width: $length
+  height: $length

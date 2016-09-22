@@ -9,9 +9,9 @@ module.exports = document.addEventListener('DOMContentLoaded', function() {
         trainingNumber: 1,
         modalOpen: false,
         activeModal: '',
-        currentTitle: 'Nothing has changed.',
-        currentDescription: 'Do your freaking job sloan...',
-        currentIncludes: 'Are you even a developer? Like, uh?',
+        currentTitle: '',
+        currentDescription: '',
+        currentIncludes: '',
         currentIndex: 1,
         isFirstIndex: false,
         isLastIndex: false,
@@ -33,32 +33,25 @@ module.exports = document.addEventListener('DOMContentLoaded', function() {
           if(this.currentIndex === 1) {
             this.isFirstIndex = true
             this.isLastIndex = false
-            console.log('index is 1');
           } else if(this.currentIndex === 8) {
             this.isFirstIndex = false
             this.isLastIndex = true
-            console.log('index is 8');
           } else {
             this.isFirstIndex = false
             this.isLastIndex = false
-            console.log('index is somewhere in the middle');
           }
-          console.log('opening');
         },
         closeModal: function() {
           this.modalOpen = false
           this.currentTitle = ""
           this.currentDescription = ""
           this.currentIncludes = ""
-          console.log('closing');
         },
         prevModal: function() {
           var prevIndex = this.currentIndex - 1
           var prevIndex = document.getElementById('modal' + prevIndex)
           if (prevIndex) {
             prevIndex.click()
-            console.log('prevIndex', prevIndex);
-            console.log('theres a previous modal');
           }
 
         },
@@ -66,7 +59,6 @@ module.exports = document.addEventListener('DOMContentLoaded', function() {
           var nextIndex = parseInt(this.currentIndex) + 1
           var nextModal = document.getElementById('modal' + nextIndex)
           if (nextModal) nextModal.click()
-          console.log('next');
         }
       }
     })
