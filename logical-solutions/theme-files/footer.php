@@ -11,6 +11,8 @@
 ?>
 
 	</div><!-- #content -->
+
+  <?php if (!is_page('contact')) { ?>
 	<div class="subfooter">
 		<div class="container">
 			<div class="subfooter--text">
@@ -19,6 +21,8 @@
      <a class="cta cta__white" href="/contact/">Contact Us</a>
 		</div>
 	</div>
+  <?php } ?>
+
 	<footer id="footer" class="footer" role="contentinfo">
 		<div class="container">
 			<div class="row hidden-xs hidden-sm">
