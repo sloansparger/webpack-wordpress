@@ -35,7 +35,7 @@ get_header();
 						for($i = 0; $i < count($mainCategories); $i++) {
 							$currentCategory = $mainCategories[$i]
 							?>
-							<div class="col-md-3">
+							<div class="col-md-3 col-sm-4 col-xs-6">
 								<p class="job--category"
 									 @click="changeCatFilter('<?php echo strtolower($currentCategory) ?>')"
 									 v-bind:class="{'job--category__active': isCurrentFilter('<?php echo strtolower($currentCategory) ?>')}">
