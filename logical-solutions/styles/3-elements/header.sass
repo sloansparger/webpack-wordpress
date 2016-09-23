@@ -21,10 +21,10 @@
 
   &__slider
     background-color: $light-grey
-    position: absolute
+    position: fixed
     transform: translateY(-100%)
     top: 0
-    transition: transform .33s $ease-out-quad
+    transition: transform .33s $ease-out-quint
     z-index: 1
 
     &__active
@@ -41,6 +41,11 @@
 
     .header--menu a
       color: $brand-blue
+
+  &__slider,
+  &__grey-bg
+    .header--hamburger
+      margin-top: 0
 
   &--container
     width: 100%
@@ -152,6 +157,9 @@
   overflow: scroll
 
   &__hidden
+    transform: translateX(100%)
+
+  &__grey
     transform: translateX(100%)
 
   &--exit
