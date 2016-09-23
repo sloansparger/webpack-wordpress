@@ -162,7 +162,7 @@ get_header('grey');
                   <h4 class="capabilities--option-text">Customized Training</h4>
                 </div>
               </div>
-              <a href="/products" class="btn btn__blue">Learn More about Training</a>
+              <a href="/training" class="btn btn__blue">Learn More about Training</a>
             </div>
             <div class="col-xs-12 col-md-6">
               <div v-show="trainingNumber === 1">

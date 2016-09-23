@@ -1,0 +1,43 @@
+.form-container
+  font-size: 1.8rem
+
+  input, textarea, select, option
+    margin-bottom: 3rem
+    width: 100%
+    height: 4rem
+    background-color: white
+    border: none
+
+  input, textarea, select
+    &:focus
+      outline: 1px auto $brand-blue
+
+  select
+    padding-left: calc(1rem - 2px)
+    width: 100%
+
+  input, textarea
+    padding-left: 1rem  
+  
+  textarea
+    height: 35.6rem
+
+  &--required
+    select
+      color: $brand-green
+
+    input, textarea
+      color: $brand-mid-green
+
+      &::-webkit-input-placeholder
+        color: $brand-green
+
+  &--optional
+    input, textarea, select
+      color: $mid-light-grey
+
+      &::-webkit-input-placeholder
+        color: $light-grey
+
+  &--submit
+    float: right
