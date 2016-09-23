@@ -1,7 +1,6 @@
 import Vue from 'vue'
 import timeago from 'timeago.js'
 timeago(Date.now())
-// require('./vues/capabilites')
 
 Vue.filter('reverse', function (value) {
   return value.split('').reverse().join('')
@@ -11,7 +10,7 @@ Vue.filter('timeago', t => timeago().format(new Date(t)))
 
 var app = require('./vues/index')
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function() {  
   if(document.getElementById('jobs')) {
     mergeAndCreateVues(require('./vues/jobs'))
   }

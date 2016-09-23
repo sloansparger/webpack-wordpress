@@ -23,9 +23,10 @@
 		<?php get_template_part('template-parts/header'); ?>
 	</header><!-- #masthead -->
 
-
-	<header class="header header__slider">
+	<header class="header header__slider" v-bind:class="{'header__slider__active': slideNavActive}">
 		<?php get_template_part('template-parts/header'); ?>
 	</header>
+
+	<?php get_template_part('template-parts/mobile-nav'); ?>
 
 	<div id="content" class="site-content">
