@@ -15,4 +15,5 @@
   </div>
 
   <div class="header--menu clearfix"><?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu', 'menu_class' => 'clearfix') ); ?></div>
+  <div class="header--hamburger hidden-md hidden-lg" @click="openMobileNav"></div>
 </div>
