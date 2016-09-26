@@ -46,7 +46,7 @@ get_header('grey');
 				</div>
 			</section>
 
-      <section class="section-md bg-cool-light-grey">
+      <section id="contact" class="section-md bg-cool-light-grey">
 				<div class="container">
 					<h3 class="section-title">Send us a message</h3>
           <?php echo do_shortcode( '[contact-form-7 id="67" title="Contact Form"]' ); ?>

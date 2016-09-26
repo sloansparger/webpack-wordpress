@@ -1,12 +1,6 @@
 import Vue from 'vue'
 import timeago from 'timeago.js'
-timeago(Date.now())
-
-Vue.filter('reverse', function (value) {
-  return value.split('').reverse().join('')
-})
-
-Vue.filter('timeago', t => timeago().format(new Date(t)))
+require('./vues/filters')
 
 var app = require('./vues/index')
 
@@ -19,6 +13,9 @@ document.addEventListener('DOMContentLoaded', function() {
   }
   else if(document.getElementById('capabilities')) {
     mergeAndCreateVues(require('./vues/capabilities'))
+  }
+  else if(document.getElementById('products')) {
+    mergeAndCreateVues(require('./vues/products'))
   }
   else {
     createVue(app)

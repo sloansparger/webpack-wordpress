@@ -96,6 +96,40 @@
     line-height: 1.8rem
     letter-spacing: .5px
 
+  &--modal-content
+    display: flex
+
+  &--modal-image
+    width: 46rem
+    height: 46rem
+    position: relative
+    overflow: hidden
+    background: $cool-light-grey center / cover no-repeat
+    flex-grow: 1
+    flex-shrink: 0
+    margin-right: 8rem
+
+    @media screen and (max-width: 1199px)
+      width: 40rem
+      height: 40rem
+
+    @media screen and (max-width: 991px)
+      width: 35rem
+      height: 35rem
+      margin-right: 5rem
+
+    @media screen and (max-width: 767px)
+      width: 20rem
+      height: 20rem
+
+  &--modal-description
+    position: relative
+
+  &--modal-cta
+    position: absolute
+    bottom: 0
+    left: 0
+
 .product:hover
   .product
     &--name

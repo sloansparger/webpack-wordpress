@@ -1,7 +1,7 @@
 var inView
+
 document.addEventListener('DOMContentLoaded', function() {
   inView = require('in-view')
-  console.log(inView)
 })
 
 module.exports = {
