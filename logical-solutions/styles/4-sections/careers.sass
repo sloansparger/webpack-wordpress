@@ -29,6 +29,13 @@
 
   &--excerpt
     height: 7.5rem
+    white-space: nowrap
+    overflow: hidden
+    text-overflow: ellipsis
+
+    @media screen and (max-width: 767px)
+      height: auto
+      
 
   &--description p
     font-size: 1.6rem

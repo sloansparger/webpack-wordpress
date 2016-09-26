@@ -3,9 +3,9 @@ module.exports = {
     catFilter: 'all',
     modalOpen: false,
     activeModal: '',
-    currentTitle: 'You are fired!',
-    currentRequirements: ['one', 'two', 'three'],
-    currentDescription: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quia consectetur repellat fuga. Repudiandae doloremque eius libero vitae nihil nobis magni aspernatur quis minus sapiente, consectetur adipisci nam sint neque expedita.',
+    currentTitle: '',
+    currentRequirements: [],
+    currentDescription: '',
   },
   methods: {
     changeCatFilter: function(filter) {

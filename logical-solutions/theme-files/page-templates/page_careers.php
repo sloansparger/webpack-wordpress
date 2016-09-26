@@ -27,7 +27,7 @@ get_header();
 				<div class="container">
 					<h3 class="section-title">Open Positions</h3>
 					<div class="row mb10">
-						<div class="col-md-3">
+						<div class="col-md-3 col-sm-4 col-xs-6">
 							<p class="job--category" @click="changeCatFilter('all')" v-bind:class="{'job--category__active': isCurrentFilter('all')}">All Categories  <span class="job--category-count">(<?php echo $totalJobs ?>)</span></p>
 						</div>
 
@@ -51,11 +51,10 @@ get_header();
 									$desc = get_field('description', false, false);
 									$req = get_field('requirements', false, false);
 						?> <!-- start nested loop -->
-							<div class="col-md-4" v-show="matchesCurrentFilter('<?php echo strtolower(get_the_terms(get_the_ID(), 'job-category')[0]->name) ?>')">
+							<div class="col-md-4 col-sm-6 col-xxs-12" v-show="matchesCurrentFilter('<?php echo strtolower(get_the_terms(get_the_ID(), 'job-category')[0]->name) ?>')">
 								<div class="job--preview">
 									<h4 class="job--preview-title mb0"><?php the_title(); ?></h4>
 									<span v-text="'<?php the_date(); ?>' | timeago"></span>
-									<br/>
 									<p class="job--excerpt mt2"><?php if (strlen($desc) > 100) echo substr($desc, 0, 99) . '...'; else echo $desc; ?></p>
 									<button class="btn btn__blue btn__small" @click="openModal('<?php the_title(); ?>', '<?php echo $desc; ?>', '<?php echo $req; ?>')">Learn More</button>
 								</div>

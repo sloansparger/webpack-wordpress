@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import timeago from 'timeago.js'
-require('./vues/filters')
+
+Vue.filter('timeago', t => timeago().format(new Date(t)))
 
 var app = require('./vues/index')
 
