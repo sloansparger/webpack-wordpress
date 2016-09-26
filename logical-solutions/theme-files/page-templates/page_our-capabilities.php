@@ -25,7 +25,7 @@ get_header('grey');
                   $desc = get_field('description', false, false);
                   $includes = get_field('includes', false, false);
             ?>
-              <div class="col-xs-5 col-md-3">
+              <div class="col-xxs-12 col-xs-6 col-md-3">
                 <p id="modal<?php echo $count + 1; ?>"
                    @click="openModal(`<?php the_title(); ?>`, `<?php echo $desc; ?>`, `<?php echo $includes; ?>`, <?php echo $count + 1; ?>)"
                    class="capabilities--arrow-link">
@@ -34,8 +34,9 @@ get_header('grey');
               </div>
             <?php $count++;
                   endwhile; else: endif; ?>
-          <p class="text-brand-green text-sm text-thin text-center">Click on a category above to learn more</p>
+
         </div>
+        <p class="text-brand-green text-sm text-thin text-center">Click on a category above to learn more</p>
       </section>
 
       <section class="blurb-section bg-cool-light-grey">
