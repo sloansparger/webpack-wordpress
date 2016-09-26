@@ -10,8 +10,11 @@ Vue.filter('timeago', t => timeago().format(new Date(t)))
 
 var app = require('./vues/index')
 
-document.addEventListener('DOMContentLoaded', function() {  
-  if(document.getElementById('jobs')) {
+document.addEventListener('DOMContentLoaded', function() {
+  if(document.getElementById('home')) {
+    mergeAndCreateVues(require('./vues/home'))
+  }
+  else if(document.getElementById('jobs')) {
     mergeAndCreateVues(require('./vues/jobs'))
   }
   else if(document.getElementById('capabilities')) {

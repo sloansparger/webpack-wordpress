@@ -14,9 +14,8 @@
 
 get_header(); ?>
 
-<div class="page-hero page-hero__home-page">
-  <div class="page-hero--image" style="background-image: url()">
-  </div>
+<div id="home" class="page-hero page-hero__home-page">
+  <div class="page-hero--image" style="background-image: url()"></div>
   <div class="container">
     <div class="home-hero">
       <div class="home-hero--choose-container">
@@ -35,14 +34,49 @@ get_header(); ?>
   </div>
 </div>
 
-<div class="container">
-  <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
-    <?php the_content(); ?>
-  <?php endwhile; else : ?>
-  <p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
-  <?php endif; ?>
-</div>
+<section class="section-lg bg-cool-light-grey">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-md-10 col-md-offset-1">
+        <blockquote class="text-center">
+          Each solution is specifically crafted through our comprehensive four step process; ensuring an efficient and simple path to your Energy Star Rating
+        </blockquote>
+      </div>
+    </div>
+  </div>
+</section>
 
+
+<section class="section-md">
+
+</section>
+
+
+<section class="image-section bg-cool-light-grey">
+  <div class="image-section--image image-section--image__right"></div>
+  <div class="container">
+    <h3 class="section-title section-title__banner image-section--title">Featured Products</h3>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="capabilities--options">
+          <div class="capabilities--option" v-on:click="showSlide('product', 1)" v-bind:class="{ 'active': productSlideNumber === 1 }">
+            <div class="capabilities--option-dot capabilities--option-dot__cool-grey"></div>
+            <h4 class="capabilities--option-text">WebCTRL System</h4>
+          </div>
+          <div class="capabilities--option" v-on:click="showSlide('product', 2)" v-bind:class="{ 'active': productSlideNumber === 2 }">
+            <div class="capabilities--option-dot capabilities--option-dot__cool-grey"></div>
+            <h4 class="capabilities--option-text">Roi Analysis</h4>
+          </div>
+          <div class="capabilities--option" v-on:click="showSlide('product', 3)" v-bind:class="{ 'active': productSlideNumber === 3 }">
+            <div class="capabilities--option-dot capabilities--option-dot__cool-grey"></div>
+            <h4 class="capabilities--option-text">Leed</h4>
+          </div>
+        </div>
+        <a href="#" class="btn btn__blue">View All Products</a>
+      </div>
+    </div>
+  </div>
+</section>
 
 <?php
 get_footer();
