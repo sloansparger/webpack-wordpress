@@ -2,20 +2,11 @@
   &--top-section
     margin-top: 9rem
 
-  &--info-section
-    position: absolute
-    width: 45%
-    height: 100%
-    top: 0
-    right: 0
-    padding: 10rem 5rem
-    background-color: $brand-dark-blue
-
-@media screen and (max-width: 991px)
-  .training
-    &--info-section
-      width: 100%
+  &--divider
+    @media screen and (min-width: 768px)
+      position: absolute
       top: 0
-      left: 0
-      right: 0
-      height: 56.25rem
+      right: calc(-16.6666% - 4rem)
+      width: 1px
+      height: 100%
+      background-color: $brand-dark-blue
