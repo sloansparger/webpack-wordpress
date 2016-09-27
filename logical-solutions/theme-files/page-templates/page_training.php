@@ -61,7 +61,7 @@ get_header('grey');
       <section class="section-md bg-cool-light-grey" id="register">
         <div class="container">
           <h3 class="section-title">Register for Training</h3>
-          <?php echo do_shortcode( '[contact-form-7 id="68" title="Training Form"]' ); ?>
+          <?php echo do_shortcode( '[contact-form-7 id="141" title="Training Form"]' ); ?>
         </div>
       </section>
 
