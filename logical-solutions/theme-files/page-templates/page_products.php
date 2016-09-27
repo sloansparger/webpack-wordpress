@@ -16,7 +16,7 @@ get_header();
         $totalProducts = 0;
         if ( $products->have_posts() ) : while ( $products->have_posts() ) : $products->the_post();
           array_push($allCategories, get_the_terms(get_the_ID(), 'product-category')[0]->name);
-          $totalProducts++; 
+          $totalProducts++;
           $categoryCount = array_count_values($allCategories);
           $mainCategories = array_values(array_unique($allCategories));
         endwhile; endif;
@@ -25,7 +25,7 @@ get_header();
 			<section class="section-md" id="products">
 
         <?php
-          for($i = 0; $i < count($mainCategories); $i++) {
+          for($i = 0; $i < 1; $i++) {
             $currentCategory = $mainCategories[$i];
         ?>
 
@@ -33,10 +33,7 @@ get_header();
 					<h3 class="section-title"><?php echo strtoupper($currentCategory); ?></h3>
 					<div class="products">
 
-            <?php
-              for($i = 0; $i < count($totalProducts); $i++) {
-                $currentProduct = $
-            ?>
+
 
 						<div class="product">
               <div class="product--image"  style="background-image: url(http://fillmurray.com/500/580)">
@@ -51,7 +48,7 @@ get_header();
               </div>
             </div>
 
-            <?php } ?>
+
 
 
 						<div class="product">
@@ -280,6 +277,8 @@ get_header();
 
 					</div>
 				</div>
+
+				<?php } ?>
 			</section>
 
 			<div class="modal" v-bind:class="{'modal__open': modalOpen}">

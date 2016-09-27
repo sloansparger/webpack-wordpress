@@ -9,10 +9,16 @@ get_header();
 		<main id="main" class="site-main" role="main">
 
 			<?php
-			while ( have_posts() ) {
-				the_post();
-				get_template_part( '/template-parts/hero' );
-			}
+				while ( have_posts() ) {
+					the_post();
+					get_template_part( '/template-parts/hero' );
+				}
+
+				$employees = new WP_Query( array( 'post_type' => 'lsi_employees', 'posts_per_page' => -1));
+				// $count = 0;
+				// if ( $capabilities->have_posts() ) : while ( $capabilities->have_posts() ) : $capabilities->the_post();
+				// $desc = get_field('description', false, false);
+				// $includes = get_field('includes', false, false);
 			?>
 
 			<section class="section-md">
@@ -46,118 +52,21 @@ get_header();
 				<div class="container">
 					<h3 class="section-title section-title__right">Our Team</h3>
 					<div class="team-members">
+						<?php
+							if ( $employees->have_posts() ) : while ( $employees->have_posts() ) : $employees->the_post();
+							$jobTitle = get_field('job_title', false, false);
+							$imageId = get_field('profile_image', false, false);
+						?>
+
 						<div class="team-member">
-							<img class="team-member--image" src="http://fillmurray.com/250/290" alt="">
+							<img class="team-member--image" src="<?php echo wp_get_attachment_image_src($imageId, 'full')[0]; ?>" alt="">
 							<div class="team-member--info">
-								<h4 class="team-member--name">Bill Murry</h4>
-								<h5 class="team-member--position">Owner</h5>
+								<h4 class="team-member--name"><?php the_title(); ?></h4>
+								<h5 class="team-member--position"><?php echo $jobTitle; ?></h5>
 							</div>
 						</div>
-						<div class="team-member">
-							<img class="team-member--image" src="http://fillmurray.com/250/290" alt="">
-							<div class="team-member--info">
-								<h4 class="team-member--name">Bill Murry</h4>
-								<h5 class="team-member--position">Owner</h5>
-							</div>
-						</div>
-						<div class="team-member">
-							<img class="team-member--image" src="http://fillmurray.com/250/290" alt="">
-							<div class="team-member--info">
-								<h4 class="team-member--name">Bill Murry</h4>
-								<h5 class="team-member--position">Owner</h5>
-							</div>
-						</div>
-						<div class="team-member">
-							<img class="team-member--image" src="http://fillmurray.com/250/290" alt="">
-							<div class="team-member--info">
-								<h4 class="team-member--name">Bill Murry</h4>
-								<h5 class="team-member--position">Owner</h5>
-							</div>
-						</div>
-						<div class="team-member">
-							<img class="team-member--image" src="http://fillmurray.com/250/290" alt="">
-							<div class="team-member--info">
-								<h4 class="team-member--name">Bill Murry</h4>
-								<h5 class="team-member--position">Owner</h5>
-							</div>
-						</div>
-						<div class="team-member">
-							<img class="team-member--image" src="http://fillmurray.com/250/290" alt="">
-							<div class="team-member--info">
-								<h4 class="team-member--name">Bill Murry</h4>
-								<h5 class="team-member--position">Owner</h5>
-							</div>
-						</div>
-						<div class="team-member">
-							<img class="team-member--image" src="http://fillmurray.com/250/290" alt="">
-							<div class="team-member--info">
-								<h4 class="team-member--name">Bill Murry</h4>
-								<h5 class="team-member--position">Owner</h5>
-							</div>
-						</div>
-						<div class="team-member">
-							<img class="team-member--image" src="http://fillmurray.com/250/290" alt="">
-							<div class="team-member--info">
-								<h4 class="team-member--name">Bill Murry</h4>
-								<h5 class="team-member--position">Owner</h5>
-							</div>
-						</div>
-						<div class="team-member">
-							<img class="team-member--image" src="http://fillmurray.com/250/290" alt="">
-							<div class="team-member--info">
-								<h4 class="team-member--name">Bill Murry</h4>
-								<h5 class="team-member--position">Owner</h5>
-							</div>
-						</div>
-						<div class="team-member">
-							<img class="team-member--image" src="http://fillmurray.com/250/290" alt="">
-							<div class="team-member--info">
-								<h4 class="team-member--name">Bill Murry</h4>
-								<h5 class="team-member--position">Owner</h5>
-							</div>
-						</div>
-						<div class="team-member">
-							<img class="team-member--image" src="http://fillmurray.com/250/290" alt="">
-							<div class="team-member--info">
-								<h4 class="team-member--name">Bill Murry</h4>
-								<h5 class="team-member--position">Owner</h5>
-							</div>
-						</div>
-						<div class="team-member">
-							<img class="team-member--image" src="http://fillmurray.com/250/290" alt="">
-							<div class="team-member--info">
-								<h4 class="team-member--name">Bill Murry</h4>
-								<h5 class="team-member--position">Owner</h5>
-							</div>
-						</div>
-						<div class="team-member">
-							<img class="team-member--image" src="http://fillmurray.com/250/290" alt="">
-							<div class="team-member--info">
-								<h4 class="team-member--name">Bill Murry</h4>
-								<h5 class="team-member--position">Owner</h5>
-							</div>
-						</div>
-						<div class="team-member">
-							<img class="team-member--image" src="http://fillmurray.com/250/290" alt="">
-							<div class="team-member--info">
-								<h4 class="team-member--name">Bill Murry</h4>
-								<h5 class="team-member--position">Owner</h5>
-							</div>
-						</div>
-						<div class="team-member">
-							<img class="team-member--image" src="http://fillmurray.com/250/290" alt="">
-							<div class="team-member--info">
-								<h4 class="team-member--name">Bill Murry</h4>
-								<h5 class="team-member--position">Owner</h5>
-							</div>
-						</div>
-						<div class="team-member">
-							<img class="team-member--image" src="http://fillmurray.com/250/290" alt="">
-							<div class="team-member--info">
-								<h4 class="team-member--name">Bill Murry</h4>
-								<h5 class="team-member--position">Owner</h5>
-							</div>
-						</div>
+
+						<?php endwhile; else: endif;?>
 					</div>
 				</div>
 			</section>

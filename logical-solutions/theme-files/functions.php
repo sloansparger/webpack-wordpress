@@ -223,6 +223,23 @@ function new_post_types() {
         'supports'          => array('title', 'thumbnail'),
         )
       );
+
+  register_post_type( 'lsi_employees',
+      array(
+        'labels'            => array(
+          'name'            => 'Employees',
+          'singular_name'   => 'Employee',
+          ),
+        'public'            => true,
+        'has_archive'       => false,
+        'menu_position'     => 5,
+        'show_in_rest'      => true,
+        'rest_base'         => 'employee-api',
+        'rest_controller_class' => 'WP_REST_Posts_Controller',
+				'rewrite'           => array('slug' => 'employees'),
+        'supports'          => array('title', 'thumbnail'),
+        )
+      );
 }
 
 /***** MY CUSTOM TAXONOMIES CODE *****/
@@ -278,6 +295,16 @@ function new_taxonomies() {
     array(
           'label'     => 'Capability Category',
           'rewrite'   => array('slug' => 'capability-category'),
+          'hierarchical' => true,
+    )
+  );
+
+  register_taxonomy(
+    'employee-category',
+    'lsi_employee',
+    array(
+          'label'     => 'Employee Category',
+          'rewrite'   => array('slug' => 'employee-category'),
           'hierarchical' => true,
     )
   );
