@@ -4,20 +4,27 @@ Template Name: Our Capabilities
 */
 get_header('grey');
 ?>
+
 <div id="app">
   <div id="capabilities" class="content-area">
     <main id="main" class="site-main" role="main">
 
       <?php
-      while ( have_posts() ) {
+      while ( have_posts() ) :
         the_post();
         get_template_part( '/template-parts/hero' );
-      }
-      ?>
+
+        $markets_section_text = get_field('markets_section_text');
+        $products_blurb = get_field('products_blurb');
+        $products_company_description = get_field('products_company_description');
+        $service_blurb = get_field('service_blurb');
+        $services_text = get_field('services_text');
+        $training_blurb = get_field('training_blurb');
+       ?>
 
       <section class="section-md">
         <div class="container">
-          <h3 class="text-center information-title">We’re proud to exceed expectations<br class="hidden-lg hidden-md"> within a variety of markets, including:</h3>
+          <h3 class="text-center information-title"><?php echo $markets_section_text; ?></h3>
           <div class="row">
             <?php $capabilities = new WP_Query( array( 'post_type' => 'lsi_capabilities' ) );
                   $count = 0;
@@ -43,11 +50,9 @@ get_header('grey');
   			<div class="container">
   				<div class="row">
   					<div class="col-xs-12 col-md-10 col-md-offset-1">
-  						<blockquote class="text-center">
-  							We put the power in your hands through robust yet intuitive software - allowing you to control your facility on any computer with internet access. The freedom for seamless system integration can be yours, with open communication protocols enabling integration of third-party elements like security, fire, lighting, and other key mechanical systems.
-  						</blockquote>
+  						<blockquote class="text-center"><?php echo $products_blurb; ?></blockquote>
               <br>
-              <p class="text-center">LSi is a licensed security provider in the state of Texas (TXB15530). As a Lenel Value Authorized Reseller (VAR), we offer design, installation, and service for OnGuard Access Control. </p>
+              <p class="text-center"><?php echo $products_company_description; ?></p>
   					</div>
   				</div>
   			</div>
@@ -94,9 +99,7 @@ get_header('grey');
   			<div class="container">
   				<div class="row">
   					<div class="col-xs-12 col-md-8 col-md-offset-2">
-  						<blockquote class="text-center">
-  							Our dedicated LSi service team has a proven track record, with unmatched experience encompassing energy-related controls and instrumentation projects.
-  						</blockquote>
+  						<blockquote class="text-center"><?php echo get_field('service_blurb');?></blockquote>
   					</div>
   				</div>
   			</div>
@@ -106,11 +109,7 @@ get_header('grey');
         <div class="container">
           <h3 class="section-title">Services</h3>
           <div class="row">
-            <div class="col-xs-12 col-md-5">
-              <p>To ensure that your facility is properly supported, LSi offers structured technical support programs that include all preventative and scheduled system performance calibrations and future upgrades. </p>
-              <br>
-              <p>We offer four comprehensive programs tailored to suit your needs, beginning with the simple annual Preventative Support Program, or the all-inclusive Premium All-Inclusive Support Program. </p>
-            </div>
+            <div class="col-xs-12 col-md-5"><?php echo $services_text; ?></div>
             <div class="col-xs-12 col-md-7">
               <h3 class="text-bold text-brand-mid-blue mt0 mb3">Each program offers scaled and discounted rates for:</h3>
               <div class="row">
@@ -136,9 +135,7 @@ get_header('grey');
   			<div class="container">
   				<div class="row">
   					<div class="col-xs-12 col-md-10 col-md-offset-1">
-  						<blockquote class="text-center">
-  							LSi offers choices for educational opportunities to ensure our clients are well-educated at the appropriate level for their usage. Both predetermined and custom programs are available, in our facility or yours.
-  						</blockquote>
+  						<blockquote class="text-center"><?php echo $training_blurb; ?></blockquote>
   					</div>
   				</div>
   			</div>
@@ -225,6 +222,8 @@ get_header('grey');
 				  </div>
 				</div>
 			</div>
+
+      <?php endwhile; ?>
 
     </main><!-- #main -->
   </div><!-- #primary -->
