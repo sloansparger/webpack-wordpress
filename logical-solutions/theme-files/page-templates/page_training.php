@@ -9,18 +9,18 @@ get_header('grey');
 		<main id="main" class="site-main" role="main">
 
 			<?php
-			while ( have_posts() ) {
+			while ( have_posts() ) :
 				the_post();
-			}
-			?>
+
+        $body_text = get_field('body_text');
+      ?>
 
 			<section class="section-md training--top-section">
 				<div class="container">
 					<h3 class="section-title">Training</h3>
 				  <div class="row">
 				    <div class="col-md-7">
-				      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ullamcorper, felis nec pellentesque vehicula, turpis nibh placerat eros, eu pharetra tortor ligula consectetur velit. Fusce dignissim lobortis mollis. Aenean imperdiet volutpat accumsan. Sed sem turpis, imperdiet a aliquam sed, posuere vel nisl. Suspendisse nec magna non elit elementum bibendum nec quis metus. Aliquam elementum ex in justo tincidunt tincidunt. Cras rutrum nulla et risus laoreet euismod. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Cras tincidunt et leo vel viverra.</p>
-              <p>Fusce id tortor nec sem pulvinar placerat sit amet non ante. Maecenas scelerisque lacus sit amet aliquam congue. Donec fermentum, odio ut scelerisque mollis, nisi tortor vehicula leo, sed placerat quam justo non nibh. Donec feugiat mi vel ex luctus vehicula. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Integer sagittis ut neque eu blandit. Vivamus a imperdiet mauris, quis luctus eros. Suspendisse pharetra mi quis eleifend euismod. Donec est est, ultricies et mollis id, pretium nec dui.</p>
+              <p><?php echo $body_text; ?></p>
 							<div class="training--divider"></div>
 				    </div>
 				    <div class="col-md-3 col-md-offset-2">
@@ -64,6 +64,8 @@ get_header('grey');
           <?php echo do_shortcode( '[contact-form-7 id="141" title="Training Form"]' ); ?>
         </div>
       </section>
+
+			<?php endwhile; ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
