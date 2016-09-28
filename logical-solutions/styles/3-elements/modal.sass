@@ -15,6 +15,9 @@
   padding-bottom: 5rem
   @extend .repeatable-building-bg
 
+  @media screen and (max-width: 767px)
+    padding-top: 5rem
+
   &__open
     display: block
     opacity: 1
@@ -27,6 +30,12 @@
     width: 6rem
     background: url('/wp-content/themes/logical-solutions/images/modal-exit.svg') center no-repeat
     background-size: contain
+
+    @media screen and (max-width: 767px)
+      width: 4rem
+      height: 4rem
+      top: -4rem
+      right: 1rem
 
   &--content-height-set
     height: 100%
@@ -60,8 +69,6 @@
       width: 1px
       background-color: $light-grey
       box-shadow: inset 1px 0 0 white, inset -1px 0 0 white
-
-
 
 
 .modal-is-open

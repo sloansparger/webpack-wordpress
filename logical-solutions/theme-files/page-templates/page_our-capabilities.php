@@ -99,7 +99,7 @@ get_header('grey');
   			<div class="container">
   				<div class="row">
   					<div class="col-xs-12 col-md-8 col-md-offset-2">
-  						<blockquote class="text-center"><?php echo get_field('service_blurb');?></blockquote>
+  						<blockquote class="text-center"><?php echo $service_blurb; ?></blockquote>
   					</div>
   				</div>
   			</div>
@@ -109,7 +109,7 @@ get_header('grey');
         <div class="container">
           <h3 class="section-title">Services</h3>
           <div class="row">
-            <div class="col-xs-12 col-md-5"><?php echo $services_text; ?></div>
+            <div class="col-xs-12 col-md-5"><p><?php echo $services_text; ?></p></div>
             <div class="col-xs-12 col-md-7">
               <h3 class="text-bold text-brand-mid-blue mt0 mb3">Each program offers scaled and discounted rates for:</h3>
               <div class="row">
@@ -193,10 +193,11 @@ get_header('grey');
 				<div class="container">
 				  <div class="row">
 				    <div class="col-md-5">
-				      <p class="text-bold">{{currentDescription}}</p>
+				      <p class="text-bold capabilities--description-section">{{currentDescription}}</p>
 				    </div>
 				    <div class="col-md-5 col-md-offset-1">
 				      <div class="capabilities--include-section">
+                <br>
 				        <p class="text-bold mb2">Installations Include:</p>
 				        <ul class="capabilities--includes">
 				          <li v-for="includes in currentIncludes" track-by="$index" class="capabilities--include">

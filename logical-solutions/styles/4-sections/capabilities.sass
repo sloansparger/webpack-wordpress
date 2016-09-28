@@ -81,11 +81,18 @@
       transition: all .33s $ease-out-back
       // change all to height and width when transition has been decided on
 
+  &--description-section
+    @media screen and (max-width: 767px)
+      text-align: center
+
   &--include-section
     height: 200vh
     max-height: 43rem
     padding-bottom: 3rem
     position: relative
+
+    @media screen and (max-width: 767px)
+      text-align: center
 
   &--includes
     list-style-type: none
@@ -96,6 +103,11 @@
   &--modal-nav
     position: absolute
     bottom: 0
+
+    @media screen and (max-width: 767px)
+      position: static
+      margin-top: 4rem
+      text-align: center
 
   &--modal-button
     background: none
