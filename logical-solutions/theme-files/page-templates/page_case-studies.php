@@ -74,7 +74,7 @@ get_header();
 				</section>
 
 				<section class="image-section">
-					<div class="image-section--image">
+					<div class="image-section--image image-section--image__right">
             <img src="<?php echo wp_get_attachment_image_src($case_study_3_image, 'full')[0]; ?>">
           </div>
 					<div class="container">
