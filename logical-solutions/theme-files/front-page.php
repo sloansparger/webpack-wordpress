@@ -222,7 +222,7 @@ get_header(); ?>
 
 <section class="image-section bg-cool-light-grey">
   <div class="image-section--image image-section--image__wide image-section--image__right">
-    <div class="featured-products--image" style="background-image: url('/wp-content/uploads/2016/09/CaseStudy_ChaseTower.jpg')" v-show="caseSlideNumber === 1">
+    <div class="featured-products--image" style="background-image: url('/wp-content/uploads/2016/09/CaseStudies_Homepage_ChaseTower.jpg')" v-show="caseSlideNumber === 1">
       <p class="featured-products--image-text">Doloremque laudantium, totam rem aperiam, eaqu e ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
     </div>
     <div class="featured-products--image" style="background-image: url('/wp-content/uploads/2016/09/CaseStudy_GarlandISD.jpg')" v-show="caseSlideNumber === 2">
