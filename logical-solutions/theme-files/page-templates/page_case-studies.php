@@ -25,10 +25,6 @@ get_header();
         $case_study_3_text = get_field('case_study_3_text');
         $case_study_3_image = get_field('case_study_3_image');
         $case_study_3_pdf = get_field('case_study_3_pdf');
-        $case_study_4_name = get_field('case_study_4_name');
-        $case_study_4_text = get_field('case_study_4_text');
-        $case_study_4_image = get_field('case_study_4_image');
-        $case_study_4_pdf = get_field('case_study_4_pdf');
       ?>
 
 			<section class="blurb-section bg-cool-light-grey">
@@ -82,29 +78,12 @@ get_header();
             <img src="<?php echo wp_get_attachment_image_src($case_study_3_image, 'full')[0]; ?>">
           </div>
 					<div class="container">
-            <h3 class="section-title image-section--title"><?php echo $case_study_3_name; ?></h3>
 						<div class="row">
-							<div class="col-md-6">
+							<div class="col-md-6 col-md-offset-6">
+                <h3 class="section-title image-section--title"><?php echo $case_study_3_name; ?></h3>
 								<p class=""><?php echo $case_study_3_text; ?></p>
 								<div class="studies--btn-container">
 									<a href="<?php echo $case_study_3_pdf; ?>" class="studies--btn btn btn__blue" download>View Full Case Study PDF</a>
-								</div>
-							</div>
-						</div>
-					</div>
-				</section>
-
-				<section class="image-section">
-					<div class="image-section--image">
-            <img src="<?php echo wp_get_attachment_image_src($case_study_4_image, 'full')[0]; ?>">
-          </div>
-					<div class="container">
-						<div class="row">
-							<div class="col-md-6 col-md-offset-6">
-                <h3 class="section-title image-section--title"><?php echo $case_study_4_name; ?></h3>
-								<p class=""><?php echo $case_study_4_text; ?></p>
-								<div class="studies--btn-container">
-									<a href="<?php echo $case_study_4_pdf; ?>" class="studies--btn btn btn__blue" download>View Full Case Study PDF</a>
 								</div>
 							</div>
 						</div>
