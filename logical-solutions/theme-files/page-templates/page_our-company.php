@@ -33,13 +33,13 @@ get_header();
 					<div class="awards--stray-line"></div>
 					<div class="awards">
 						<div class="award">
-							<img class="award--image" src="http://fillmurray.com/g/300/150" alt="">
+							<img class="award--image" src="<?php echo wp_get_attachment_image_src(get_field('award_1'), 'full')[0]; ?>" alt="">
 							<p class="text-center">
 								Automated Logic Awarded 2009<br>Product of the Year by Consulting<br>Specifying Engineer
 							</p>
 						</div>
 						<div class="award">
-							<img class="award--image" src="http://fillmurray.com/g/300/150" alt="">
+							<img class="award--image" src="<?php echo wp_get_attachment_image_src(get_field('award_2'), 'full')[0]; ?>" alt="">
 							<p class="text-center">
 								WebCTRL Receives BTL Advanced<br>Workstation Software<br>Certification
 							</p>
