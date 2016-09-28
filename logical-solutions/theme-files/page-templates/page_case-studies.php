@@ -78,12 +78,12 @@ get_header();
             <img src="<?php echo wp_get_attachment_image_src($case_study_3_image, 'full')[0]; ?>">
           </div>
 					<div class="container">
+						<h3 class="section-title image-section--title"><?php echo $case_study_3_name; ?></h3>
 						<div class="row">
 							<div class="col-md-6">
-                <h3 class="section-title image-section--title"><?php echo $case_study_3_name; ?></h3>
 								<p class=""><?php echo $case_study_3_text; ?></p>
 								<div class="studies--btn-container">
-									<a href="<?php echo $case_study_3_pdf; ?>" class="studies--btn btn btn__blue" download>View Full Case Study PDF</a>
+									<a href="<?php echo $case_study_3_pdf; ?>" class="studies--btn btn btn__blue">View Full Case Study PDF</a>
 								</div>
 							</div>
 						</div>
