@@ -41,7 +41,7 @@ get_header();
 			<div class="studies">
 				<section class="image-section">
 					<div class="image-section--image image-section--image__right">
-            <div class="image-section--image-bg" style="background-image: url(<?php echo wp_get_attachment_image_src($case_study_1_image, 'full')[0]; ?>)">
+            <div class="image-section--image-bg" style="background-image: url(<?php echo wp_get_attachment_image_src($case_study_1_image, 'full')[0]; ?>)"></div>
           </div>
 					<div class="container">
 						<h3 class="section-title image-section--title"><?php echo $case_study_1_name; ?></h3>
@@ -58,7 +58,7 @@ get_header();
 
 				<section class="image-section">
 					<div class="image-section--image">
-            <div class="image-section--image-bg" style="background-image: url(<?php echo wp_get_attachment_image_src($case_study_2_image, 'full')[0]; ?>)">
+            <div class="image-section--image-bg" style="background-image: url(<?php echo wp_get_attachment_image_src($case_study_2_image, 'full')[0]; ?>)"></div>
           </div>
 					<div class="container">
 						<div class="row">
@@ -75,7 +75,7 @@ get_header();
 
 				<section class="image-section">
 					<div class="image-section--image image-section--image__right">
-            <div class="image-section--image-bg" style="background-image: url(<?php echo wp_get_attachment_image_src($case_study_3_image, 'full')[0]; ?>)">
+            <div class="image-section--image-bg" style="background-image: url(<?php echo wp_get_attachment_image_src($case_study_3_image, 'full')[0]; ?>)"></div>
           </div>
 					<div class="container">
 						<h3 class="section-title image-section--title"><?php echo $case_study_3_name; ?></h3>
