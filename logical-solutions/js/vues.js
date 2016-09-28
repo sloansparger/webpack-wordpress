@@ -3,6 +3,36 @@ import timeago from 'timeago.js'
 
 Vue.filter('timeago', t => timeago().format(new Date(t)))
 
+Vue.filter('epochToShortDate', function(timestamp) {
+  var trainingDate = new Date(timestamp)
+  var weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+  var day = weekday[trainingDate.getDay()]
+  var date = trainingDate.getDate()
+  var month = trainingDate.getMonth() + 1
+  var year = trainingDate.getFullYear()
+  return `${day}, ${month}.${date}.${year}`
+})
+
+Vue.filter('epochToFullDate', function(timestamp) {
+  var trainingDate = new Date(timestamp)
+  var weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"]
+  var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+  var day = weekday[trainingDate.getDay()]
+  var date = trainingDate.getDate()
+  var month = months[trainingDate.getMonth()]
+  var year = trainingDate.getFullYear()
+  return `${day}, ${month} ${date}, ${year}`
+})
+
+Vue.filter('epochToMMMMDDYYYY', function(timestamp) {
+  var trainingDate = new Date(timestamp)
+  var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+  var date = trainingDate.getDate()
+  var month = months[trainingDate.getMonth()]
+  var year = trainingDate.getFullYear()
+  return `${month} ${date}, ${year}`
+})
+
 var inView
 
 document.addEventListener('DOMContentLoaded', function() {

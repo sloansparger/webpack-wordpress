@@ -23,7 +23,7 @@ get_header('grey');
           'orderby'         => 'meta_value_num',
           'order'           => 'ASC',
         ));
-        
+
       ?>
 
 			<section class="section-md training--top-section">
@@ -39,13 +39,8 @@ get_header('grey');
               <h1 class="uppercase text-thin mt0">Schedule</h1>
 
               <?php
-                // show three most recent session dates
-                $count = 0;
-                if ( $sessions->have_posts() ) : while ( $sessions->have_posts() && $count < 3 ) : $sessions->the_post();
-                  echo '<p>session_date ' . $count . ': ';
-                  the_field('session_date');
-                  echo '</p><br>';
-                  $count++;
+                if ( $sessions->have_posts() ) : while ( $sessions->have_posts() ) : $sessions->the_post();
+                  echo '<p v-text="' . get_field('session_date') . ' | epochToShortDate"></p><br>';
                 endwhile; endif;
                 wp_reset_query();
               ?>
@@ -69,7 +64,7 @@ get_header('grey');
               endif;
             ?>
 
-					<h1 class="uppercase text-thin track-out mt0 mb5"><?php echo $session_date; ?></h1>
+					<h1 class="uppercase text-thin track-out mt0 mb5" v-text="<?php echo $session_date; ?> | epochToFullDate"></h1>
           <div class="row">
             <div class="col-md-4">
               <p class="text-bold mb0 uppercase">Session Time</p>
@@ -87,7 +82,7 @@ get_header('grey');
 						</div>
 						<div class="col-md-4">
               <p class="text-bold mb0 uppercase">Registration Deadline</p>
-              <p><?php echo $registration_deadline; ?></p>
+              <p v-text="<?php echo $registration_deadline; ?> | epochToMMMMDDYYYY"></p>
             </div>
           </div>
         </div>
