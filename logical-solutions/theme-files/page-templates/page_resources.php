@@ -7,12 +7,20 @@ get_header('grey');
 <div id="app">
   <div id="capabilities" class="content-area">
     <main id="main" class="site-main" role="main">
+
+			<?php
+			while ( have_posts() ) :
+				the_post();
+
+        $body_text = get_field('body_text');
+      ?>
+
       <section class="section-md section__lead">
 				<div class="container">
 					<h3 class="section-title">Resources</h3>
 					<div class="row">
 					  <div class="col-md-8">
-					    <p>Nam sit amet ante ac nisi euismod faucibus et nec libero. Curabitur eu consectetur ex, a gravida metus. Nullam nibh tellus, iaculis vel mattis lobortis, elementum vel nulla. Nullam viverra viverra ultrices. Phasellus consectetur sem nisl, a consequat sapien fringilla eget. Fusce vulputate et turpis sed fringilla. Phasellus in interdum quam.</p>
+					    <p><?php echo $body_text; ?></p>
 					  </div>
 					</div>
 				</div>
@@ -38,6 +46,9 @@ get_header('grey');
           </div>
 				</div>
 			</section>
+
+      <?php endwhile; ?>
+
     </main><!-- #main -->
   </div><!-- #primary -->
 </div>
