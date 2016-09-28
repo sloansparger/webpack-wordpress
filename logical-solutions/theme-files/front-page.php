@@ -50,16 +50,16 @@ get_header(); ?>
 
 <section class="four-step--container">
   <div class="image-section--image image-section--image__small">
-    <div class="featured-products--image" style="background: pink" v-show="stepsSlideNumber === 1">
+    <div class="featured-products--image" style="background-image: url('/wp-content/uploads/2016/09/StepOne_Photo.jpg')" v-show="stepsSlideNumber === 1">
       <h3 class="four-step--step-num">Step One</h3>
     </div>
-    <div class="featured-products--image" style="background: honeydew" v-show="stepsSlideNumber === 2">
+    <div class="featured-products--image" style="background-image: url('/wp-content/uploads/2016/09/StepTwo_Photo.jpg')" v-show="stepsSlideNumber === 2">
       <h3 class="four-step--step-num">Step Two</h3>
     </div>
-    <div class="featured-products--image" style="background: tomato" v-show="stepsSlideNumber === 3">
+    <div class="featured-products--image" style="background-image: url('/wp-content/uploads/2016/09/StepThree_Photo.jpg')" v-show="stepsSlideNumber === 3">
       <h3 class="four-step--step-num">Step Three</h3>
     </div>
-    <div class="featured-products--image" style="background: lawngreen" v-show="stepsSlideNumber === 4">
+    <div class="featured-products--image" style="background-image: url('/wp-content/uploads/2016/09/StepFour_Photo.jpg')" v-show="stepsSlideNumber === 4">
       <h3 class="four-step--step-num">Step Four</h3>
     </div>
   </div>
@@ -119,7 +119,7 @@ get_header(); ?>
           </div>
           <div class="four-step--slide" v-show="stepsSlideNumber === 4">
             <h2 class="uppercase track-out">Certification and Approval</h2>
-            <p>When Energy Star Rating is achieved, LSi can assist in certification and processing of approved paperwork. </p>
+            <p>When Energy Star Rating is achieved, LSi can assist in certification and processing of approved paperwork.</p>
           </div>
           <a href="/case-studies" class="four-step--slides-btn btn btn__blue">View Projects</a>
         </div>
@@ -131,13 +131,13 @@ get_header(); ?>
 
 <section class="image-section bg-cool-light-grey">
   <div class="image-section--image image-section--image__wide image-section--image__right">
-    <div class="featured-products--image" style="background: pink" v-show="productSlideNumber === 1">
+    <div class="featured-products--image" style="background-image: url('/wp-content/uploads/2016/09/WebCTRL-System.jpg')" v-show="productSlideNumber === 1">
       <p class="featured-products--image-text">Doloremque laudantium, totam rem aperiam, eaqu e ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
     </div>
-    <div class="featured-products--image" style="background: honeydew" v-show="productSlideNumber === 2">
+    <div class="featured-products--image" style="background-image: url('/wp-content/uploads/2016/09/Eco-Screen-Kiosk.jpg')" v-show="productSlideNumber === 2">
       <p class="featured-products--image-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad veniam accusamus non ducimus, pariatur fugit harum quod.</p>
     </div>
-    <div class="featured-products--image" style="background: tomato" v-show="productSlideNumber === 3">
+    <div class="featured-products--image" style="background-image: url('/wp-content/uploads/2016/09/Environment-Index-Tools.jpg')" v-show="productSlideNumber === 3">
       <p class="featured-products--image-text">Nisi odit inventore id dolores possimus sint tempore dignissimos, saepe quas eveniet. Veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
     </div>
   </div>
@@ -222,14 +222,11 @@ get_header(); ?>
 
 <section class="image-section bg-cool-light-grey">
   <div class="image-section--image image-section--image__wide image-section--image__right">
-    <div class="featured-products--image" style="background: pink" v-show="caseSlideNumber === 1">
+    <div class="featured-products--image" style="background-image: url('/wp-content/uploads/2016/09/CaseStudy_ChaseTower.jpg')" v-show="caseSlideNumber === 1">
       <p class="featured-products--image-text">Doloremque laudantium, totam rem aperiam, eaqu e ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
     </div>
-    <div class="featured-products--image" style="background: honeydew" v-show="caseSlideNumber === 2">
+    <div class="featured-products--image" style="background-image: url('/wp-content/uploads/2016/09/CaseStudy_GarlandISD.jpg')" v-show="caseSlideNumber === 2">
       <p class="featured-products--image-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad veniam accusamus non ducimus, pariatur fugit harum quod.</p>
-    </div>
-    <div class="featured-products--image" style="background: tomato" v-show="caseSlideNumber === 3">
-      <p class="featured-products--image-text">Nisi odit inventore id dolores possimus sint tempore dignissimos, saepe quas eveniet. Veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
     </div>
   </div>
   <div class="container">
@@ -239,15 +236,11 @@ get_header(); ?>
         <div class="capabilities--options">
           <div class="capabilities--option" v-on:click="showSlide('case', 1)" v-bind:class="{ 'active': caseSlideNumber === 1 }">
             <div class="featured-products--option-dot featured-products--option-dot__cool-grey"></div>
-            <h4 class="capabilities--option-text uppercase">Case #1</h4>
+            <h4 class="capabilities--option-text uppercase">Chase Tower Building</h4>
           </div>
           <div class="capabilities--option" v-on:click="showSlide('case', 2)" v-bind:class="{ 'active': caseSlideNumber === 2 }">
             <div class="featured-products--option-dot featured-products--option-dot__cool-grey"></div>
-            <h4 class="capabilities--option-text uppercase">Case #2</h4>
-          </div>
-          <div class="capabilities--option" v-on:click="showSlide('case', 3)" v-bind:class="{ 'active': caseSlideNumber === 3 }">
-            <div class="featured-products--option-dot featured-products--option-dot__cool-grey"></div>
-            <h4 class="capabilities--option-text uppercase">Case #3</h4>
+            <h4 class="capabilities--option-text uppercase">Garland ISD</h4>
           </div>
         </div>
         <a href="#" class="case-studies--btn btn btn__blue">See All Case Studies</a>
