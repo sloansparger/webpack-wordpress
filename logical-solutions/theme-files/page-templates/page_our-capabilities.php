@@ -109,7 +109,9 @@ get_header('grey');
         <div class="container">
           <h3 class="section-title">Services</h3>
           <div class="row">
-            <div class="col-xs-12 col-md-5"><?php echo $services_text; ?></div>
+            <div class="col-xs-12 col-md-5">
+              <p><?php echo $services_text; ?></p>
+            </div>
             <div class="col-xs-12 col-md-7">
               <h3 class="text-bold text-brand-mid-blue mt0 mb3">Each program offers scaled and discounted rates for:</h3>
               <div class="row">
