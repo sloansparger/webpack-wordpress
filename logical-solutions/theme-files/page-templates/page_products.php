@@ -23,7 +23,7 @@ get_header();
 						<?php if ( $softwarePosts->have_posts() ) : while ( $softwarePosts->have_posts() ) : $softwarePosts->the_post(); ?>
 
 						<div class="product">
-							<div class="product--image"  style="background-image: url(<?php echo wp_get_attachment_image_src(get_field('image'), 'medium')[0]; ?>)">
+							<div class="product--image" style="background-image: url(<?php echo wp_get_attachment_image_src(get_field('image'), 'medium')[0]; ?>)">
 								<div class="product--overlay"></div>
 								<h3 class="product--name text-white"><?php echo the_title() ?></h3>
 								<button class="product--learn-more btn btn__white" @click="openModal('<?php echo the_title() ?>', '<?php echo wp_get_attachment_image_src(get_field('image'), 'full')[0]; ?>', '<?php the_field('description'); ?>')">
