@@ -3,7 +3,39 @@ import timeago from 'timeago.js'
 
 Vue.filter('timeago', t => timeago().format(new Date(t)))
 
-var app = require('./vues/index')
+var inView
+
+document.addEventListener('DOMContentLoaded', function() {
+  inView = require('in-view')
+})
+
+var app = {
+  el: '#app',
+  data: {
+    mobileNavOpen: false,
+    slideNavActive: false
+  },
+  ready: function() {
+    inView('.page-hero')
+      .on('enter', () => this.deactivateSlideNav())
+      .on('exit', () => this.activateSlideNav())
+  },
+  methods: {
+    openMobileNav: function() {
+      this.mobileNavOpen = true
+    },
+    closeMobileNav: function() {
+      this.mobileNavOpen = false
+    },
+    activateSlideNav: function() {
+      this.slideNavActive = true
+    },
+    deactivateSlideNav: function() {
+      this.slideNavActive = false
+    }
+  }
+}
+
 
 document.addEventListener('DOMContentLoaded', function() {
   if(document.getElementById('home')) {
@@ -24,7 +56,8 @@ document.addEventListener('DOMContentLoaded', function() {
 })
 
 function createVue(vueObj) {
-  new Vue(vueObj)
+  var vueApp = new Vue(vueObj)
+  console.log(vueApp);
 }
 
 function mergeAndCreateVues(vueToMerge) {

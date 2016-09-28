@@ -155,12 +155,13 @@
   transform: translate(0)
   transition: transform .3s $ease-out-quint
   overflow: scroll
+  z-index: 99999
 
   &__hidden
     transform: translateX(100%)
 
-  &__grey
-    transform: translateX(100%)
+  // &__grey
+  //   transform: translateX(100%)
 
   &--exit
     @include square(3.5rem)

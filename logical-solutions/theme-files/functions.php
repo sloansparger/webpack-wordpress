@@ -153,6 +153,7 @@ function new_post_types() {
         'rest_base'         => 'products-api',
         'rest_controller_class' => 'WP_REST_Posts_Controller',
         'supports'          => array('title', 'thumbnail'),
+				'taxonomies'        => array('category')
         )
       );
 

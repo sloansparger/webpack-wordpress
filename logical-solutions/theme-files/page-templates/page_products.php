@@ -11,100 +11,31 @@ get_header();
 			<?php while ( have_posts() ) { the_post(); get_template_part( '/template-parts/hero' ); } ?>
 
       <?php
-        $products = new WP_Query( array( 'post_type' => 'lsi_product' ) );
-        $allCategories = [];
-        $totalProducts = 0;
-        if ( $products->have_posts() ) : while ( $products->have_posts() ) : $products->the_post();
-          array_push($allCategories, get_the_terms(get_the_ID(), 'product-category')[0]->name);
-          $totalProducts++;
-          $categoryCount = array_count_values($allCategories);
-          $mainCategories = array_values(array_unique($allCategories));
-        endwhile; endif;
+        $hardwarePosts = new WP_Query( array( 'post_type' => 'lsi_product', 'cat' => 12, 'posts_per_page' => -1));
+        $softwarePosts = new WP_Query( array( 'post_type' => 'lsi_product', 'cat' => 11, 'posts_per_page' => -1));
       ?>
 
 			<section class="section-md" id="products">
 
-        <?php
-          for($i = 0; $i < 1; $i++) {
-            $currentCategory = $mainCategories[$i];
-        ?>
-
 				<div class="container">
-					<h3 class="section-title"><?php echo strtoupper($currentCategory); ?></h3>
+					<h3 class="section-title">Software</h3>
 					<div class="products">
-
-
-
-						<div class="product">
-              <div class="product--image"  style="background-image: url(http://fillmurray.com/500/580)">
-                <div class="product--overlay"></div>
-                <h3 class="product--name text-white">Product Murray</h3>
-                <button class="product--learn-more btn btn__white" @click="openModal('Title', 'http://fillmurray.com/500/580', 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel voluptate accusantium voluptates. Eligendi cupiditate sunt accusamus in ut, nostrum quis atque consequatur blanditiis, ratione dolor iure ad possimus nobis vel!')">
-                  Learn More
-                </button>
-              </div>
-              <div class="product--info-container">
-                <h5 class="product--info text-white">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi </h5>
-              </div>
-            </div>
-
-
-
+						<?php if ( $softwarePosts->have_posts() ) : while ( $softwarePosts->have_posts() ) : $softwarePosts->the_post(); ?>
 
 						<div class="product">
-              <div class="product--image"  style="background-image: url(http://fillmurray.com/250/290)">
+							<div class="product--image"  style="background-image: url(<?php echo wp_get_attachment_image_src(get_field('image'), 'medium')[0]; ?>)">
 								<div class="product--overlay"></div>
-                <h3 class="product--name text-white">Product Murray</h3>
-								<button class="product--learn-more btn btn__white" @click="openModal()">Learn More</button>
-              </div>
-              <div class="product--info-container">
-                <h5 class="product--info text-white">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi </h5>
-              </div>
-            </div>
+								<h3 class="product--name text-white"><?php echo the_title() ?></h3>
+								<button class="product--learn-more btn btn__white" @click="openModal('<?php echo the_title() ?>', '<?php echo wp_get_attachment_image_src(get_field('image'), 'full')[0]; ?>', '<?php the_field('description'); ?>')">
+									Learn More
+								</button>
+							</div>
+							<div class="product--info-container">
+								<h5 class="product--info text-white"><?php echo substr(get_field('description'), 0, 100); ?></h5>
+							</div>
+						</div>
 
-						<div class="product">
-              <div class="product--image"  style="background-image: url(http://fillmurray.com/250/290)">
-								<div class="product--overlay"></div>
-                <h3 class="product--name text-white">Product Murray</h3>
-								<button class="product--learn-more btn btn__white" @click="openModal()">Learn More</button>
-              </div>
-              <div class="product--info-container">
-                <h5 class="product--info text-white">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi </h5>
-              </div>
-            </div>
-
-						<div class="product">
-              <div class="product--image"  style="background-image: url(http://fillmurray.com/250/290)">
-								<div class="product--overlay"></div>
-                <h3 class="product--name text-white">Product Murray</h3>
-								<button class="product--learn-more btn btn__white" @click="openModal()">Learn More</button>
-              </div>
-              <div class="product--info-container">
-                <h5 class="product--info text-white">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi </h5>
-              </div>
-            </div>
-
-						<div class="product">
-              <div class="product--image"  style="background-image: url(http://fillmurray.com/250/290)">
-								<div class="product--overlay"></div>
-                <h3 class="product--name text-white">Product Murray</h3>
-								<button class="product--learn-more btn btn__white" @click="openModal()">Learn More</button>
-              </div>
-              <div class="product--info-container">
-                <h5 class="product--info text-white">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi </h5>
-              </div>
-            </div>
-
-						<div class="product">
-              <div class="product--image"  style="background-image: url(http://fillmurray.com/250/290)">
-								<div class="product--overlay"></div>
-                <h3 class="product--name text-white">Product Murray</h3>
-								<button class="product--learn-more btn btn__white" @click="openModal()">Learn More</button>
-              </div>
-              <div class="product--info-container">
-                <h5 class="product--info text-white">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi </h5>
-              </div>
-            </div>
+						<?php	endwhile; endif; ?>
 
             <div class="products--contact-btn-container">
               <a class="btn btn__blue products--contact-btn uppercase" href="/contact/">Contact Us</a>
@@ -117,159 +48,22 @@ get_header();
 					<h3 class="section-title">Hardware</h3>
 					<div class="products">
 
-						<div class="product">
-              <div class="product--image"  style="background-image: url(http://fillmurray.com/250/290)">
-								<div class="product--overlay"></div>
-                <h3 class="product--name text-white">Product Murray</h3>
-								<button class="product--learn-more btn btn__white" @click="openModal()">Learn More</button>
-              </div>
-              <div class="product--info-container">
-                <h5 class="product--info text-white">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi </h5>
-              </div>
-            </div>
+						<?php if ( $hardwarePosts->have_posts() ) : while ( $hardwarePosts->have_posts() ) : $hardwarePosts->the_post(); ?>
 
-						<div class="product">
-              <div class="product--image"  style="background-image: url(http://fillmurray.com/250/290)">
-								<div class="product--overlay"></div>
-                <h3 class="product--name text-white">Product Murray</h3>
-								<button class="product--learn-more btn btn__white" @click="openModal()">Learn More</button>
-              </div>
-              <div class="product--info-container">
-                <h5 class="product--info text-white">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi </h5>
-              </div>
-            </div>
+							<div class="product">
+								<div class="product--image"  style="background-image: url(<?php echo wp_get_attachment_image_src(get_field('image'), 'medium')[0]; ?>)">
+									<div class="product--overlay"></div>
+									<h3 class="product--name text-white"><?php echo the_title() ?></h3>
+									<button class="product--learn-more btn btn__white" @click="openModal('<?php echo the_title() ?>', '<?php echo wp_get_attachment_image_src(get_field('image'), 'full')[0]; ?>', '<?php the_field('description'); ?>')">
+										Learn More
+									</button>
+								</div>
+								<div class="product--info-container">
+									<h5 class="product--info text-white"><?php echo substr(get_field('description'), 0, 100); ?></h5>
+								</div>
+							</div>
 
-						<div class="product">
-              <div class="product--image"  style="background-image: url(http://fillmurray.com/250/290)">
-								<div class="product--overlay"></div>
-                <h3 class="product--name text-white">Product Murray</h3>
-								<button class="product--learn-more btn btn__white" @click="openModal()">Learn More</button>
-              </div>
-              <div class="product--info-container">
-                <h5 class="product--info text-white">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi </h5>
-              </div>
-            </div>
-
-						<div class="product">
-              <div class="product--image"  style="background-image: url(http://fillmurray.com/250/290)">
-								<div class="product--overlay"></div>
-                <h3 class="product--name text-white">Product Murray</h3>
-								<button class="product--learn-more btn btn__white" @click="openModal()">Learn More</button>
-              </div>
-              <div class="product--info-container">
-                <h5 class="product--info text-white">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi </h5>
-              </div>
-            </div>
-
-						<div class="product">
-              <div class="product--image"  style="background-image: url(http://fillmurray.com/250/290)">
-								<div class="product--overlay"></div>
-                <h3 class="product--name text-white">Product Murray</h3>
-								<button class="product--learn-more btn btn__white" @click="openModal()">Learn More</button>
-              </div>
-              <div class="product--info-container">
-                <h5 class="product--info text-white">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi </h5>
-              </div>
-            </div>
-
-						<div class="product">
-              <div class="product--image"  style="background-image: url(http://fillmurray.com/250/290)">
-								<div class="product--overlay"></div>
-                <h3 class="product--name text-white">Product Murray</h3>
-								<button class="product--learn-more btn btn__white" @click="openModal()">Learn More</button>
-              </div>
-              <div class="product--info-container">
-                <h5 class="product--info text-white">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi </h5>
-              </div>
-            </div>
-
-						<div class="product">
-              <div class="product--image"  style="background-image: url(http://fillmurray.com/250/290)">
-								<div class="product--overlay"></div>
-                <h3 class="product--name text-white">Product Murray</h3>
-								<button class="product--learn-more btn btn__white" @click="openModal()">Learn More</button>
-              </div>
-              <div class="product--info-container">
-                <h5 class="product--info text-white">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi </h5>
-              </div>
-            </div>
-
-						<div class="product">
-              <div class="product--image"  style="background-image: url(http://fillmurray.com/250/290)">
-								<div class="product--overlay"></div>
-                <h3 class="product--name text-white">Product Murray</h3>
-								<button class="product--learn-more btn btn__white" @click="openModal()">Learn More</button>
-              </div>
-              <div class="product--info-container">
-                <h5 class="product--info text-white">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi </h5>
-              </div>
-            </div>
-
-						<div class="product">
-              <div class="product--image"  style="background-image: url(http://fillmurray.com/250/290)">
-								<div class="product--overlay"></div>
-                <h3 class="product--name text-white">Product Murray</h3>
-								<button class="product--learn-more btn btn__white" @click="openModal()">Learn More</button>
-              </div>
-              <div class="product--info-container">
-                <h5 class="product--info text-white">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi </h5>
-              </div>
-            </div>
-
-						<div class="product">
-              <div class="product--image"  style="background-image: url(http://fillmurray.com/250/290)">
-								<div class="product--overlay"></div>
-                <h3 class="product--name text-white">Product Murray</h3>
-								<button class="product--learn-more btn btn__white" @click="openModal()">Learn More</button>
-              </div>
-              <div class="product--info-container">
-                <h5 class="product--info text-white">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi </h5>
-              </div>
-            </div>
-
-						<div class="product">
-              <div class="product--image"  style="background-image: url(http://fillmurray.com/250/290)">
-								<div class="product--overlay"></div>
-                <h3 class="product--name text-white">Product Murray</h3>
-								<button class="product--learn-more btn btn__white" @click="openModal()">Learn More</button>
-              </div>
-              <div class="product--info-container">
-                <h5 class="product--info text-white">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi </h5>
-              </div>
-            </div>
-
-						<div class="product">
-              <div class="product--image"  style="background-image: url(http://fillmurray.com/250/290)">
-								<div class="product--overlay"></div>
-                <h3 class="product--name text-white">Product Murray</h3>
-								<button class="product--learn-more btn btn__white" @click="openModal()">Learn More</button>
-              </div>
-              <div class="product--info-container">
-                <h5 class="product--info text-white">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi </h5>
-              </div>
-            </div>
-
-						<div class="product">
-              <div class="product--image"  style="background-image: url(http://fillmurray.com/250/290)">
-								<div class="product--overlay"></div>
-                <h3 class="product--name text-white">Product Murray</h3>
-								<button class="product--learn-more btn btn__white" @click="openModal()">Learn More</button>
-              </div>
-              <div class="product--info-container">
-                <h5 class="product--info text-white">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi </h5>
-              </div>
-            </div>
-
-						<div class="product">
-              <div class="product--image"  style="background-image: url(http://fillmurray.com/250/290)">
-								<div class="product--overlay"></div>
-                <h3 class="product--name text-white">Product Murray</h3>
-								<button class="product--learn-more btn btn__white" @click="openModal()">Learn More</button>
-              </div>
-              <div class="product--info-container">
-                <h5 class="product--info text-white">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi </h5>
-              </div>
-            </div>
+						<?php	endwhile; endif; ?>
 
             <div class="products--contact-btn-container">
               <a class="btn btn__blue products--contact-btn uppercase" href="/contact/">Contact Us</a>
@@ -278,7 +72,6 @@ get_header();
 					</div>
 				</div>
 
-				<?php } ?>
 			</section>
 
 			<div class="modal" v-bind:class="{'modal__open': modalOpen}">
