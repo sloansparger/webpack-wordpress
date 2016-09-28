@@ -255,7 +255,7 @@ get_header(); ?>
     <h3 class="section-title section-title__right section-title__banner image-section--title">Awards</h3>
     <div class="home-awards">
       <div class="home-award">
-        <img class="home-award--image" src="<?php echo wp_get_attachment_image_src(get_field('award_1'), 'full')[0]; ?>" alt="">
+        <img class="home-award--image" src="/wp-content/uploads/2016/09/award-1.jpg" alt="">
         <div class="home-award--info">
           <p class="text-center">
             Automated Logic Awarded 2009<br>Product of the Year by Consulting<br>Specifying Engineer
@@ -263,7 +263,7 @@ get_header(); ?>
         </div>
       </div>
       <div class="home-award">
-        <img class="home-award--image" src="<?php echo wp_get_attachment_image_src(get_field('award_2'), 'full')[0]; ?>" alt="">
+        <img class="home-award--image" src="/wp-content/uploads/2016/09/award-2.jpg" alt="">
         <div class="home-award--info">
           <p class="text-center">
             WebCTRL Receives BTL Advanced<br>Workstation Software<br>Certification
