@@ -12,7 +12,7 @@ get_header();
 
 			<?php	get_template_part( '/template-parts/hero' ); ?>
 
-			<?php $jobs = new WP_Query( array( 'post_type' => 'lsi_job ' ) );
+			<?php $jobs = new WP_Query( array( 'post_type' => 'lsi_job' ) );
 						$allCategories = [];
 						$totalJobs = 0;
 						if ( $jobs->have_posts() ) : while ( $jobs->have_posts() ) : $jobs->the_post();

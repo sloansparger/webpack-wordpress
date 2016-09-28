@@ -12,7 +12,18 @@ get_header('grey');
 			while ( have_posts() ) :
 				the_post();
 
+        // get editable content
         $body_text = get_field('body_text');
+
+        // get training session posts and order by session_date (unix timestamp)
+        $sessions = new WP_Query(array(
+          'post_type'       => 'lsi_training_session',
+          'posts_per_page'  => -1,
+          'meta_key'        => 'session_date',
+          'orderby'         => 'meta_value_num',
+          'order'           => 'ASC',
+        ));
+        
       ?>
 
 			<section class="section-md training--top-section">
@@ -26,6 +37,19 @@ get_header('grey');
 				    <div class="col-md-3 col-md-offset-2">
               <a href="#register" class="btn btn__blue mb5">Register Now</a>
               <h1 class="uppercase text-thin mt0">Schedule</h1>
+
+              <?php
+                // show three most recent session dates
+                $count = 0;
+                if ( $sessions->have_posts() ) : while ( $sessions->have_posts() && $count < 3 ) : $sessions->the_post();
+                  echo '<p>session_date ' . $count . ': ';
+                  the_field('session_date');
+                  echo '</p><br>';
+                  $count++;
+                endwhile; endif;
+                wp_reset_query();
+              ?>
+
 				    </div>
 				  </div>
 				</div>
@@ -34,11 +58,22 @@ get_header('grey');
       <section>
         <div class="container">
           <h3 class="section-title image-section--title">Next Session</h3>
-					<h1 class="uppercase text-thin track-out mt0 mb5">Wednesday, August 10, 2016</h1>
+
+            <?php
+              // call the first post in the query (should be first and soonest session_date)
+              if ( $sessions->have_posts() ) : $sessions->the_post();
+                $session_date = get_field('session_date');
+                $start_time = get_field('start_time');
+                $end_time = get_field('end_time');
+                $registration_deadline = get_field('registration_deadline');
+              endif;
+            ?>
+
+					<h1 class="uppercase text-thin track-out mt0 mb5"><?php echo $session_date; ?></h1>
           <div class="row">
             <div class="col-md-4">
               <p class="text-bold mb0 uppercase">Session Time</p>
-              <p>10:00 AM - 2:00 PM</p>
+              <p><?php echo $start_time; ?> - <?php echo $end_time; ?></p>
 						</div>
 						<div class="col-md-4">
 							<p class="text-bold mb0 uppercase">Session Location</p>
@@ -52,7 +87,7 @@ get_header('grey');
 						</div>
 						<div class="col-md-4">
               <p class="text-bold mb0 uppercase">Registration Deadline</p>
-              <p>August 01, 2016</p>
+              <p><?php echo $registration_deadline; ?></p>
             </div>
           </div>
         </div>
@@ -61,7 +96,7 @@ get_header('grey');
       <section class="section-md bg-cool-light-grey" id="register">
         <div class="container">
           <h3 class="section-title">Register for Training</h3>
-          <?php echo do_shortcode( '[contact-form-7 id="141" title="Training Form"]' ); ?>
+          <?php echo do_shortcode( '[contact-form-7 id="115" title="Training Form"]' ); ?>
         </div>
       </section>
 
