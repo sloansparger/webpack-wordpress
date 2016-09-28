@@ -79,7 +79,7 @@ get_header();
           </div>
 					<div class="container">
 						<div class="row">
-							<div class="col-md-6 col-md-offset-6">
+							<div class="col-md-6">
                 <h3 class="section-title image-section--title"><?php echo $case_study_3_name; ?></h3>
 								<p class=""><?php echo $case_study_3_text; ?></p>
 								<div class="studies--btn-container">
