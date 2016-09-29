@@ -195,10 +195,11 @@ get_header('grey');
 				<div class="container">
 				  <div class="row">
 				    <div class="col-md-5">
-				      <p class="text-bold">{{currentDescription}}</p>
+				      <p class="text-bold capabilities--description-section">{{currentDescription}}</p>
 				    </div>
 				    <div class="col-md-5 col-md-offset-1">
 				      <div class="capabilities--include-section">
+                <br>
 				        <p class="text-bold mb2">Installations Include:</p>
 				        <ul class="capabilities--includes">
 				          <li v-for="includes in currentIncludes" track-by="$index" class="capabilities--include">
