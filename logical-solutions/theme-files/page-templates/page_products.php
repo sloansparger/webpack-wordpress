@@ -11,8 +11,8 @@ get_header();
 			<?php while ( have_posts() ) { the_post(); get_template_part( '/template-parts/hero' ); } ?>
 
       <?php
-        $hardwarePosts = new WP_Query( array( 'post_type' => 'lsi_product', 'cat' => 8, 'posts_per_page' => -1));
-        $softwarePosts = new WP_Query( array( 'post_type' => 'lsi_product', 'cat' => 9, 'posts_per_page' => -1));
+        $hardwarePosts = new WP_Query( array( 'post_type' => 'lsi_product', 'cat' => 11, 'posts_per_page' => -1));
+        $softwarePosts = new WP_Query( array( 'post_type' => 'lsi_product', 'cat' => 12, 'posts_per_page' => -1));
       ?>
 
 			<section class="section-md" id="products">

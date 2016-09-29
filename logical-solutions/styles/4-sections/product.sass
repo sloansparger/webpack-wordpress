@@ -119,23 +119,24 @@
       width: 100%
 
 
-.product:hover
-  .product
-    &--name
-      bottom: 15rem
+@media screen and (min-width: 509px)
+  .product:hover
+    .product
+      &--name
+        bottom: 15rem
 
-    &--overlay
-      height: 100%
+      &--overlay
+        height: 100%
 
-    &--info-container
-      background: $brand-blue
+      &--info-container
+        background: $brand-blue
 
-    &--info
-      color: white
+      &--info
+        color: white
 
-    &--learn-more
-      opacity: 1
-      bottom: 5.5rem
+      &--learn-more
+        opacity: 1
+        bottom: 5.5rem
 
 
 @media screen and (min-width: 1200px)
@@ -227,6 +228,15 @@
       top: 50%
       left: 50%
       transform: translate(calc(-50%), -50%)
+
+@media screen and (max-width: 508px)
+  .product
+    &--image
+      height: 8rem
+      background: none !important
+
+    &--overlay
+      height: 100%
 
 @media screen and (max-width: 414px)
   $product_margin: 0 0 3rem 0
