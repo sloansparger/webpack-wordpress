@@ -39,8 +39,11 @@ get_header('grey');
               <h1 class="uppercase text-thin mt0">Schedule</h1>
 
               <?php
+								$sessionArray = [];
                 if ( $sessions->have_posts() ) : while ( $sessions->have_posts() ) : $sessions->the_post();
-                  echo '<p v-text="' . get_field('session_date') . ' | epochToShortDate"></p><br>';
+									$sessionDate = get_field('session_date');
+									array_push($sessionArray, $sessionDate);
+                  echo '<p v-text="' . $sessionDate . ' | epochToShortDate"></p>';
                 endwhile; endif;
                 wp_reset_query();
               ?>
@@ -88,7 +91,7 @@ get_header('grey');
         </div>
       </section>
 
-      <section class="section-md bg-cool-light-grey" id="register">
+      <section class="section-md bg-cool-light-grey" id="training">
         <div class="container">
           <h3 class="section-title">Register for Training</h3>
           <?php echo do_shortcode( '[contact-form-7 id="115" title="Training Form"]' ); ?>
@@ -96,6 +99,21 @@ get_header('grey');
       </section>
 
 			<?php endwhile; ?>
+
+			<script type="text/javascript">
+				<?php
+					$sessionCount = count($sessionArray);
+					$sessionString = '';
+					for ($i = 0; $i < $sessionCount; $i++) {
+						if ($i === $sessionCount - 1) {
+						  $sessionString = $sessionString . $sessionArray[$i];
+						} else {
+							$sessionString = $sessionString . $sessionArray[$i] . ', ';
+						}
+					}
+				?>
+				window.registrationDates = [<?php echo $sessionString; ?>]
+			</script>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
