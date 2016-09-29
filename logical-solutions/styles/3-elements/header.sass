@@ -118,14 +118,14 @@
       font-size: 1.6rem
       text-transform: uppercase
       padding: 1.5rem
-      font-weight: 100
+      @extend .text-thin
       color: white
 
       &:hover
         text-decoration: none
 
     .current-menu-item a
-      font-weight: 700
+      @extend .text-bold
 
       &::before
         content: ''

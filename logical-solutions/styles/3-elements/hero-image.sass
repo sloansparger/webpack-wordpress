@@ -31,7 +31,7 @@
     color: white
     background: $brand-blue
     display: inline-block
-    font-weight: 700
+    @extend .text-bold
     letter-spacing: 2px
     font-size: 4rem
     padding: .3rem
@@ -54,7 +54,7 @@
     margin-top: 20rem
     padding-top: 2rem
     width: 77.5rem
-    font-weight: 300
+    @extend .text-thin
     letter-spacing: 2px
     position: relative
 
@@ -104,14 +104,14 @@
       display: inline-block
       float: left
       clear: both
-    
+
   &--blue-box
     color: white
     background-color: $brand-blue
     padding: .5rem 1.4rem 0rem 1.6rem
     margin-left: 18rem
     float: left
-    
+
     &--subtitle
       margin: 0
 
@@ -169,7 +169,6 @@
       &--choose
         color: $brand-blue
         padding: 2rem 2rem 0rem 3rem
-        font-weight: normal
         font-size: 3rem
         line-height: 2.5rem
         letter-spacing: 0px
@@ -190,7 +189,7 @@
 
       &--subtitle
         font-size: 3rem
-        font-weight: normal
+        font-family: Amelia-Bold, sans-serif
         letter-spacing: 2px
 
     &--see-our-process-container
