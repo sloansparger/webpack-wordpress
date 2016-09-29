@@ -80,6 +80,9 @@ document.addEventListener('DOMContentLoaded', function() {
   else if(document.getElementById('products')) {
     mergeAndCreateVues(require('./vues/products'))
   }
+  else if(document.getElementById('training')) {
+    mergeAndCreateVues(require('./vues/training'))
+  }
   else {
     createVue(app)
   }
@@ -87,12 +90,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function createVue(vueObj) {
   var vueApp = new Vue(vueObj)
-  console.log(vueApp);
 }
 
 function mergeAndCreateVues(vueToMerge) {
   var modifiedApp = Object.assign({}, app)
   Object.assign(modifiedApp.data, vueToMerge.data)
   Object.assign(modifiedApp.methods, vueToMerge.methods)
+  modifiedApp.ready = vueToMerge.ready
   createVue(modifiedApp)
 }

@@ -13,4 +13,6 @@
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://use.typekit.net/jce5jze.js"></script>
+<script>try{Typekit.load({ async: true });}catch(e){}</script>
 <script type="text/javascript" src="/wp-content/themes/logical-solutions/assets/bundle.js"></script>
