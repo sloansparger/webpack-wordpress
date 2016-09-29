@@ -61,13 +61,13 @@ get_header('grey');
 
       <section class="image-section">
         <div class="image-section--image">
-          <div class="capabilities--image" style="background: pink" v-show="slideNumber === 1">
+          <div class="capabilities--image" style="background-image: url('/wp-content/uploads/2016/09/WebCTRL-System.jpg')" v-show="slideNumber === 1">
             <p class="capabilities--image-text">Doloremque laudantium, totam rem aperiam, eaqu e ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
           </div>
-          <div class="capabilities--image" style="background: honeydew" v-show="slideNumber === 2">
+          <div class="capabilities--image" style="background-image: url('/wp-content/uploads/2016/09/Eco-Screen-Kiosk.jpg')" v-show="slideNumber === 2">
             <p class="capabilities--image-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad veniam accusamus non ducimus, pariatur fugit harum quod.</p>
           </div>
-          <div class="capabilities--image" style="background: tomato" v-show="slideNumber === 3">
+          <div class="capabilities--image" style="background-image: url('/wp-content/uploads/2016/09/Energy-Reports-Package.jpg')" v-show="slideNumber === 3">
             <p class="capabilities--image-text">Nisi odit inventore id dolores possimus sint tempore dignissimos, saepe quas eveniet. Veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
           </div>
         </div>
@@ -109,7 +109,9 @@ get_header('grey');
         <div class="container">
           <h3 class="section-title">Services</h3>
           <div class="row">
-            <div class="col-xs-12 col-md-5"><p><?php echo $services_text; ?></p></div>
+            <div class="col-xs-12 col-md-5">
+              <p><?php echo $services_text; ?></p>
+            </div>
             <div class="col-xs-12 col-md-7">
               <h3 class="text-bold text-brand-mid-blue mt0 mb3">Each program offers scaled and discounted rates for:</h3>
               <div class="row">

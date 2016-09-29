@@ -1,0 +1,57 @@
+.featured-products
+  &--option-dot
+    height: 4rem
+    width: 4rem
+    margin-right: 2.75rem
+    position: relative
+
+    &::before
+      content: ''
+      border-radius: 50%
+      background-color: $brand-green
+      height: 3rem
+      width: 3rem
+      position: absolute
+      @include absolute-center
+      transition: all .33s $ease-out-circ
+
+    &::after
+      content: ''
+      border-radius: 50%
+      background-color: white
+      height: 2rem
+      width: 2rem
+      position: absolute
+      @include absolute-center
+      transition: all .33s $ease-out-back
+
+    &__cool-grey::after
+      background-color: $cool-light-grey
+
+  &--image
+    position: absolute
+    top: 0
+    right: 0
+    bottom: 0
+    left: 0
+    background-position: center
+    background-size: cover
+
+  &--image-text
+    position: absolute
+    bottom: 8rem
+    left: 0
+    background: white
+    padding: 2rem 1.5rem
+    color: $brand-dark-blue
+    width: 47rem
+
+.active
+  .featured-products--option-dot
+    &::before
+      height: 4rem
+      width: 4rem
+
+    &::after
+      height: 0
+      width: 0

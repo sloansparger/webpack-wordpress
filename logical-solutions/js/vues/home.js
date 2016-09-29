@@ -7,6 +7,7 @@ module.exports = {
   },
   methods: {
     showSlide: function(slideName, slideNum) {
+      console.log(slideName + 'SlideNumber');
       this[slideName + 'SlideNumber'] = slideNum
     }
   }

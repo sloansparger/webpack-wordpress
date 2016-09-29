@@ -63,7 +63,7 @@ get_header();
 					<div class="container">
 						<div class="row">
 							<div class="col-md-6 col-md-offset-6">
-                <h3 class="section-title image-section--title"><?php echo $case_study_2_name; ?></h3>
+                <h3 class="section-title image-section--title image-section--title__right"><?php echo $case_study_2_name; ?></h3>
 								<p class=""><?php echo $case_study_2_text; ?></p>
 								<div class="studies--btn-container">
 									<a href="<?php echo $case_study_2_pdf; ?>" class="studies--btn btn btn__blue" download>View Full Case Study PDF</a>
