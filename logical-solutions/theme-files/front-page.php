@@ -152,14 +152,14 @@ get_header(); ?>
           </div>
           <div class="capabilities--option" v-on:click="showSlide('product', 2)" v-bind:class="{ 'active': productSlideNumber === 2 }">
             <div class="featured-products--option-dot featured-products--option-dot__cool-grey"></div>
-            <h4 class="capabilities--option-text uppercase">Roi Analysis</h4>
+            <h4 class="capabilities--option-text uppercase">ECO-Screen Kiosk</h4>
           </div>
           <div class="capabilities--option" v-on:click="showSlide('product', 3)" v-bind:class="{ 'active': productSlideNumber === 3 }">
             <div class="featured-products--option-dot featured-products--option-dot__cool-grey"></div>
-            <h4 class="capabilities--option-text uppercase">Leed</h4>
+            <h4 class="capabilities--option-text uppercase">Energy Reports Package</h4>
           </div>
         </div>
-        <a href="#" class="btn btn__blue">View All Products</a>
+        <a href="/products" class="btn btn__blue">View All Products</a>
       </div>
     </div>
   </div>
@@ -178,19 +178,19 @@ get_header(); ?>
           <h3>We provide one simple solution for integration and control of HVAC, electrical, fire, security, emergency generators, computer rooms, and other building systems. We have exceeded expectations within a variety of markets.</h3>
         </div>
         <div v-show="industrySlideNumber === 2">
-          <h3 class="text-bold mt0"> ipsum dolor sit amet, consectetur adipisicing elit. Commodi, quasi, a. Fugit labore voluptatibus eos commodi, adipisci molestiae voluptatem pariatur nisi repudiandae. Ullam fugit, similique, animi modi error voluptatum consequuntur.</h3>
+          <h3 class="text-bold mt0">How "green" is your building? </h3>
           <br>
-          <h3>Ea, eligendi tempore voluptate, libero sunt nihil distinctio molestias aperiam quae placeat eaque labore, qui quo voluptatem deleniti? Dolorem doloribus voluptas accusamus.</h3>
+          <h3>Beginning with our complimentary analysis of your current Energy Management strategies, Logical Solutions can help you achieve optimum performance, return on investment, and certifications to validate the energy efficiency of your facility.</h3>
         </div>
         <div v-show="industrySlideNumber === 3">
-          <h3 class="text-bold mt0">Ea, vitae possimus, numquam cupiditate atque id, illo dolorum ipsum exercitationem debitis doloribus hic sint delectus inventore rerum iste. Ut, repellendus, iusto.</h3>
+          <h3 class="text-bold mt0">Are you getting the most from your investment? </h3>
           <br>
-          <h3>Nemo repellendus, dolore non, odit architecto ratione excepturi maiores est suscipit eaque magni nulla dolorum quaerat asperiores similique ab laborum possimus tempore!</h3>
+          <h3>Let LSi evaluate your facility and equipment to show how you can achieve greater energy savings, reduce costs, and improve tenant comfort.</h3>
         </div>
         <div v-show="industrySlideNumber === 4">
-          <h3 class="text-bold mt0">Ea, vitae possimus, numquam cupiditate atque id, illo dolorum ipsum exercitationem debitis doloribus hic sint delectus inventore rerum iste. Ut, repellendus, iusto.</h3>
+          <h3 class="text-bold mt0">Striving for a level of LEED Certification by the US Green Buildings Council?</h3>
           <br>
-          <h3>Nemo repellendus, dolore non, odit architecto ratione excepturi maiores est suscipit eaque magni nulla dolorum quaerat asperiores similique ab laborum possimus tempore!</h3>
+          <h3>LSi can act as a key component in your effort. Our expertise with certified projects will help you reach your goal.</h3>
         </div>
       </div>
       <div class="col-xs-12 col-md-5 col-md-offset-1">

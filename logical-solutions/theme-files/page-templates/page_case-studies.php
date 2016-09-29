@@ -17,10 +17,12 @@ get_header();
         $case_study_1_text = get_field('case_study_1_text');
         $case_study_1_image = get_field('case_study_1_image');
         $case_study_1_pdf = get_field('case_study_1_pdf');
+
         $case_study_2_name = get_field('case_study_2_name');
         $case_study_2_text = get_field('case_study_2_text');
         $case_study_2_image = get_field('case_study_2_image');
         $case_study_2_pdf = get_field('case_study_2_pdf');
+
         $case_study_3_name = get_field('case_study_3_name');
         $case_study_3_text = get_field('case_study_3_text');
         $case_study_3_image = get_field('case_study_3_image');
@@ -49,7 +51,7 @@ get_header();
 							<div class="col-md-6">
 								<p class=""><?php echo $case_study_1_text; ?></p>
 								<div class="studies--btn-container">
-									<a href="<?php echo $case_study_1_pdf; ?>" class="studies--btn btn btn__blue">View Full Case Study PDF</a>
+									<a href="<?php echo $case_study_1_pdf; ?>" target="_" class="studies--btn btn btn__blue">View Full Case Study PDF</a>
 								</div>
 							</div>
 						</div>
@@ -66,7 +68,7 @@ get_header();
                 <h3 class="section-title image-section--title image-section--title__right"><?php echo $case_study_2_name; ?></h3>
 								<p class=""><?php echo $case_study_2_text; ?></p>
 								<div class="studies--btn-container">
-									<a href="<?php echo $case_study_2_pdf; ?>" class="studies--btn btn btn__blue" download>View Full Case Study PDF</a>
+									<a href="<?php echo $case_study_2_pdf; ?>" target="_" class="studies--btn btn btn__blue">View Full Case Study PDF</a>
 								</div>
 							</div>
 						</div>
@@ -83,7 +85,7 @@ get_header();
 							<div class="col-md-6">
 								<p class=""><?php echo $case_study_3_text; ?></p>
 								<div class="studies--btn-container">
-									<a href="<?php echo $case_study_3_pdf; ?>" class="studies--btn btn btn__blue">View Full Case Study PDF</a>
+									<a href="<?php echo $case_study_3_pdf; ?>" target="_" class="studies--btn btn btn__blue">View Full Case Study PDF</a>
 								</div>
 							</div>
 						</div>
