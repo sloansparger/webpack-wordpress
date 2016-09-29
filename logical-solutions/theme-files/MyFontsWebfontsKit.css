@@ -1,0 +1,40 @@
+/**
+ * @license
+ * MyFonts Webfont Build ID 3289499, 2016-09-29T12:54:47-0400
+ * 
+ * The fonts listed in this notice are subject to the End User License
+ * Agreement(s) entered into by the website owner. All other parties are 
+ * explicitly restricted from using the Licensed Webfonts(s).
+ * 
+ * You may obtain a valid license at the URLs below.
+ * 
+ * Webfont: Amelia-Bold by TipoType
+ * URL: http://www.myfonts.com/fonts/tipotype/amelia/bold/
+ * 
+ * Webfont: Amelia-Light by TipoType
+ * URL: http://www.myfonts.com/fonts/tipotype/amelia/light/
+ * 
+ * Webfont: Amelia by TipoType
+ * URL: http://www.myfonts.com/fonts/tipotype/amelia/regular/
+ * 
+ * 
+ * License: http://www.myfonts.com/viewlicense?type=web&buildid=3289499
+ * Licensed pageviews: 10,000
+ * Webfonts copyright: Copyright (c) 2013 by Mart&#x00ED;n Sommaruga. All rights reserved.
+ * 
+ * © 2016 MyFonts Inc
+*/
+
+
+/* @import must be at top of file, otherwise CSS will not work */
+@import url("//hello.myfonts.net/count/32319b");
+
+  
+@font-face {font-family: 'Amelia-Bold';src: url('webfonts/32319B_0_0.eot');src: url('webfonts/32319B_0_0.eot?#iefix') format('embedded-opentype'),url('webfonts/32319B_0_0.woff2') format('woff2'),url('webfonts/32319B_0_0.woff') format('woff'),url('webfonts/32319B_0_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'Amelia-Light';src: url('webfonts/32319B_1_0.eot');src: url('webfonts/32319B_1_0.eot?#iefix') format('embedded-opentype'),url('webfonts/32319B_1_0.woff2') format('woff2'),url('webfonts/32319B_1_0.woff') format('woff'),url('webfonts/32319B_1_0.ttf') format('truetype');}
+ 
+  
+@font-face {font-family: 'Amelia';src: url('webfonts/32319B_2_0.eot');src: url('webfonts/32319B_2_0.eot?#iefix') format('embedded-opentype'),url('webfonts/32319B_2_0.woff2') format('woff2'),url('webfonts/32319B_2_0.woff') format('woff'),url('webfonts/32319B_2_0.ttf') format('truetype');}
+ 
