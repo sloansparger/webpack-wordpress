@@ -131,13 +131,13 @@ get_header(); ?>
 
 <section class="image-section bg-cool-light-grey">
   <div class="image-section--image image-section--image__wide image-section--image__right">
-    <div class="featured-products--image" style="background-image: url('/wp-content/uploads/2016/09/WebCTRL-System.jpg')" v-show="productSlideNumber === 1">
+    <div class="featured-products--image" style="background-image: url('/wp-content/uploads/2016/09/Homepage_ProductSliders_WebCTRLSystems.jpg')" v-show="productSlideNumber === 1">
       <p class="featured-products--image-text">Doloremque laudantium, totam rem aperiam, eaqu e ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
     </div>
-    <div class="featured-products--image" style="background-image: url('/wp-content/uploads/2016/09/Eco-Screen-Kiosk.jpg')" v-show="productSlideNumber === 2">
+    <div class="featured-products--image" style="background-image: url('/wp-content/uploads/2016/09/Homepage_ProductSliders_ECO-ScreenKiosk.jpg')" v-show="productSlideNumber === 2">
       <p class="featured-products--image-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad veniam accusamus non ducimus, pariatur fugit harum quod.</p>
     </div>
-    <div class="featured-products--image" style="background-image: url('/wp-content/uploads/2016/09/Environment-Index-Tools.jpg')" v-show="productSlideNumber === 3">
+    <div class="featured-products--image" style="background-image: url('/wp-content/uploads/2016/09/Homepage_ProductSliders_EnergyReportsPackage.jpg')" v-show="productSlideNumber === 3">
       <p class="featured-products--image-text">Nisi odit inventore id dolores possimus sint tempore dignissimos, saepe quas eveniet. Veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
     </div>
   </div>
