@@ -61,13 +61,13 @@ get_header('grey');
 
       <section class="image-section">
         <div class="image-section--image">
-          <div class="capabilities--image" style="background-image: url('/wp-content/uploads/2016/09/Capabilities_ProductSliders_WebCTRLSystems.jpg')" v-show="slideNumber === 1">
+          <div class="capabilities--image" style="background-image: url('/wp-content/uploads/2016/09/Capabilities_ProductSliders_WebCTRLSystems.jpg')" v-show="slideNumber === 1" transition="fade">
             <p class="capabilities--image-text">Doloremque laudantium, totam rem aperiam, eaqu e ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
           </div>
-          <div class="capabilities--image" style="background-image: url('/wp-content/uploads/2016/09/Capabilities_ProductSliders_ECO-ScreenKiosk.jpg')" v-show="slideNumber === 2">
+          <div class="capabilities--image" style="background-image: url('/wp-content/uploads/2016/09/Capabilities_ProductSliders_ECO-ScreenKiosk.jpg')" v-show="slideNumber === 2" transition="fade">
             <p class="capabilities--image-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad veniam accusamus non ducimus, pariatur fugit harum quod.</p>
           </div>
-          <div class="capabilities--image" style="background-image: url('/wp-content/uploads/2016/09/Capabilities_ProductSliders_EnergyReportsPackage.jpg')" v-show="slideNumber === 3">
+          <div class="capabilities--image" style="background-image: url('/wp-content/uploads/2016/09/Capabilities_ProductSliders_EnergyReportsPackage.jpg')" v-show="slideNumber === 3" transition="fade">
             <p class="capabilities--image-text">Nisi odit inventore id dolores possimus sint tempore dignissimos, saepe quas eveniet. Veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
           </div>
         </div>

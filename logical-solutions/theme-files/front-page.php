@@ -50,16 +50,16 @@ get_header(); ?>
 
 <section class="four-step--container">
   <div class="image-section--image image-section--image__small">
-    <div class="featured-products--image" style="background-image: url('/wp-content/uploads/2016/09/StepOne_Photo.jpg')" v-show="stepsSlideNumber === 1">
+    <div class="featured-products--image" style="background-image: url('/wp-content/uploads/2016/09/StepOne_Photo.jpg')" v-show="stepsSlideNumber === 1" transition="fade">
       <h3 class="four-step--step-num">Step One</h3>
     </div>
-    <div class="featured-products--image" style="background-image: url('/wp-content/uploads/2016/09/StepTwo_Photo.jpg')" v-show="stepsSlideNumber === 2">
+    <div class="featured-products--image" style="background-image: url('/wp-content/uploads/2016/09/StepTwo_Photo.jpg')" v-show="stepsSlideNumber === 2" transition="fade">
       <h3 class="four-step--step-num">Step Two</h3>
     </div>
-    <div class="featured-products--image" style="background-image: url('/wp-content/uploads/2016/09/StepThree_Photo.jpg')" v-show="stepsSlideNumber === 3">
+    <div class="featured-products--image" style="background-image: url('/wp-content/uploads/2016/09/StepThree_Photo.jpg')" v-show="stepsSlideNumber === 3" transition="fade">
       <h3 class="four-step--step-num">Step Three</h3>
     </div>
-    <div class="featured-products--image" style="background-image: url('/wp-content/uploads/2016/09/StepFour_Photo.jpg')" v-show="stepsSlideNumber === 4">
+    <div class="featured-products--image" style="background-image: url('/wp-content/uploads/2016/09/StepFour_Photo.jpg')" v-show="stepsSlideNumber === 4" transition="fade">
       <h3 class="four-step--step-num">Step Four</h3>
     </div>
   </div>
@@ -131,13 +131,13 @@ get_header(); ?>
 
 <section class="image-section bg-cool-light-grey">
   <div class="image-section--image image-section--image__wide image-section--image__right">
-    <div class="featured-products--image" style="background-image: url('/wp-content/uploads/2016/09/Homepage_ProductSliders_WebCTRLSystems.jpg')" v-show="productSlideNumber === 1">
+    <div class="featured-products--image" style="background-image: url('/wp-content/uploads/2016/09/Homepage_ProductSliders_WebCTRLSystems.jpg')" v-show="productSlideNumber === 1" transition="fade">
       <p class="featured-products--image-text">Doloremque laudantium, totam rem aperiam, eaqu e ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
     </div>
-    <div class="featured-products--image" style="background-image: url('/wp-content/uploads/2016/09/Homepage_ProductSliders_ECO-ScreenKiosk.jpg')" v-show="productSlideNumber === 2">
+    <div class="featured-products--image" style="background-image: url('/wp-content/uploads/2016/09/Homepage_ProductSliders_ECO-ScreenKiosk.jpg')" v-show="productSlideNumber === 2" transition="fade">
       <p class="featured-products--image-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad veniam accusamus non ducimus, pariatur fugit harum quod.</p>
     </div>
-    <div class="featured-products--image" style="background-image: url('/wp-content/uploads/2016/09/Homepage_ProductSliders_EnergyReportsPackage.jpg')" v-show="productSlideNumber === 3">
+    <div class="featured-products--image" style="background-image: url('/wp-content/uploads/2016/09/Homepage_ProductSliders_EnergyReportsPackage.jpg')" v-show="productSlideNumber === 3" transition="fade">
       <p class="featured-products--image-text">Nisi odit inventore id dolores possimus sint tempore dignissimos, saepe quas eveniet. Veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
     </div>
   </div>
@@ -222,10 +222,10 @@ get_header(); ?>
 
 <section class="image-section bg-cool-light-grey">
   <div class="image-section--image image-section--image__wide image-section--image__right">
-    <div class="featured-products--image" style="background-image: url('/wp-content/uploads/2016/09/CaseStudies_Homepage_ChaseTower.jpg')" v-show="caseSlideNumber === 1">
+    <div class="featured-products--image" style="background-image: url('/wp-content/uploads/2016/09/CaseStudies_Homepage_ChaseTower.jpg')" v-show="caseSlideNumber === 1" transition="fade">
       <p class="featured-products--image-text">Doloremque laudantium, totam rem aperiam, eaqu e ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
     </div>
-    <div class="featured-products--image" style="background-image: url('/wp-content/uploads/2016/09/CaseStudy_GarlandISD.jpg')" v-show="caseSlideNumber === 2">
+    <div class="featured-products--image" style="background-image: url('/wp-content/uploads/2016/09/CaseStudy_GarlandISD.jpg')" v-show="caseSlideNumber === 2" transition="fade">
       <p class="featured-products--image-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad veniam accusamus non ducimus, pariatur fugit harum quod.</p>
     </div>
   </div>
