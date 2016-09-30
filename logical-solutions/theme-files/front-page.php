@@ -196,14 +196,14 @@ get_header(); ?>
             <h4 class="capabilities--option-text uppercase">Energy Reports Package</h4>
           </div>
         </div>
-        A proven, industry-leading system, the WebCTRL® building automation system gives you the ability to fully understand your operations and analyze the results with tools that make sense to you.
-      </p>
-        <p class="featured-products--mobile-text visible-xs mb2" v-if="productSlideNumber === 2">
         <div class="featured-products--mobile-text-container">
           <p class="featured-products--mobile-text visible-xs mb2" v-if="productSlideNumber === 1">
             Automated Logic’s Eco-Screen® Sustainability Kiosk is a powerful tool that allows building owners to showcase their facilities’ energy conservation and sustainability measures.
           </p>
-            <p class="featured-products--mobile-text visible-xs mb2" v-if="productSlideNumber === 3">
+          <p class="featured-products--mobile-text visible-xs mb2" v-if="productSlideNumber === 2">
+            A proven, industry-leading system, the WebCTRL® building automation system gives you the ability to fully understand your operations and analyze the results with tools that make sense to you.
+          </p>
+          <p class="featured-products--mobile-text visible-xs mb2" v-if="productSlideNumber === 3">
             The EnergyReportsTM analysis package provides on-the-fly report creation that is simple and intuitive to use. It allows facility managers to produce a wide variety of reports and dashboards that help them visualize and understand a building’s energy consumption.
           </p>
         </div>
@@ -276,18 +276,26 @@ get_header(); ?>
 
 <section class="image-section bg-cool-light-grey">
   <div class="image-section--image image-section--image__wide image-section--image__right">
+    <div class="image-section--arrow visible-xs"
+         @click="prevSlide('case')"
+         v-bind:class="{'image-section--arrow__disabled': caseSlideNumber === 1}"></div>
     <div class="featured-products--image" style="background-image: url('/wp-content/uploads/2016/09/CaseStudies_Homepage_ChaseTower.jpg')" v-show="caseSlideNumber === 1" transition="fade">
-      <p class="featured-products--image-text">Doloremque laudantium, totam rem aperiam, eaqu e ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+      <p class="featured-products--image-text hidden-xs">Late in 2013, the 55-story skyscraper located in the City Center District of downtown Dallas, TX, moved forward in their pursuit of an upgraded Energy Management / Building Automation System.</p>
+      <p class="featured-products--image-title visible-xs">Chase Tower Building</p>
     </div>
     <div class="featured-products--image" style="background-image: url('/wp-content/uploads/2016/09/CaseStudy_GarlandISD.jpg')" v-show="caseSlideNumber === 2" transition="fade">
-      <p class="featured-products--image-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad veniam accusamus non ducimus, pariatur fugit harum quod.</p>
+      <p class="featured-products--image-text hidden-xs">In 2015 Garland ISD (GISD) was challenged to find a solution to upgrade existing end of life cycle control systems. Control components were failing, replacement parts were expensive or not available and bond projects were not planned to immediately address functional needs.</p>
+      <p class="featured-products--image-title visible-xs">Garland ISD</p>
     </div>
+    <div class="image-section--arrow image-section--arrow__right visible-xs"
+         @click="nextSlide('case')"
+         v-bind:class="{'image-section--arrow__disabled': caseSlideNumber === caseSlideCount}"></div>
   </div>
   <div class="container">
     <h3 class="section-title section-title__banner image-section--title">Case Studies</h3>
     <div class="row">
       <div class="col-md-6">
-        <div class="capabilities--options">
+        <div class="capabilities--options hidden-xs">
           <div class="capabilities--option" v-on:click="showSlide('case', 1)" v-bind:class="{ 'active': caseSlideNumber === 1 }">
             <div class="featured-products--option-dot featured-products--option-dot__cool-grey"></div>
             <h4 class="capabilities--option-text uppercase">Chase Tower Building</h4>
@@ -297,7 +305,15 @@ get_header(); ?>
             <h4 class="capabilities--option-text uppercase">Garland ISD</h4>
           </div>
         </div>
-        <a href="#" class="case-studies--btn btn btn__blue">See All Case Studies</a>
+        <div class="featured-products--mobile-text-container">
+          <p class="featured-products--mobile-text visible-xs mb2" v-if="caseSlideNumber === 1">
+            Automated Logic’s Eco-Screen® Sustainability Kiosk is a powerful tool that allows building owners to showcase their facilities’ energy conservation and sustainability measures.
+          </p>
+          <p class="featured-products--mobile-text visible-xs mb2" v-if="caseSlideNumber === 2">
+            A proven, industry-leading system, the WebCTRL® building automation system gives you the ability to fully understand your operations and analyze the results with tools that make sense to you.
+          </p>
+        </div>
+        <a href="#" class="featured-products--btn btn btn__blue">See All Case Studies</a>
       </div>
     </div>
   </div>
