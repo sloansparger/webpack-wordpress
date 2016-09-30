@@ -166,19 +166,13 @@ get_header('grey');
             </div>
             <div class="col-xs-12 col-md-6">
               <div v-show="trainingNumber === 1">
-                <p>Held monthly, operators of WebCTRL are invited to join our formal classroom training for an overview of the system, as well as specific feature sets. </p>
-                <br>
-                <p>Utilizing individual User Manuals and hands-on computer workstations, the curriculum includes an introduction to WebCTRL system navigation; establishing setpoints; creating, modifying, and deleting schedules; creating trend graphs and reports; managing alarms; creating and modifying operator privileges - and more. The class runs from 9:00am to approximately 3:30pm at LSi, and meals are included. </p>
+                <?php the_field('traing_slide_1'); ?>
               </div>
               <div v-show="trainingNumber === 2">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi, quasi, a. Fugit labore voluptatibus eos commodi, adipisci molestiae voluptatem pariatur nisi repudiandae. Ullam fugit, similique, animi modi error voluptatum consequuntur.</p>
-                <br>
-                <p>Ea, eligendi tempore voluptate, libero sunt nihil distinctio molestias aperiam quae placeat eaque labore, qui quo voluptatem deleniti? Dolorem doloribus voluptas accusamus.</p>
+                <?php the_field('traing_slide_2'); ?>
               </div>
               <div v-show="trainingNumber === 3">
-                <p>Ea, vitae possimus, numquam cupiditate atque id, illo dolorum ipsum exercitationem debitis doloribus hic sint delectus inventore rerum iste. Ut, repellendus, iusto.</p>
-                <br>
-                <p>Nemo repellendus, dolore non, odit architecto ratione excepturi maiores est suscipit eaque magni nulla dolorum quaerat asperiores similique ab laborum possimus tempore!</p>
+                <?php the_field('traing_slide_3'); ?>
               </div>
             </div>
           </div>
