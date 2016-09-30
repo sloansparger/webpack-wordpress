@@ -77,7 +77,7 @@ get_header('grey');
         <div class="container">
           <div class="row">
             <div class="col-md-6 col-md-offset-6">
-              <h3 class="section-title image-section--title image-section--title__right">Featured Products</h3>
+              <h3 class="section-title image-section--title image-section--title__right blue-title-mobile">Featured Products</h3>
               <div class="capabilities--options">
                 <div class="capabilities--option" v-on:click="showSlide(1)" v-bind:class="{ 'active': slideNumber === 1 }">
                   <div class="capabilities--option-dot"></div>
