@@ -141,13 +141,13 @@ get_header(); ?>
 <section class="image-section bg-cool-light-grey">
   <div class="image-section--image image-section--image__wide image-section--image__right">
     <div class="featured-products--image" style="background-image: url('/wp-content/uploads/2016/09/Homepage_ProductSliders_WebCTRLSystems.jpg')" v-show="productSlideNumber === 1" transition="fade">
-      <p class="featured-products--image-text">Doloremque laudantium, totam rem aperiam, eaqu e ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+      <p class="featured-products--image-text">A proven, industry-leading system, the WebCTRL® building automation system gives you the ability to fully understand your operations and analyze the results with tools that make sense to you.</p>
     </div>
     <div class="featured-products--image" style="background-image: url('/wp-content/uploads/2016/09/Homepage_ProductSliders_ECO-ScreenKiosk.jpg')" v-show="productSlideNumber === 2" transition="fade">
-      <p class="featured-products--image-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad veniam accusamus non ducimus, pariatur fugit harum quod.</p>
+      <p class="featured-products--image-text">Automated Logic’s Eco-Screen® Sustainability Kiosk is a powerful tool that allows building owners to showcase their facilities’ energy conservation and sustainability measures.</p>
     </div>
     <div class="featured-products--image" style="background-image: url('/wp-content/uploads/2016/09/Homepage_ProductSliders_EnergyReportsPackage.jpg')" v-show="productSlideNumber === 3" transition="fade">
-      <p class="featured-products--image-text">Nisi odit inventore id dolores possimus sint tempore dignissimos, saepe quas eveniet. Veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+      <p class="featured-products--image-text">The EnergyReportsTM analysis package provides on-the-fly report creation that is simple and intuitive to use. It allows facility managers to produce a wide variety of reports and dashboards that help them visualize and understand a building’s energy consumption.</p>
     </div>
   </div>
   <div class="container">

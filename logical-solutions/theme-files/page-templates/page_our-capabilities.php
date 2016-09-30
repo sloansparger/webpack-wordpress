@@ -65,13 +65,13 @@ get_header('grey');
       <section class="image-section">
         <div class="image-section--image">
           <div class="capabilities--image" style="background-image: url('/wp-content/uploads/2016/09/Capabilities_ProductSliders_WebCTRLSystems.jpg')" v-show="slideNumber === 1" transition="fade">
-            <p class="capabilities--image-text">Doloremque laudantium, totam rem aperiam, eaqu e ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+            <p class="capabilities--image-text">A proven, industry-leading system, the WebCTRL® building automation system gives you the ability to fully understand your operations and analyze the results with tools that make sense to you.</p>
           </div>
           <div class="capabilities--image" style="background-image: url('/wp-content/uploads/2016/09/Capabilities_ProductSliders_ECO-ScreenKiosk.jpg')" v-show="slideNumber === 2" transition="fade">
-            <p class="capabilities--image-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad veniam accusamus non ducimus, pariatur fugit harum quod.</p>
+            <p class="capabilities--image-text">Automated Logic’s Eco-Screen® Sustainability Kiosk is a powerful tool that allows building owners to showcase their facilities’ energy conservation and sustainability measures.</p>
           </div>
           <div class="capabilities--image" style="background-image: url('/wp-content/uploads/2016/09/Capabilities_ProductSliders_EnergyReportsPackage.jpg')" v-show="slideNumber === 3" transition="fade">
-            <p class="capabilities--image-text">Nisi odit inventore id dolores possimus sint tempore dignissimos, saepe quas eveniet. Veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
+            <p class="capabilities--image-text">The EnergyReportsTM analysis package provides on-the-fly report creation that is simple and intuitive to use. It allows facility managers to produce a wide variety of reports and dashboards that help them visualize and understand a building’s energy consumption.</p>
           </div>
         </div>
         <div class="container">
