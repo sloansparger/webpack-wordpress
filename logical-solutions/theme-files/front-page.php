@@ -18,23 +18,34 @@ get_header(); ?>
   <div class="page-hero--image" style="background-image: url(<?php the_post_thumbnail_url() ?>)"></div>
   <div class="container">
     <div class="home-hero">
-      <div class="home-hero--choose-container">
-        <p class="home-hero--choose-container--choose uppercase text-bold">Choose</p>
+
+      <div class="home-hero--main-text">
+        <h3 class="home-hero--choose">Choose</h3>
+        <h1 class="home-hero--title">A Logical Solution</h1>
+        <p class="home-hero--subtitle">For your energy management and control systems</p>
       </div>
-      <div class="home-hero--white-box">
-        <p class="home-hero--white-box--logical-solution uppercase text-bold">A Logical Solution</p>
-      </div>
-      <div class="home-hero--blue-box">
-        <p class="home-hero--blue-box--subtitle text-bold">For your energy management and control systems</p>
-      </div>
+
     </div>
-    <div class="home-hero--see-our-process-container">
-      <span class="home-hero--see-our-process-container--see-our-process uppercase text-bold text-white">See our process <span class="hidden-xs">below</span></span>
-    </div>
+  </div>
+
+  <div class="home-hero--process-below">
+    <p class="home-hero--process-text">Learn More <span class="hidden-xs">About Us</span></p>
   </div>
 </div>
 
-<section class="section-lg four-step--blurb bg-cool-light-grey">
+<section class="section-lg">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 col-md-10 col-md-offset-1">
+        <blockquote class="text-center">
+          "Logical Solutions provides simple solutions to our building control needs. Our system is easy to use, and the cost of ownership surprisingly low."<br>- John Dawson
+        </blockquote>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- <section class="section-lg four-step--blurb bg-cool-light-grey">
   <div class="container">
     <div class="row">
       <div class="col-xs-12 col-md-10 col-md-offset-1">
@@ -44,11 +55,9 @@ get_header(); ?>
       </div>
     </div>
   </div>
-</section>
+</section> -->
 
-
-
-<section class="four-step--container">
+<!-- <section class="four-step--container">
   <div class="image-section--image image-section--image__small">
     <div class="featured-products--image" style="background-image: url('/wp-content/uploads/2016/09/StepOne_Photo.jpg')" v-show="stepsSlideNumber === 1" transition="fade">
       <h3 class="four-step--step-num">Step One</h3>
@@ -126,7 +135,7 @@ get_header(); ?>
       </div>
     </div>
   </div>
-</section>
+</section> -->
 
 
 <section class="image-section bg-cool-light-grey">
@@ -148,7 +157,7 @@ get_header(); ?>
         <div class="capabilities--options">
           <div class="capabilities--option" v-on:click="showSlide('product', 1)" v-bind:class="{ 'active': productSlideNumber === 1 }">
             <div class="featured-products--option-dot featured-products--option-dot__cool-grey"></div>
-            <h4 class="capabilities--option-text uppercase">WebCTRL System&reg;</h4>
+            <h4 class="capabilities--option-text">WebCTRL&reg; SYSTEM</h4>
           </div>
           <div class="capabilities--option" v-on:click="showSlide('product', 2)" v-bind:class="{ 'active': productSlideNumber === 2 }">
             <div class="featured-products--option-dot featured-products--option-dot__cool-grey"></div>
