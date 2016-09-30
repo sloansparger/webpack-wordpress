@@ -55,7 +55,7 @@ get_header('grey');
   					<div class="col-xs-12 col-md-10 col-md-offset-1">
   						<blockquote class="text-center"><?php echo $products_blurb; ?></blockquote>
               <br>
-              <p class="text-center"><?php echo $products_company_description; ?></p>
+              <p class="blurb-section--lower text-center"><?php echo $products_company_description; ?></p>
   					</div>
   				</div>
   			</div>
