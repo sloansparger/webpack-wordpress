@@ -96,6 +96,10 @@
 
   &--includes
     list-style-type: none
+    height: 30rem
+    display: flex
+    flex-direction: column
+    flex-wrap: wrap
 
   &--include
     margin-bottom: 2rem
@@ -113,7 +117,7 @@
     background: none
     border: none
     letter-spacing: 2px
-    font-weight: 100
+    @extend .text-thin
     outline: none
     transition: color .3s $ease-out-quint
 
@@ -133,7 +137,7 @@
 .active
   .capabilities--option-text
     color: $brand-green
-    font-weight: 700
+    @extend .text-bold
 
   .capabilities--option-dot
     &::before

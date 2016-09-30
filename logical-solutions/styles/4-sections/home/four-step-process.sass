@@ -5,6 +5,7 @@
   &--container
     padding: 3rem 0 9rem
     position: relative
+    overflow-x: hidden
     z-index: 1
 
     &::after
@@ -104,7 +105,7 @@
     background: none
     border: none
     letter-spacing: 2px
-    font-weight: 100
+    @extend .text-thin
     outline: none
     transition: color .3s $ease-out-quint
 

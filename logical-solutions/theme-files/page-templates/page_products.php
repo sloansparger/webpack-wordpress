@@ -11,8 +11,8 @@ get_header();
 			<?php while ( have_posts() ) { the_post(); get_template_part( '/template-parts/hero' ); } ?>
 
       <?php
-        $hardwarePosts = new WP_Query( array( 'post_type' => 'lsi_product', 'cat' => 8, 'posts_per_page' => -1));
-        $softwarePosts = new WP_Query( array( 'post_type' => 'lsi_product', 'cat' => 9, 'posts_per_page' => -1));
+        $hardwarePosts = new WP_Query( array( 'post_type' => 'lsi_product', 'category_name' => 'Hardware', 'posts_per_page' => -1));
+        $softwarePosts = new WP_Query( array( 'post_type' => 'lsi_product', 'category_name' => 'Software', 'posts_per_page' => -1));
       ?>
 
 			<section class="section-md" id="products">
@@ -22,11 +22,11 @@ get_header();
 					<div class="products">
 						<?php if ( $softwarePosts->have_posts() ) : while ( $softwarePosts->have_posts() ) : $softwarePosts->the_post(); ?>
 
-						<div class="product">
+						<div class="product" @click="openMobileModal('<?php echo the_title() ?>', '<?php echo wp_get_attachment_image_src(get_field('image'), 'full')[0]; ?>', '<?php echo htmlentities(get_field('full_description')); ?>')">
 							<div class="product--image" style="background-image: url(<?php echo wp_get_attachment_image_src(get_field('image'), 'medium')[0]; ?>)">
 								<div class="product--overlay"></div>
 								<h3 class="product--name text-white"><?php echo the_title() ?></h3>
-								<button class="product--learn-more btn btn__white" @click="openModal('<?php echo the_title() ?>', '<?php echo wp_get_attachment_image_src(get_field('image'), 'full')[0]; ?>', '<?php the_field('description'); ?>')">
+								<button class="product--learn-more btn btn__white" @click="openModal('<?php echo the_title() ?>', '<?php echo wp_get_attachment_image_src(get_field('image'), 'full')[0]; ?>', '<?php echo htmlentities(get_field('full_description')); ?>')">
 									Learn More
 								</button>
 							</div>
@@ -50,11 +50,11 @@ get_header();
 
 						<?php if ( $hardwarePosts->have_posts() ) : while ( $hardwarePosts->have_posts() ) : $hardwarePosts->the_post(); ?>
 
-							<div class="product">
+							<div class="product" @click="openMobileModal('<?php echo the_title() ?>', '<?php echo wp_get_attachment_image_src(get_field('image'), 'full')[0]; ?>', '<?php htmlentities(the_field('full_description')); ?>')">
 								<div class="product--image"  style="background-image: url(<?php echo wp_get_attachment_image_src(get_field('image'), 'medium')[0]; ?>)">
 									<div class="product--overlay"></div>
 									<h3 class="product--name text-white"><?php echo the_title() ?></h3>
-									<button class="product--learn-more btn btn__white" @click="openModal('<?php echo the_title() ?>', '<?php echo wp_get_attachment_image_src(get_field('image'), 'full')[0]; ?>', '<?php the_field('description'); ?>')">
+									<button class="product--learn-more btn btn__white" @click="openModal('<?php echo the_title() ?>', '<?php echo wp_get_attachment_image_src(get_field('image'), 'full')[0]; ?>', '<?php htmlentities(the_field('full_description')); ?>')">
 										Learn More
 									</button>
 								</div>
@@ -81,17 +81,19 @@ get_header();
 				<div class="container">
           <h3 class="section-title">{{currentTitle}}</h3>
 				</div>
-				<div class="container">
+				<div class="product-modal--scroll-content">
+					<div class="container">
 
-					<div class="product--modal-content">
-						<div class="product--modal-image" style="background-image: url({{currentImage}})"></div>
+						<div class="product--modal-content">
+							<div class="product--modal-image" v-bind:style="{ backgroundImage: 'url(' + currentImage + ')' }"></div>
 
-						<div class="product--modal-description">
-							<p>{{currentDescription}}</p>
-							<a href="/contact#contact" class="product--modal-cta btn btn__blue uppercase">Contact Us</a>
+							<div class="product--modal-description">
+								<p class="product--modal-description-area"></p>
+								<a href="/contact#contact" class="product--modal-cta btn btn__blue uppercase">Contact Us</a>
+							</div>
 						</div>
-					</div>
 
+					</div>
 				</div>
 			</div>
 

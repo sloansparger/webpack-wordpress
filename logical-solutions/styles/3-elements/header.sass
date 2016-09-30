@@ -118,14 +118,14 @@
       font-size: 1.6rem
       text-transform: uppercase
       padding: 1.5rem
-      font-weight: 100
+      @extend .text-thin
       color: white
 
       &:hover
         text-decoration: none
 
     .current-menu-item a
-      font-weight: 700
+      @extend .text-bold
 
       &::before
         content: ''
@@ -156,16 +156,13 @@
   z-index: 1
   padding-top: 8rem
   padding-left: 3rem
-  transform: translate(0)
+  transform: translateX(100%)
   transition: transform .3s $ease-out-quint
   overflow: scroll
   z-index: 99999
 
-  &__hidden
-    transform: translateX(100%)
-
-  // &__grey
-  //   transform: translateX(100%)
+  &__show
+    transform: translate(0)
 
   &--exit
     @include square(3.5rem)

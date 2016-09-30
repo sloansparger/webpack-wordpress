@@ -35,7 +35,7 @@ get_header('grey');
 							<div class="training--divider"></div>
 				    </div>
 				    <div class="col-md-3 col-md-offset-2">
-              <a href="#register" class="btn btn__blue mb5">Register Now</a>
+              <a href="#training" class="btn btn__blue mb5">Register Now</a>
               <h1 class="uppercase text-thin mt0">Schedule</h1>
 
               <?php
@@ -55,7 +55,7 @@ get_header('grey');
 
       <section>
         <div class="container">
-          <h3 class="section-title image-section--title">Next Session</h3>
+          <h3 class="section-title">Next Session</h3>
 
             <?php
               // call the first post in the query (should be first and soonest session_date)

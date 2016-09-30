@@ -16,7 +16,7 @@
 	<div class="subfooter">
 		<div class="container">
 			<div class="subfooter--text">
-        <p class="track-out">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
+        <p class="track-out">Let us help you find a logical solution</p>
      </div>
      <a class="cta cta__white" href="/contact/">Contact Us</a>
 		</div>

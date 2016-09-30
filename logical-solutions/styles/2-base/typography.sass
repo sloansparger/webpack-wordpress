@@ -8,9 +8,9 @@ html
     font-size: 8px
 
 body
-  font-family: "ingra",sans-serif
-  letter-spacing: -.5px
-  font-weight: 500
+  font-family: Amelia, serif
+  font-style: normal
+  font-weight: normal
 
 h1
   font-size: 3.6rem
@@ -32,7 +32,7 @@ blockquote
   color: $brand-mid-blue
   letter-spacing: 1.25px
   line-height: 1.4
-  font-weight: 600
+  @extend .text-bold
   margin: 0
   padding: 0
   border: none
@@ -47,25 +47,31 @@ blockquote
   font-size: 1.6rem
 
 .text-thin
-  font-weight: 200
+  font-family: Amelia-Light, serif
+  font-style: normal
+  font-weight: normal
+
+.text-normal
+  font-family: Amelia, serif
+  font-style: normal
+  font-weight: normal
 
 .text-bold
-  font-weight: 600
-
-.text-extra-bold
-  font-weight: 900
+  font-family: Amelia-Bold, serif
+  font-style: normal
+  font-weight: normal
 
 .active-link
   border-bottom: 2px solid $brand-green
   color: $brand-blue
 
 .section-title
+  @extend .text-bold
   font-size: 4.5rem
   color: $brand-mid-blue
   padding-bottom: 1rem
   margin-bottom: 5rem
   position: relative
-  font-weight: 600
   text-transform: uppercase
   letter-spacing: 3px
 
@@ -93,8 +99,6 @@ blockquote
       height: 100%
       z-index: -1
       background-color: $brand-blue
-
-
 
 .information-title
   @extend .text-bold

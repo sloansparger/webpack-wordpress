@@ -26,7 +26,7 @@ get_header('grey');
 				<div class="container">
 					<h3 class="section-title">Contact Us</h3>
 					<div class="row">
-					  <div class="col-xs-10 col-sm-4 col-md-3 col-xs-offset-1 col-sm-offset-0 col-md-offset-1">
+					  <div class="col-xs-10 col-sm-4 col-md-3 col-xs-offset-1 col-sm-offset-0">
               <h3 class="text-bold">Address</h3>
               <p class="contact--address-name"><?php echo $company_name; ?></p>
               <a class="contact--address" href="<?php echo $googleMapsUrl; ?>">
@@ -35,7 +35,7 @@ get_header('grey');
                 </p></address>
               </a>
 					  </div>
-					  <div class="col-xs-10 col-sm-4 col-md-3 col-xs-offset-1 col-sm-offset-0 col-md-offset-1">
+					  <div class="col-xs-10 col-sm-4 col-md-3 col-xs-offset-0 col-md-offset-1">
               <h3 class="text-bold">Phone Number</h3>
               <a href="tel:<?php echo $phone_number; ?>" class="text-brand-mid-blue">
                 <h1 class="contact--number text-thin"><?php echo $phone_number; ?></h1>
@@ -44,7 +44,7 @@ get_header('grey');
                 <?php echo $phone_extensions; ?>
               </p></address>
 					  </div>
-					  <div class="col-xs-10 col-sm-4 col-md-3 col-xs-offset-1 col-sm-offset-0 col-md-offset-1">
+					  <div class="col-xs-10 col-sm-4 col-md-3 col-xs-offset-0 col-md-offset-1">
               <h3 class="text-bold">Fax Number</h3>
               <h1 class="mt0 text-thin"><?php echo $fax_number; ?></h1>
 					  </div>

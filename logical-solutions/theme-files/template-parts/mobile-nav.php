@@ -3,7 +3,7 @@
  * Template part for mobile nav
  */
 ?>
-<nav class="mobile-nav mobile-nav__grey hidden-lg hidden-md" v-bind:class="{'mobile-nav__hidden': !mobileNavOpen}">
+<nav class="mobile-nav mobile-nav__grey hidden-lg hidden-md" v-bind:class="{'mobile-nav__show': mobileNavOpen}">
   <div class="mobile-nav--exit" @click="closeMobileNav"></div>
   <ul class="mobile-nav--menu">
     <li class="mobile-nav--menu-item">

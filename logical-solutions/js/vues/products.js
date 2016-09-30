@@ -3,20 +3,26 @@ module.exports = {
     modalOpen: false,
     currentTitle: '',
     currentImage: '',
-    currentDescription: '',
   },
   methods: {
     closeModal: function() {
+      var descriptionArea = document.querySelector('.product--modal-description-area')
       this.modalOpen = false
       this.currentTitle = ''
       this.currentImage = ''
-      this.currentDescription = ''
+      descriptionArea.innerHTML = ''
     },
     openModal: function(title, image, description) {
+      var descriptionArea = document.querySelector('.product--modal-description-area')
       this.modalOpen = true
       this.currentTitle = title
       this.currentImage = image
-      this.currentDescription = description
+      descriptionArea.innerHTML = description
+    },
+    openMobileModal: function(title, image, description) {
+      if (window.innerWidth <= 768) {
+        this.openModal(title, image, description)
+      }
     }
   }
 }
