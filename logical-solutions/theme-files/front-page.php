@@ -29,7 +29,7 @@ get_header(); ?>
       </div>
     </div>
     <div class="home-hero--see-our-process-container">
-      <a class="home-hero--see-our-process-container--see-our-process uppercase text-bold text-white">See our process <span class="hidden-xs">below</span></a>
+      <span class="home-hero--see-our-process-container--see-our-process uppercase text-bold text-white">See our process <span class="hidden-xs">below</span></span>
     </div>
   </div>
 </div>
