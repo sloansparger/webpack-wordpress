@@ -44,7 +44,7 @@ get_header();
             <div class="image-section--image-bg" style="background-image: url(<?php echo wp_get_attachment_image_src($case_study_1_image, 'full')[0]; ?>)"></div>
           </div>
 					<div class="container">
-						<h3 class="section-title image-section--title"><?php echo $case_study_1_name; ?></h3>
+						<h3 class="section-title image-section--title blue-title-mobile"><?php echo $case_study_1_name; ?></h3>
 						<div class="row">
 							<div class="col-md-6">
 								<p class=""><?php echo $case_study_1_text; ?></p>
@@ -63,7 +63,7 @@ get_header();
 					<div class="container">
 						<div class="row">
 							<div class="col-md-6 col-md-offset-6">
-                <h3 class="section-title image-section--title image-section--title__right"><?php echo $case_study_2_name; ?></h3>
+                <h3 class="section-title image-section--title image-section--title__right blue-title-mobile"><?php echo $case_study_2_name; ?></h3>
 								<p class=""><?php echo $case_study_2_text; ?></p>
 								<div class="studies--btn-container">
 									<a href="<?php echo $case_study_2_pdf; ?>" class="studies--btn btn btn__blue" download>View Full Case Study PDF</a>
@@ -78,7 +78,7 @@ get_header();
             <div class="image-section--image-bg" style="background-image: url(<?php echo wp_get_attachment_image_src($case_study_3_image, 'full')[0]; ?>)"></div>
           </div>
 					<div class="container">
-						<h3 class="section-title image-section--title"><?php echo $case_study_3_name; ?></h3>
+						<h3 class="section-title image-section--title blue-title-mobile"><?php echo $case_study_3_name; ?></h3>
 						<div class="row">
 							<div class="col-md-6">
 								<p class=""><?php echo $case_study_3_text; ?></p>
