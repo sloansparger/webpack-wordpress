@@ -46,7 +46,7 @@ get_header('grey');
                   endwhile; else: endif; ?>
 
         </div>
-        <p class="text-brand-green text-sm text-thin text-center">Click on a category above to learn more</p>
+        <p class="capabilities--learn-more text-brand-green text-center">Click on a category above to learn more</p>
       </section>
 
       <section class="blurb-section bg-cool-light-grey">
@@ -55,7 +55,7 @@ get_header('grey');
   					<div class="col-xs-12 col-md-10 col-md-offset-1">
   						<blockquote class="text-center"><?php echo $products_blurb; ?></blockquote>
               <br>
-              <p class="text-center"><?php echo $products_company_description; ?></p>
+              <p class="blurb-section--lower text-center"><?php echo $products_company_description; ?></p>
   					</div>
   				</div>
   			</div>
@@ -77,7 +77,7 @@ get_header('grey');
         <div class="container">
           <div class="row">
             <div class="col-md-6 col-md-offset-6">
-              <h3 class="section-title image-section--title image-section--title__right">Featured Products</h3>
+              <h3 class="section-title image-section--title image-section--title__right blue-title-mobile">Featured Products</h3>
               <div class="capabilities--options">
                 <div class="capabilities--option" v-on:click="showSlide(1)" v-bind:class="{ 'active': slideNumber === 1 }">
                   <div class="capabilities--option-dot"></div>

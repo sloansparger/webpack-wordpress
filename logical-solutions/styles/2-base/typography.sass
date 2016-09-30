@@ -31,7 +31,7 @@ blockquote
   font-size: 2.5rem
   color: $brand-mid-blue
   letter-spacing: 1.25px
-  line-height: 1.4
+  line-height: 1.25
   @extend .text-bold
   margin: 0
   padding: 0
@@ -104,6 +104,9 @@ blockquote
   @extend .text-bold
   @extend .text-brand-mid-blue
   @extend .track-out
+  text-align: left
+  padding-left: 3rem
+  margin-top: 0
   margin-bottom: 4rem
 
 .split-paragraph
@@ -137,3 +140,23 @@ blockquote
 @media screen and (max-width: 450px)
   .section-title::after
     right: 0
+
+
+.blue-title-mobile
+
+  @media screen and (max-width: 991px)
+    background: $brand-blue
+    color: white
+    padding: .3rem
+    margin-right: 20rem
+
+    &::after
+      content: ''
+      position: absolute
+      background: #20499E
+      top: 0
+      right: 100%
+      left: auto !important
+      height: 100%
+      width: 50rem
+      z-index: 1
