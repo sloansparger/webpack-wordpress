@@ -20,6 +20,9 @@ get_header('grey');
         $service_blurb = get_field('service_blurb');
         $services_text = get_field('services_text');
         $training_blurb = get_field('training_blurb');
+        $trainingSlideText1 = get_field('training_slide_1');
+        $trainingSlideText2 = get_field('training_slide_2');
+        $trainingSlideText3 = get_field('training_slide_3');
        ?>
 
       <section class="section-md">
@@ -166,13 +169,13 @@ get_header('grey');
             </div>
             <div class="col-xs-12 col-md-6">
               <div v-show="trainingNumber === 1">
-                <?php the_field('training_slide_1'); ?>
+                <p><?php echo $trainingSlideText1; ?></p>
               </div>
               <div v-show="trainingNumber === 2">
-                <?php the_field('training_slide_2'); ?>
+                <p><?php echo $trainingSlideText2; ?></p>
               </div>
               <div v-show="trainingNumber === 3">
-                <?php the_field('training_slide_3'); ?>
+                <p><?php echo $trainingSlideText3; ?></p>
               </div>
             </div>
           </div>
