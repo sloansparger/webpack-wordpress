@@ -113,18 +113,18 @@ get_header('grey');
           <h3 class="section-title">Services</h3>
           <div class="row">
             <div class="col-xs-12 col-md-5">
-              <p class="capabilities--mobile-paragraph-margin-bottom"><?php echo $services_text; ?></p>
+              <p class="capabilities--mobile-paragraph-margin-bottom text-brand-mid-blue"><?php echo $services_text; ?></p>
             </div>
             <div class="col-xs-12 col-md-7">
               <h3 class="text-bold text-brand-mid-blue mt0 mb3">Each program offers scaled and discounted rates for:</h3>
               <div class="row">
-                <div class="col-xs-12 col-md-7">
+                <div class="col-xs-12 col-md-7 text-brand-mid-blue">
                   <p>Telephone Support</p>
                   <p>Preventative Maintenance Inspections</p>
                   <p>ALC Parts Pricing</p>
                   <p>Time & Material Rates</p>
                 </div>
-                <div class="col-xs-12 col-md-5">
+                <div class="col-xs-12 col-md-5 text-brand-mid-blue">
                   <p>Labor for Onsite Repair Service</p>
                   <p>Priority Onsite Response</p>
                   <p>Software Upgrade</p>
@@ -152,15 +152,15 @@ get_header('grey');
           <div class="row">
             <div class="col-xs-12 col-md-6">
               <div class="capabilities--options">
-                <div class="capabilities--option" v-on:click="showTraining(1)" v-bind:class="{ 'active': trainingNumber === 1 }">
+                <div class="capabilities--option text-brand-mid-blue" v-on:click="showTraining(1)" v-bind:class="{ 'active': trainingNumber === 1 }">
                   <div class="capabilities--option-dot"></div>
                   <h4 class="capabilities--option-text">WebCTRL Basic Operator Training</h4>
                 </div>
-                <div class="capabilities--option" v-on:click="showTraining(2)" v-bind:class="{ 'active': trainingNumber === 2 }">
+                <div class="capabilities--option text-brand-mid-blue" v-on:click="showTraining(2)" v-bind:class="{ 'active': trainingNumber === 2 }">
                   <div class="capabilities--option-dot"></div>
                   <h4 class="capabilities--option-text">WebCTRL Advanced Operator Training</h4>
                 </div>
-                <div class="capabilities--option" v-on:click="showTraining(3)" v-bind:class="{ 'active': trainingNumber === 3 }">
+                <div class="capabilities--option text-brand-mid-blue" v-on:click="showTraining(3)" v-bind:class="{ 'active': trainingNumber === 3 }">
                   <div class="capabilities--option-dot"></div>
                   <h4 class="capabilities--option-text">Customized Training</h4>
                 </div>
@@ -168,7 +168,7 @@ get_header('grey');
               <a href="/training" class="btn btn__blue hidden-sm hidden-xs">Learn More about Training</a>
             </div>
             <div class="col-xs-12 col-md-6">
-              <div class="capabilities--mobile-paragraph-margin-bottom">
+              <div class="capabilities--mobile-paragraph-margin-bottom text-brand-mid-blue">
                 <div v-show="trainingNumber === 1">
                   <p><?php echo $trainingSlideText1; ?></p>
                 </div>
