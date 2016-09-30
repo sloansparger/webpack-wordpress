@@ -18,19 +18,18 @@ get_header(); ?>
   <div class="page-hero--image" style="background-image: url(<?php the_post_thumbnail_url() ?>)"></div>
   <div class="container">
     <div class="home-hero">
-      <div class="home-hero--choose-container">
-        <p class="home-hero--choose-container--choose uppercase text-bold">Choose</p>
+
+      <div class="home-hero--main-text">
+        <h3 class="home-hero--choose">Choose</h3>
+        <h1 class="home-hero--title">A Logical Solution</h1>
+        <p class="home-hero--subtitle">For your energy management and control systems</p>
       </div>
-      <div class="home-hero--white-box">
-        <p class="home-hero--white-box--logical-solution uppercase text-bold">A Logical Solution</p>
-      </div>
-      <div class="home-hero--blue-box">
-        <p class="home-hero--blue-box--subtitle text-bold">For your energy management and control systems</p>
-      </div>
+
     </div>
-    <div class="home-hero--see-our-process-container">
-      <a class="home-hero--see-our-process-container--see-our-process uppercase text-bold text-white">See our process <span class="hidden-xs">below</span></a>
-    </div>
+  </div>
+
+  <div class="home-hero--process-below">
+    <p class="home-hero--process-text">See our process <span class="hidden-xs">below</span></p>
   </div>
 </div>
 
