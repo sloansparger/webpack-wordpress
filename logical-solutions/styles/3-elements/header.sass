@@ -1,5 +1,5 @@
 .header
-  height: 9.5rem
+  height: 8.8rem
   padding: 0 15rem
   width: 100%
   position: absolute
@@ -7,7 +7,7 @@
   z-index: 1
 
   &__grey-bg
-    background-color: $light-grey
+    background-color: $cool-light-grey
 
     .header--logo
       &__color
@@ -20,7 +20,7 @@
       color: $brand-blue
 
   &__slider
-    background-color: $light-grey
+    background-color: $cool-light-grey
     position: fixed
     transform: translateY(-100%)
     top: 0
@@ -64,9 +64,9 @@
     &::before
       content: ''
       position: absolute
-      left: 25rem
-      bottom: calc(50% - 13px)
-      right: calc(67.5rem - 1px)
+      left: 25.25rem
+      bottom: calc(50% - 14px)
+      right: calc(69.5rem - 1px)
       height: 2px
       background: $brand-green
 
@@ -80,6 +80,8 @@
       display: block
 
   &--menu
+    margin-top: .75rem
+
     ul
       list-style-type: none
       margin-bottom: 0
@@ -113,15 +115,17 @@
       display: inline-block
       border-bottom: 2px solid $brand-green
       float: left
+      line-height: 1
 
     a
       font-size: 1.6rem
       text-transform: uppercase
       padding: 1.5rem
+      letter-spacing: 1px
       @extend .text-thin
       color: #e4e4ea
 
-      &:hover
+      &:hover, &:focus
         text-decoration: none
 
     .current-menu-item a
@@ -142,9 +146,17 @@
     background-size: contain
     margin-top: 1rem
 
-.home .header--menu li:last-child a
-  color: $brand-green
+.home
+  li:last-child a
+    color: $brand-green
 
+body:not(.page-template-page_contact-us)
+  .header--menu
+    position: relative
+    left: -15px
+
+    li:last-child a
+      padding-right: 0
 
 .mobile-nav
   position: fixed
@@ -171,7 +183,6 @@
     right: 3rem
     background: url($images-folder + 'exit.svg') center no-repeat
     background-size: contain
-
 
   &--menu
     border-bottom: 2px solid $brand-green
@@ -218,9 +229,6 @@
 
   &--contact-item
     font-size: 2.25rem
-
-
-
 
 @media screen and (max-width: 1440px)
   .header
