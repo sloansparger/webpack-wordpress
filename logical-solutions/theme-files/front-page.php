@@ -196,11 +196,11 @@ get_header(); ?>
             <h4 class="capabilities--option-text uppercase">Energy Reports Package</h4>
           </div>
         </div>
+        A proven, industry-leading system, the WebCTRL® building automation system gives you the ability to fully understand your operations and analyze the results with tools that make sense to you.
+      </p>
+        <p class="featured-products--mobile-text visible-xs mb2" v-if="productSlideNumber === 2">
         <div class="featured-products--mobile-text-container">
           <p class="featured-products--mobile-text visible-xs mb2" v-if="productSlideNumber === 1">
-            A proven, industry-leading system, the WebCTRL® building automation system gives you the ability to fully understand your operations and analyze the results with tools that make sense to you.
-          </p>
-            <p class="featured-products--mobile-text visible-xs mb2" v-if="productSlideNumber === 2">
             Automated Logic’s Eco-Screen® Sustainability Kiosk is a powerful tool that allows building owners to showcase their facilities’ energy conservation and sustainability measures.
           </p>
             <p class="featured-products--mobile-text visible-xs mb2" v-if="productSlideNumber === 3">
@@ -217,9 +217,12 @@ get_header(); ?>
 
 <section class="section-md">
   <div class="container">
-    <h3 class="section-title section-title__right section-title__banner image-section--title">An Industry Expert</h3>
+    <h3 class="section-title section-title__right section-title__banner">An Industry Expert</h3>
     <div class="row">
-      <div class="col-xs-12 col-md-6">
+      <div class="image-section--arrow visible-xs"
+      @click="prevSlide('industry')"
+      v-bind:class="{'image-section--arrow__disabled': industrySlideNumber === 1}"></div>
+      <div class="col-xs-10 col-xs-offset-1 col-sm-offset-0 col-sm-8 col-md-6">
         <div v-show="industrySlideNumber === 1">
           <h3 class="text-bold mt0">Logical Solutions keeps our clients apprised of the latest regulatory changes, legislative updates, and energy incentives in the industry.</h3>
           <br>
@@ -241,7 +244,10 @@ get_header(); ?>
           <h3>LSi can act as a key component in your effort. Our expertise with certified projects will help you reach your goal.</h3>
         </div>
       </div>
-      <div class="col-xs-12 col-md-5 col-md-offset-1">
+      <div class="image-section--arrow visible-xs image-section--arrow__right"
+           @click="nextSlide('industry')"
+           v-bind:class="{'image-section--arrow__disabled': industrySlideNumber === 4}"></div>
+      <div class="col-xs-12 col-sm-3 col-md-5 col-sm-offset-1 hidden-xs">
         <div class="capabilities--options">
           <div class="capabilities--option" @click="showSlide('industry', 1)" v-bind:class="{ 'active': industrySlideNumber === 1 }">
             <div class="featured-products--option-dot"></div>
