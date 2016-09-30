@@ -322,7 +322,7 @@ get_header(); ?>
 
 <section class="section-md repeatable-building-bg">
   <div class="container">
-    <h3 class="section-title section-title__right section-title__banner image-section--title">Awards</h3>
+    <h3 class="section-title section-title__right section-title__banner">Awards</h3>
     <div class="home-awards">
       <div class="home-award">
         <img class="home-award--image" src="/wp-content/uploads/2016/09/award-1.jpg" alt="">
