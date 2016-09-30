@@ -65,8 +65,8 @@
       content: ''
       position: absolute
       left: 25rem
-      bottom: calc(50% - 13px)
-      right: calc(67.5rem - 1px)
+      bottom: calc(50% - 14px)
+      right: calc(66rem - 1px)
       height: 2px
       background: $brand-green
 
@@ -113,6 +113,7 @@
       display: inline-block
       border-bottom: 2px solid $brand-green
       float: left
+      line-height: 1
 
     a
       font-size: 1.6rem
@@ -121,7 +122,7 @@
       @extend .text-thin
       color: #e4e4ea
 
-      &:hover
+      &:hover, &:focus
         text-decoration: none
 
     .current-menu-item a
@@ -144,6 +145,7 @@
 
 .home .header--menu li:last-child a
   color: $brand-green
+  padding-right: 0
 
 
 .mobile-nav
