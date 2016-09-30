@@ -81,17 +81,19 @@ get_header();
 				<div class="container">
           <h3 class="section-title">{{currentTitle}}</h3>
 				</div>
-				<div class="container">
+				<div class="product-modal--scroll-content">
+					<div class="container">
 
-					<div class="product--modal-content">
-						<div class="product--modal-image" v-bind:style="{ backgroundImage: 'url(' + currentImage + ')' }"></div>
+						<div class="product--modal-content">
+							<div class="product--modal-image" v-bind:style="{ backgroundImage: 'url(' + currentImage + ')' }"></div>
 
-						<div class="product--modal-description">
-							<p class="product--modal-description-area"></p>
-							<a href="/contact#contact" class="product--modal-cta btn btn__blue uppercase">Contact Us</a>
+							<div class="product--modal-description">
+								<p class="product--modal-description-area"></p>
+								<a href="/contact#contact" class="product--modal-cta btn btn__blue uppercase">Contact Us</a>
+							</div>
 						</div>
-					</div>
 
+					</div>
 				</div>
 			</div>
 
