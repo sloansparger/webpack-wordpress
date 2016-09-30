@@ -81,7 +81,7 @@ get_header('grey');
               <div class="capabilities--options">
                 <div class="capabilities--option" v-on:click="showSlide(1)" v-bind:class="{ 'active': slideNumber === 1 }">
                   <div class="capabilities--option-dot"></div>
-                  <h4 class="capabilities--option-text">WebCTRL System&reg;</h4>
+                  <h4 class="capabilities--option-text">WebCTRL&reg; System</h4>
                 </div>
                 <div class="capabilities--option" v-on:click="showSlide(2)" v-bind:class="{ 'active': slideNumber === 2 }">
                   <div class="capabilities--option-dot"></div>
