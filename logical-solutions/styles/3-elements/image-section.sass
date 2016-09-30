@@ -30,6 +30,25 @@
     width: 100%
     background: url(http://logical-solutions.square205.com/wp-content/uploads/2016/09/LSi_Header_Images_CaseStudies.jpg) center / cover no-repeat
 
+  &--arrow
+    width: 5rem
+    height: 5rem
+    background: url($images-folder + 'slider-arrow.svg') center / 3rem no-repeat
+    z-index: 1
+    display: block
+    position: absolute
+    top: 50%
+    transform: translateY(-50%)
+    left: 1rem
+
+    &__disabled
+      opacity: .5
+
+    &__right
+      transform: translateY(-50%) scaleX(-1)
+      left: auto
+      right: 1rem
+
 @media screen and (max-width: 991px)
   .image-section
 

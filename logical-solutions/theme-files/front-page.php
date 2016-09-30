@@ -140,21 +140,49 @@ get_header(); ?>
 
 <section class="image-section bg-cool-light-grey">
   <div class="image-section--image image-section--image__wide image-section--image__right">
-    <div class="featured-products--image" style="background-image: url('/wp-content/uploads/2016/09/Homepage_ProductSliders_WebCTRLSystems.jpg')" v-show="productSlideNumber === 1" transition="fade">
-      <p class="featured-products--image-text">A proven, industry-leading system, the WebCTRL® building automation system gives you the ability to fully understand your operations and analyze the results with tools that make sense to you.</p>
+    <div class="image-section--arrow visible-xs"
+         @click="prevSlide('product')"
+         v-bind:class="{'image-section--arrow__disabled': productSlideNumber === 1}"></div>
+
+    <div class="featured-products--image"
+         style="background-image: url('/wp-content/uploads/2016/09/Homepage_ProductSliders_WebCTRLSystems.jpg')"
+         v-show="productSlideNumber === 1"
+         transition="fade">
+      <p class="featured-products--image-text hidden-xs">
+        A proven, industry-leading system, the WebCTRL® building automation system gives you the ability to fully understand your operations and analyze the results with tools that make sense to you.
+      </p>
+      <p class="featured-products--image-title visible-xs">WebCTRL&reg; SYSTEM</p>
     </div>
-    <div class="featured-products--image" style="background-image: url('/wp-content/uploads/2016/09/Homepage_ProductSliders_ECO-ScreenKiosk.jpg')" v-show="productSlideNumber === 2" transition="fade">
-      <p class="featured-products--image-text">Automated Logic’s Eco-Screen® Sustainability Kiosk is a powerful tool that allows building owners to showcase their facilities’ energy conservation and sustainability measures.</p>
+
+    <div class="featured-products--image"
+         style="background-image: url('/wp-content/uploads/2016/09/Homepage_ProductSliders_ECO-ScreenKiosk.jpg')"
+         v-show="productSlideNumber === 2"
+         transition="fade">
+      <p class="featured-products--image-text hidden-xs">
+        Automated Logic’s Eco-Screen® Sustainability Kiosk is a powerful tool that allows building owners to showcase their facilities’ energy conservation and sustainability measures.
+      </p>
+      <p class="featured-products--image-title visible-xs">ECO-Screen Kiosk</p>
     </div>
-    <div class="featured-products--image" style="background-image: url('/wp-content/uploads/2016/09/Homepage_ProductSliders_EnergyReportsPackage.jpg')" v-show="productSlideNumber === 3" transition="fade">
-      <p class="featured-products--image-text">The EnergyReportsTM analysis package provides on-the-fly report creation that is simple and intuitive to use. It allows facility managers to produce a wide variety of reports and dashboards that help them visualize and understand a building’s energy consumption.</p>
+
+    <div class="featured-products--image"
+         style="background-image: url('/wp-content/uploads/2016/09/Homepage_ProductSliders_EnergyReportsPackage.jpg')"
+         v-show="productSlideNumber === 3"
+         transition="fade">
+      <p class="featured-products--image-text hidden-xs">
+        The EnergyReportsTM analysis package provides on-the-fly report creation that is simple and intuitive to use. It allows facility managers to produce a wide variety of reports and dashboards that help them visualize and understand a building’s energy consumption.
+      </p>
+      <p class="featured-products--image-title visible-xs">Energy Reports Package</p>
     </div>
+
+    <div class="image-section--arrow visible-xs image-section--arrow__right"
+         @click="nextSlide('product')"
+         v-bind:class="{'image-section--arrow__disabled': productSlideNumber === productSlideCount}"></div>
   </div>
   <div class="container">
     <h3 class="section-title section-title__banner image-section--title">Featured Products</h3>
     <div class="row">
       <div class="col-md-6">
-        <div class="capabilities--options">
+        <div class="capabilities--options hidden-xs">
           <div class="capabilities--option" v-on:click="showSlide('product', 1)" v-bind:class="{ 'active': productSlideNumber === 1 }">
             <div class="featured-products--option-dot featured-products--option-dot__cool-grey"></div>
             <h4 class="capabilities--option-text">WebCTRL&reg; SYSTEM</h4>
@@ -167,6 +195,17 @@ get_header(); ?>
             <div class="featured-products--option-dot featured-products--option-dot__cool-grey"></div>
             <h4 class="capabilities--option-text uppercase">Energy Reports Package</h4>
           </div>
+        </div>
+        <div class="featured-products--mobile-text-container">
+          <p class="featured-products--mobile-text visible-xs mb2" v-if="productSlideNumber === 1">
+            A proven, industry-leading system, the WebCTRL® building automation system gives you the ability to fully understand your operations and analyze the results with tools that make sense to you.
+          </p>
+            <p class="featured-products--mobile-text visible-xs mb2" v-if="productSlideNumber === 2">
+            Automated Logic’s Eco-Screen® Sustainability Kiosk is a powerful tool that allows building owners to showcase their facilities’ energy conservation and sustainability measures.
+          </p>
+            <p class="featured-products--mobile-text visible-xs mb2" v-if="productSlideNumber === 3">
+            The EnergyReportsTM analysis package provides on-the-fly report creation that is simple and intuitive to use. It allows facility managers to produce a wide variety of reports and dashboards that help them visualize and understand a building’s energy consumption.
+          </p>
         </div>
         <a href="/products" class="btn btn__blue">View All Products</a>
       </div>
