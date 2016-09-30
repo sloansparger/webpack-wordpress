@@ -81,15 +81,15 @@ get_header('grey');
               <div class="capabilities--options">
                 <div class="capabilities--option" v-on:click="showSlide(1)" v-bind:class="{ 'active': slideNumber === 1 }">
                   <div class="capabilities--option-dot"></div>
-                  <h4 class="capabilities--option-text">WebCTRL&reg; System</h4>
+                  <h4 class="capabilities--option-text text-uppercase">WebCTRL&reg; System</h4>
                 </div>
                 <div class="capabilities--option" v-on:click="showSlide(2)" v-bind:class="{ 'active': slideNumber === 2 }">
                   <div class="capabilities--option-dot"></div>
-                  <h4 class="capabilities--option-text">Eco-screen Kiosk</h4>
+                  <h4 class="capabilities--option-text text-uppercase">Eco-screen Kiosk</h4>
                 </div>
                 <div class="capabilities--option" v-on:click="showSlide(3)" v-bind:class="{ 'active': slideNumber === 3 }">
                   <div class="capabilities--option-dot"></div>
-                  <h4 class="capabilities--option-text">EnergyReports Package</h4>
+                  <h4 class="capabilities--option-text text-uppercase">EnergyReports Package</h4>
                 </div>
               </div>
               <a href="/products" class="btn btn__blue">View All Products</a>
@@ -154,15 +154,15 @@ get_header('grey');
               <div class="capabilities--options">
                 <div class="capabilities--option text-brand-mid-blue" v-on:click="showTraining(1)" v-bind:class="{ 'active': trainingNumber === 1 }">
                   <div class="capabilities--option-dot"></div>
-                  <h4 class="capabilities--option-text">WebCTRL&reg; Basic Operator Training</h4>
+                  <h4 class="capabilities--option-text text-uppercase">WebCTRL&reg; Basic Operator Training</h4>
                 </div>
                 <div class="capabilities--option text-brand-mid-blue" v-on:click="showTraining(2)" v-bind:class="{ 'active': trainingNumber === 2 }">
                   <div class="capabilities--option-dot"></div>
-                  <h4 class="capabilities--option-text">WebCTRL&reg; Advanced Operator Training</h4>
+                  <h4 class="capabilities--option-text text-uppercase">WebCTRL&reg; Advanced Operator Training</h4>
                 </div>
                 <div class="capabilities--option text-brand-mid-blue" v-on:click="showTraining(3)" v-bind:class="{ 'active': trainingNumber === 3 }">
                   <div class="capabilities--option-dot"></div>
-                  <h4 class="capabilities--option-text">Customized Training</h4>
+                  <h4 class="capabilities--option-text text-uppercase">Customized Training</h4>
                 </div>
               </div>
               <a href="/training" class="btn btn__blue hidden-sm hidden-xs">Learn More about Training</a>
