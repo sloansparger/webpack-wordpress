@@ -165,7 +165,7 @@ get_header('grey');
                   <h4 class="capabilities--option-text">Customized Training</h4>
                 </div>
               </div>
-              <a href="/training" class="btn btn__blue">Learn More about Training</a>
+              <a href="/training" class="btn btn__blue hidden-sm hidden-xs">Learn More about Training</a>
             </div>
             <div class="col-xs-12 col-md-6">
               <div v-show="trainingNumber === 1">
@@ -177,6 +177,7 @@ get_header('grey');
               <div v-show="trainingNumber === 3">
                 <p><?php echo $trainingSlideText3; ?></p>
               </div>
+              <a href="/training" class="btn btn__blue capabilities--training--learn-more hidden-md hidden-lg">Learn More about Training</a>
             </div>
           </div>
         </div>

@@ -43,6 +43,9 @@
   &--options
     margin-bottom: 8.5rem
 
+    @media screen and (max-width: 991px)
+      margin-bottom: 5rem
+
   &--option
     display: flex
     align-items: center
@@ -133,6 +136,10 @@
     &__disabled
       color: $mid-light-grey !important
       cursor: not-allowed
+
+  &--training
+    &--learn-more
+      margin-top: 3rem
 
 .active
   .capabilities--option-text
