@@ -46,7 +46,7 @@ get_header('grey');
                   endwhile; else: endif; ?>
 
         </div>
-        <p class="text-brand-green text-sm text-thin text-center">Click on a category above to learn more</p>
+        <p class="capabilities--learn-more text-brand-green text-center">Click on a category above to learn more</p>
       </section>
 
       <section class="blurb-section bg-cool-light-grey">
