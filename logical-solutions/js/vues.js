@@ -37,6 +37,7 @@ var inView
 
 document.addEventListener('DOMContentLoaded', function() {
   inView = require('in-view')
+  document.getElementById('menu-item-26').childNodes[0].textContent = 'company'
 })
 
 var app = {
