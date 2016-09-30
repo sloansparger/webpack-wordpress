@@ -22,7 +22,7 @@ get_header();
 					<div class="products">
 						<?php if ( $softwarePosts->have_posts() ) : while ( $softwarePosts->have_posts() ) : $softwarePosts->the_post(); ?>
 
-						<div class="product">
+						<div class="product" @click="openMobileModal('<?php echo the_title() ?>', '<?php echo wp_get_attachment_image_src(get_field('image'), 'full')[0]; ?>', '<?php the_field('full_description'); ?>')">
 							<div class="product--image" style="background-image: url(<?php echo wp_get_attachment_image_src(get_field('image'), 'medium')[0]; ?>)">
 								<div class="product--overlay"></div>
 								<h3 class="product--name text-white"><?php echo the_title() ?></h3>
@@ -50,7 +50,7 @@ get_header();
 
 						<?php if ( $hardwarePosts->have_posts() ) : while ( $hardwarePosts->have_posts() ) : $hardwarePosts->the_post(); ?>
 
-							<div class="product">
+							<div class="product" @click="openMobileModal('<?php echo the_title() ?>', '<?php echo wp_get_attachment_image_src(get_field('image'), 'full')[0]; ?>', '<?php the_field('full_description'); ?>')">
 								<div class="product--image"  style="background-image: url(<?php echo wp_get_attachment_image_src(get_field('image'), 'medium')[0]; ?>)">
 									<div class="product--overlay"></div>
 									<h3 class="product--name text-white"><?php echo the_title() ?></h3>

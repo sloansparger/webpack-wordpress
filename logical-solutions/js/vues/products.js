@@ -17,6 +17,11 @@ module.exports = {
       this.currentTitle = title
       this.currentImage = image
       this.currentDescription = description
+    },
+    openMobileModal: function(title, image, description) {
+      if (window.innerWidth <= 768) {
+        this.openModal(title, image, description)
+      }
     }
   }
 }

@@ -35,7 +35,7 @@ get_header('grey');
 							<div class="training--divider"></div>
 				    </div>
 				    <div class="col-md-3 col-md-offset-2">
-              <a href="#register" class="btn btn__blue mb5">Register Now</a>
+              <a href="#training" class="btn btn__blue mb5">Register Now</a>
               <h1 class="uppercase text-thin mt0">Schedule</h1>
 
               <?php
