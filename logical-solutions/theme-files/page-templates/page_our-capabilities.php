@@ -81,7 +81,7 @@ get_header('grey');
               <div class="capabilities--options">
                 <div class="capabilities--option" v-on:click="showSlide(1)" v-bind:class="{ 'active': slideNumber === 1 }">
                   <div class="capabilities--option-dot"></div>
-                  <h4 class="capabilities--option-text">WebCTRL System</h4>
+                  <h4 class="capabilities--option-text">WebCTRL System&reg;</h4>
                 </div>
                 <div class="capabilities--option" v-on:click="showSlide(2)" v-bind:class="{ 'active': slideNumber === 2 }">
                   <div class="capabilities--option-dot"></div>
@@ -154,11 +154,11 @@ get_header('grey');
               <div class="capabilities--options">
                 <div class="capabilities--option text-brand-mid-blue" v-on:click="showTraining(1)" v-bind:class="{ 'active': trainingNumber === 1 }">
                   <div class="capabilities--option-dot"></div>
-                  <h4 class="capabilities--option-text">WebCTRL Basic Operator Training</h4>
+                  <h4 class="capabilities--option-text">WebCTRL&reg; Basic Operator Training</h4>
                 </div>
                 <div class="capabilities--option text-brand-mid-blue" v-on:click="showTraining(2)" v-bind:class="{ 'active': trainingNumber === 2 }">
                   <div class="capabilities--option-dot"></div>
-                  <h4 class="capabilities--option-text">WebCTRL Advanced Operator Training</h4>
+                  <h4 class="capabilities--option-text">WebCTRL&reg; Advanced Operator Training</h4>
                 </div>
                 <div class="capabilities--option text-brand-mid-blue" v-on:click="showTraining(3)" v-bind:class="{ 'active': trainingNumber === 3 }">
                   <div class="capabilities--option-dot"></div>

@@ -148,7 +148,7 @@ get_header(); ?>
         <div class="capabilities--options">
           <div class="capabilities--option" v-on:click="showSlide('product', 1)" v-bind:class="{ 'active': productSlideNumber === 1 }">
             <div class="featured-products--option-dot featured-products--option-dot__cool-grey"></div>
-            <h4 class="capabilities--option-text uppercase">WebCTRL System</h4>
+            <h4 class="capabilities--option-text uppercase">WebCTRL System&reg;</h4>
           </div>
           <div class="capabilities--option" v-on:click="showSlide('product', 2)" v-bind:class="{ 'active': productSlideNumber === 2 }">
             <div class="featured-products--option-dot featured-products--option-dot__cool-grey"></div>
@@ -266,7 +266,7 @@ get_header(); ?>
         <img class="home-award--image" src="/wp-content/uploads/2016/09/award-2.jpg" alt="">
         <div class="home-award--info">
           <p class="text-center">
-            WebCTRL Receives BTL Advanced<br>Workstation Software<br>Certification
+            WebCTRL&reg; Receives BTL Advanced<br>Workstation Software<br>Certification
           </p>
         </div>
       </div>
