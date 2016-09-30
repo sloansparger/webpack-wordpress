@@ -55,7 +55,7 @@ get_header('grey');
 
       <section>
         <div class="container">
-          <h3 class="section-title image-section--title">Next Session</h3>
+          <h3 class="section-title">Next Session</h3>
 
             <?php
               // call the first post in the query (should be first and soonest session_date)
