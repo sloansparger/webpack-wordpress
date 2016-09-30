@@ -137,3 +137,23 @@ blockquote
 @media screen and (max-width: 450px)
   .section-title::after
     right: 0
+
+
+.blue-title-mobile
+
+  @media screen and (max-width: 991px)
+    background: $brand-blue
+    color: white
+    padding: .3rem
+    margin-right: 20rem
+
+    &::after
+      content: ''
+      position: absolute
+      background: #20499E
+      top: 0
+      right: 100%
+      left: auto !important
+      height: 100%
+      width: 50rem
+      z-index: 1
