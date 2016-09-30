@@ -137,9 +137,10 @@
       color: $mid-light-grey !important
       cursor: not-allowed
 
-  &--training
-    &--learn-more
-      margin-top: 3rem
+  &--mobile-paragraph-margin-bottom
+    @media screen and (max-width: 991px)
+      margin-bottom: 3rem
+
 
 .active
   .capabilities--option-text

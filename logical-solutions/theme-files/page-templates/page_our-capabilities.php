@@ -113,7 +113,7 @@ get_header('grey');
           <h3 class="section-title">Services</h3>
           <div class="row">
             <div class="col-xs-12 col-md-5">
-              <p><?php echo $services_text; ?></p>
+              <p class="capabilities--mobile-paragraph-margin-bottom"><?php echo $services_text; ?></p>
             </div>
             <div class="col-xs-12 col-md-7">
               <h3 class="text-bold text-brand-mid-blue mt0 mb3">Each program offers scaled and discounted rates for:</h3>
@@ -168,14 +168,16 @@ get_header('grey');
               <a href="/training" class="btn btn__blue hidden-sm hidden-xs">Learn More about Training</a>
             </div>
             <div class="col-xs-12 col-md-6">
-              <div v-show="trainingNumber === 1">
-                <p><?php echo $trainingSlideText1; ?></p>
-              </div>
-              <div v-show="trainingNumber === 2">
-                <p><?php echo $trainingSlideText2; ?></p>
-              </div>
-              <div v-show="trainingNumber === 3">
-                <p><?php echo $trainingSlideText3; ?></p>
+              <div class="capabilities--mobile-paragraph-margin-bottom">
+                <div v-show="trainingNumber === 1">
+                  <p><?php echo $trainingSlideText1; ?></p>
+                </div>
+                <div v-show="trainingNumber === 2">
+                  <p><?php echo $trainingSlideText2; ?></p>
+                </div>
+                <div v-show="trainingNumber === 3">
+                  <p><?php echo $trainingSlideText3; ?></p>
+                </div>
               </div>
               <a href="/training" class="btn btn__blue capabilities--training--learn-more hidden-md hidden-lg">Learn More about Training</a>
             </div>
