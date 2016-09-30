@@ -166,13 +166,13 @@ get_header('grey');
             </div>
             <div class="col-xs-12 col-md-6">
               <div v-show="trainingNumber === 1">
-                <?php the_field('traing_slide_1'); ?>
+                <?php the_field('training_slide_1'); ?>
               </div>
               <div v-show="trainingNumber === 2">
-                <?php the_field('traing_slide_2'); ?>
+                <?php the_field('training_slide_2'); ?>
               </div>
               <div v-show="trainingNumber === 3">
-                <?php the_field('traing_slide_3'); ?>
+                <?php the_field('training_slide_3'); ?>
               </div>
             </div>
           </div>
