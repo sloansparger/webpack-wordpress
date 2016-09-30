@@ -314,7 +314,7 @@ get_header(); ?>
         <img class="home-award--image" src="/wp-content/uploads/2016/09/award-2.jpg" alt="">
         <div class="home-award--info">
           <p class="text-center">
-            WebCTRL Receives BTL Advanced<br>Workstation Software<br>Certification
+            WebCTRL&reg; Receives BTL Advanced<br>Workstation Software<br>Certification
           </p>
         </div>
       </div>
