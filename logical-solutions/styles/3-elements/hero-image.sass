@@ -87,30 +87,21 @@
       font-size: 3rem
 
     &--blurb
-      width: 100%
-      font-size: 1.6rem
-      margin-top: 15rem
-      margin-left: 10rem
-      border-top: 2px solid $brand-green
-      border-left: 2px solid $brand-green
-      padding-left: 2.5rem
-      padding-right: 10rem
+      width: 66.6666%
+      font-size: 2.4rem
       line-height: 1.4
-
-      &::before
-        content: ''
-        position: absolute
-        height: 2px
-        width: 20rem
-        right: 100%
-        bottom: 0
-        background: $brand-green
+      margin-top: 15rem
 
       &::after
         content: none
 
   .page-hero__home-page
     height: 100vh
+
+@media screen and (max-width: 550px)
+  .page-hero
+    &--blurb
+      width: 90%
 
 @media screen and (max-width: 400px)
   .page-hero

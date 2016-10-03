@@ -43,7 +43,7 @@
           </div>
         </div>
 				<div class="col-md-1 col-md-offset-1">
-					<a class="footer--links" href="/services">Services</a>
+					<a class="footer--links" href="/capabilities">Services</a>
 					<a class="footer--links" href="/careers">Careers</a>
 				</div>
 				<div class="col-md-1">
