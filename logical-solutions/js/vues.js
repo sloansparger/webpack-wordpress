@@ -58,9 +58,11 @@ var app = {
       this.mobileNavOpen = false
     },
     activateSlideNav: function() {
+      console.log('activateSlideNav');
       this.slideNavActive = true
     },
     deactivateSlideNav: function() {
+      console.log('deactivateSlideNav');
       this.slideNavActive = false
     }
   }
@@ -96,6 +98,8 @@ function mergeAndCreateVues(vueToMerge) {
   var modifiedApp = Object.assign({}, app)
   Object.assign(modifiedApp.data, vueToMerge.data)
   Object.assign(modifiedApp.methods, vueToMerge.methods)
-  modifiedApp.ready = vueToMerge.ready
+  if (vueToMerge.ready) {
+    modifiedApp.ready = vueToMerge.ready
+  }
   createVue(modifiedApp)
 }

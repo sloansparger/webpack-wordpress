@@ -14,7 +14,7 @@ if ( ! function_exists( 'logical_solutions_setup' ) ) :
  * Note that this function is hooked into the after_setup_theme hook, which
  * runs before the init hook. The init hook is too late for some features, such
  * as indicating support for post thumbnails.
- */
+ */ 
 function logical_solutions_setup() {
 	/*
 	 * Make theme available for translation.
