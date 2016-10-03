@@ -2,7 +2,7 @@
 /*
 Template Name: Our Capabilities
 */
-get_header('grey');
+get_header();
 ?>
 
 <div id="app">
@@ -25,7 +25,7 @@ get_header('grey');
         $trainingSlideText3 = get_field('training_slide_3');
        ?>
 
-      <section class="section-md">
+      <section class="section-md" id="categories">
         <div class="container">
           <h3 class="text-center information-title"><?php echo $markets_section_text; ?></h3>
           <div class="row">
@@ -108,7 +108,7 @@ get_header('grey');
   			</div>
   		</section>
 
-      <section class="section-md">
+      <section class="section-md" id="services">
         <div class="container">
           <h3 class="section-title">Services</h3>
           <div class="row">
@@ -146,7 +146,7 @@ get_header('grey');
   			</div>
   		</section>
 
-      <section class="section-md">
+      <section class="section-md" id="trainings">
         <div class="container">
           <h3 class="section-title">Training</h3>
           <div class="row">

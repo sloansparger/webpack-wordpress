@@ -46,9 +46,24 @@ var app = {
     slideNavActive: false
   },
   ready: function() {
+    // sticky nav
     inView('.page-hero')
       .on('enter', () => this.deactivateSlideNav())
       .on('exit', () => this.activateSlideNav())
+
+    // slide to links
+    var subnavLinks = document.querySelectorAll('.current-menu-item .sub-menu a')
+
+    subnavLinks.forEach(function(a) {
+      a.onclick = function(e) {
+        e.preventDefault()
+        const hash = e.target.href.split('#')[1]
+        const elem = document.getElementById(hash)
+        jQuery('html, body').animate({
+          scrollTop: elem.offsetTop - 80
+        }, 1000);
+      }
+    })
   },
   methods: {
     openMobileNav: function() {

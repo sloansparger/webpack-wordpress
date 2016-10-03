@@ -17,7 +17,7 @@
         display: none
 
     .header--menu a
-      color: $brand-blue
+      color: $brand-blue !important
 
   &__slider
     background-color: $cool-light-grey
@@ -37,7 +37,7 @@
         display: none
 
     .header--menu a
-      color: $brand-blue
+      color: $brand-blue !important
 
   &__slider,
   &__grey-bg
@@ -79,51 +79,78 @@
   &--menu
     margin-top: .75rem
 
-    ul
+    #primary-menu
       list-style-type: none
       margin-bottom: 0
       position: relative
 
-    .current-menu-item
-      border-bottom: 2px solid transparent
-      position: relative
+      & > li
+        display: inline-block
+        border-bottom: 2px solid $brand-green
+        float: left
+        line-height: 1
+        position: relative
 
-      &::before
-        content: ''
+        & > a
+          font-size: 1.6rem
+          text-transform: uppercase
+          padding: 1.5rem
+          padding-bottom: 0
+          letter-spacing: .05rem
+          @extend .text-thin
+          color: #e4e4ea
+
+          &:hover, &:focus
+            text-decoration: none
+
+      .sub-menu
+        display: none
         position: absolute
-        top: -.75rem
+        bottom: -2.5rem
         left: 0
-        right: 0
-        height: 2px
-        background: $brand-green
+        width: 100vw
+        padding-left: .5rem
 
-      &::after
-        content: ''
-        position: absolute
-        height: calc(100% + .75rem)
-        width: 100%
-        left: 0
-        top: calc(-.75rem + 2px)
-        background: transparent
-        border-left: 2px solid $brand-green
-        border-right: 2px solid $brand-green
+        li
+          display: inline-block
+          color: white
 
-    li
-      display: inline-block
-      border-bottom: 2px solid $brand-green
-      float: left
-      line-height: 1
+        a
+          @extend .text-thin
+          padding: 1.5rem
+          color: $brand-green !important
+          text-transform: uppercase
+          font-size: 1.6rem
 
-    a
-      font-size: 1.6rem
-      text-transform: uppercase
-      padding: 1.5rem
-      letter-spacing: .05rem
-      @extend .text-thin
-      color: #e4e4ea
+          &:hover, &:focus
+            text-decoration: none
 
-      &:hover, &:focus
-        text-decoration: none
+      .current-menu-item
+        border-bottom: 2px solid transparent
+        position: relative
+
+        &::before
+          content: ''
+          position: absolute
+          top: -.75rem
+          left: 0
+          right: 0
+          height: 2px
+          background: $brand-green
+
+        &::after
+          content: ''
+          position: absolute
+          height: calc(100% + .75rem)
+          width: 100%
+          left: 0
+          top: calc(-.75rem + 2px)
+          background: transparent
+          border-left: 2px solid $brand-green
+          border-right: 2px solid $brand-green
+
+        .sub-menu
+          display: block !important
 
     .current-menu-item a
       @extend .text-bold
