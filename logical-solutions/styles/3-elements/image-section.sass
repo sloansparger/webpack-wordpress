@@ -32,14 +32,14 @@
 
   &--arrow
     width: 5rem
-    height: 5rem
-    background: url($images-folder + 'slider-arrow.svg') center / 3rem no-repeat
+    height: 10rem
+    background: url($images-folder + 'slider-arrow.svg') center / 2rem no-repeat
     z-index: 1
     display: block
     position: absolute
     top: 50%
     transform: translateY(-50%)
-    left: 1rem
+    left: 0
 
     &__disabled
       opacity: .5
@@ -47,7 +47,13 @@
     &__right
       transform: translateY(-50%) scaleX(-1)
       left: auto
-      right: 1rem
+      right: 0
+
+.image-section
+  .image-section--arrow
+    background: rgba(0,0,0,.5) url($images-folder + 'slider-arrow.svg') center / 2rem no-repeat
+
+
 
 @media screen and (max-width: 991px)
   .image-section
