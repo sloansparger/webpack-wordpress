@@ -35,7 +35,7 @@ get_header('grey');
                 </p></address>
               </a>
 					  </div>
-					  <div class="col-xs-10 col-sm-4 col-md-3 col-md-offset-1">
+					  <div class="remove-horizontal-padding-sm col-xs-10 col-sm-4 col-md-3 col-md-offset-1">
               <h3 class="text-brand-dark-blue text-bold">Phone Number</h3>
               <a href="tel:<?php echo $phone_number; ?>" class="text-brand-mid-blue">
                 <div class="contact--number text-thin"><?php echo $phone_number; ?></div>
