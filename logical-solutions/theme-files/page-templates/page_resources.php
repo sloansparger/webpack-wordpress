@@ -27,20 +27,18 @@ get_header('grey');
 			</section>
 			<section>
         <div class="container">
-          <div class="row">
+          <div class="resources">
             <?php $resources = new WP_Query( array( 'post_type' => 'lsi_resource' ) );
                   if ( $resources->have_posts() ) : while ( $resources->have_posts() ) : $resources->the_post();
                   $desc = get_field('description', false, false);
 									$link = get_field('link', false, false);
             ?>
-            <div class="col-md-4 col-sm-6 col-xs-12">
-              <div class="resource">
-                <div class="resource--title-container">
-                  <p class="resource--title uppercase mb0"><?php the_title() ?></p>
-                </div>
-                <p class="resource--excerpt"><?php echo $desc ?></p>
-                <a href="<?php echo $link ?>" target="_" class="btn btn__blue btn__small">Visit Site</a>
+            <div class="resource">
+              <div class="resource--title-container">
+                <p class="resource--title uppercase mb0"><?php the_title() ?></p>
               </div>
+              <p class="resource--excerpt"><?php echo $desc ?></p>
+              <a href="<?php echo $link ?>" target="_" class="btn btn__blue btn__small">Visit Site</a>
             </div>
             <?php endwhile; else: endif; ?>
           </div>
