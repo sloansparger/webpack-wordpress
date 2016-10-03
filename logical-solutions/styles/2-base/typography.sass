@@ -87,7 +87,13 @@ blockquote
     right: 37.5rem
 
   &__right
-    text-align: center
+    padding-left: 33rem !important
+
+    @media screen and (max-width: 991px)
+      padding-left: 21rem !important
+
+    @media screen and (max-width: 767px)
+      padding-left: 27% !important
 
     &::after
       left: 30rem
