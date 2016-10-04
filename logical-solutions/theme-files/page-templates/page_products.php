@@ -46,7 +46,7 @@ get_header();
 				</div>
 
 				<div class="container mt3">
-					<h3 class="section-title">Hardware</h3>
+					<h3 class="section-title">Energy Management Products</h3>
 					<div class="products">
 
 						<?php if ( $hardwarePosts->have_posts() ) : while ( $hardwarePosts->have_posts() ) : $hardwarePosts->the_post(); ?>
