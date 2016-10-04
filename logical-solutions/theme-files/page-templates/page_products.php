@@ -19,7 +19,7 @@ get_header();
 			<section class="section-md" id="products">
 
 				<div class="container">
-					<h3 class="section-title">Software</h3>
+					<h3 class="section-title">Energy Managment Software</h3>
 					<div class="products">
 						<?php if ( $softwarePosts->have_posts() ) : while ( $softwarePosts->have_posts() ) : $softwarePosts->the_post(); ?>
 
@@ -45,7 +45,7 @@ get_header();
 					</div>
 				</div>
 
-				<div class="container">
+				<div class="container mt3">
 					<h3 class="section-title">Hardware</h3>
 					<div class="products">
 
@@ -73,8 +73,8 @@ get_header();
 					</div>
 				</div>
 
-				<div class="container">
-					<h3 class="section-title">Security Software</h3>
+				<div class="container mt3">
+					<h3 class="section-title">Access Control &<br/>Video Surveillance Solutions</h3>
 					<div class="products">
 						<?php if ( $security_softwarePosts->have_posts() ) : while ( $security_softwarePosts->have_posts() ) : $security_softwarePosts->the_post(); ?>
 

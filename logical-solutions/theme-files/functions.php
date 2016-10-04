@@ -14,7 +14,7 @@ if ( ! function_exists( 'logical_solutions_setup' ) ) :
  * Note that this function is hooked into the after_setup_theme hook, which
  * runs before the init hook. The init hook is too late for some features, such
  * as indicating support for post thumbnails.
- */ 
+ */
 function logical_solutions_setup() {
 	/*
 	 * Make theme available for translation.
@@ -153,7 +153,8 @@ function new_post_types() {
         'rest_base'         => 'products-api',
         'rest_controller_class' => 'WP_REST_Posts_Controller',
         'supports'          => array('title', 'thumbnail'),
-				'taxonomies'        => array('category')
+				'taxonomies'        => array('category'),
+				'menu_icon'   => 'dashicons-products',
         )
       );
 
@@ -171,6 +172,7 @@ function new_post_types() {
         'rest_controller_class' => 'WP_REST_Posts_Controller',
 				'rewrite'           => array('slug' => 'careers'),
         'supports'          => array('title', 'thumbnail'),
+				'menu_icon'   => 'dashicons-businessman',
         )
       );
 
@@ -188,6 +190,7 @@ function new_post_types() {
         'rest_controller_class' => 'WP_REST_Posts_Controller',
 				'rewrite'           => array('slug' => 'training'),
         'supports'          => array('title', 'thumbnail'),
+				'menu_icon'   => 'dashicons-calendar-alt',
         )
       );
 
@@ -205,6 +208,7 @@ function new_post_types() {
         'rest_controller_class' => 'WP_REST_Posts_Controller',
 				'rewrite'           => array('slug' => 'resources'),
         'supports'          => array('title', 'thumbnail'),
+				'menu_icon'   => 'dashicons-book-alt',
         )
       );
 
@@ -222,6 +226,7 @@ function new_post_types() {
         'rest_controller_class' => 'WP_REST_Posts_Controller',
 				'rewrite'           => array('slug' => 'capabilities'),
         'supports'          => array('title', 'thumbnail'),
+				'menu_icon'   => 'dashicons-hammer',
         )
       );
 
@@ -239,6 +244,7 @@ function new_post_types() {
         'rest_controller_class' => 'WP_REST_Posts_Controller',
 				'rewrite'           => array('slug' => 'employees'),
         'supports'          => array('title', 'thumbnail'),
+				'menu_icon'   => 'dashicons-groups',
         )
       );
 }
@@ -315,4 +321,14 @@ function new_taxonomies() {
   wp_insert_term('software', 'product-category');
 
 }
+
+function wpse_233129_custom_menu_order() {
+    return array(
+			'index.php',
+			'upload.php'
+		);
+}
+
+add_filter( 'custom_menu_order', '__return_true' );
+add_filter( 'menu_order', 'wpse_233129_custom_menu_order' );
 ?>

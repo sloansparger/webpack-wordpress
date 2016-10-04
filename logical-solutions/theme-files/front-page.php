@@ -22,7 +22,7 @@ get_header(); ?>
       <div class="home-hero--main-text">
         <h3 class="home-hero--choose">Choose</h3>
         <h1 class="home-hero--title">A Logical Solution</h1>
-        <p class="home-hero--subtitle">For your energy management and control systems</p>
+        <p class="home-hero--subtitle">For your energy management and control integreation</p>
       </div>
 
     </div>
