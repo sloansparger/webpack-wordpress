@@ -88,6 +88,15 @@ get_header();
 								</ul>
 							</div>
 						</div>
+            <div class="application mt4">
+              <hr class="hidden-md hidden-lg">
+              <div class="row">
+                <div class="col-md-3 col-xs-12">
+                  <h2 class="uppercase text-thin mb4 mt0" style="padding-top: 5px">Interested?<br>Apply now</h2>
+                </div>
+                <?php echo do_shortcode( '[contact-form-7 id="265" title="Career Form"]' ); ?>
+              </div>
+            </div>
 					</div>
 				</div>
 			</div>

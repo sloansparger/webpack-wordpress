@@ -78,7 +78,7 @@ select
   border-color: $brand-green transparent transparent transparent
 
 
-input[type="submit"]
+input[type="submit"], input[type="file"]
   width: auto
 
   &.btn
@@ -108,6 +108,9 @@ input[type="submit"]
   &__shorten
     width: 75%
 
+  &__grey-outline
+    outline: 1px auto $light-grey
+
 @media screen and (max-width: 767px)
   input, textarea, select, option
     margin-bottom: 2rem
@@ -132,3 +135,40 @@ input[type="submit"]
       & > span
         margin-left: 0
         margin-right: 0
+
+.file-cover-letter, .file-resume
+  width: .1px !important
+
+.attachment
+  width: 0.1px
+  height: 0.1px
+  opacity: 0
+  overflow: hidden
+  position: absolute
+  z-index: -1
+
+  &:focus
+    color: $brand-green
+
+  &--resume
+    margin-top: 0
+    margin-bottom: 2rem
+
+  &--label
+    color: $brand-mid-blue
+    font-size: 1.6rem
+    cursor: pointer
+
+    &:hover
+      color: $brand-green
+
+.paperclip-icon
+  display: inline-block
+  left: 0
+  top: 0
+  background-image: url( $images-folder + 'paperclip.svg' )
+  background-size: contain
+  background-repeat: no-repeat
+  height: 2rem
+  width: 2rem
+  margin-right: 1rem
