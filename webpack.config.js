@@ -3,7 +3,7 @@ const autoprefixer      = require('autoprefixer')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const WriteFilePlugin   = require('write-file-webpack-plugin')
 
-const THEME_NAME        = 'logical-solutions'
+const THEME_NAME        = 'awesome-theme'
 exports.THEME_NAME      = THEME_NAME
 
 
@@ -30,7 +30,7 @@ exports.compiler = {
 
   plugins: [
     new CopyWebpackPlugin([
-      {context: __dirname + '/logical-solutions/theme-files', from: './**/*', to: '../'}
+      {context: __dirname + '/' + THEME_NAME + '/theme-files', from: './**/*', to: '../'}
     ], {ignore: ['./styles', './js', './index.js']}),
     new WriteFilePlugin()
   ],

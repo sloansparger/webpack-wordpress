@@ -22,7 +22,7 @@ compiler.plugins.push(new OpenBrowserPlugin({ url: 'http://localhost:3000' }))
 compiler.devServer = {
   contentBase: './wordpress/wp-content/themes/' + THEME_NAME + '/assets',
 
-  outputPath: join(__dirname, '../wordpress/wp-content/themes/logical-solutions/assets'),
+  outputPath: join(__dirname, '../wordpress/wp-content/themes/' + THEME_NAME + '/assets'),
 
   proxy: {
     '/': proxyConfig,

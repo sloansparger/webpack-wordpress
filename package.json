@@ -1,18 +1,10 @@
 {
-  "name": "logical-solutions",
+  "name": "webpack-wordpress",
+  "author": "Sloan Sparger",
   "version": "0.0.0",
-  "description": "Wordpress install for Logical Solutions",
-  "main": "logical-solutions/index.js",
-  "dependencies": {
-    "axios": "^0.14.0",
-    "babel-core": "^6.13.2",
-    "bootstrap": "^3.3.2",
-    "in-view": "^0.4.3",
-    "lodash": "^3.2.0",
-    "timeago.js": "^1.1.0",
-    "url-loader": "^0.5.7",
-    "vue": "^1.0.26"
-  },
+  "description": "Build Wordpress themes using Webpack and Hot Module Reloading",
+  "main": "index.js",
+  "dependencies": {},
   "devDependencies": {
     "autoprefixer": "^6.4.0",
     "babel-loader": "^6.2.5",
@@ -28,18 +20,14 @@
     "webpack": "^1.13.2",
     "webpack-dashboard": "^0.1.8",
     "webpack-dev-server": "^1.14.0",
-    "write-file-webpack-plugin": "^3.1.8"
+    "write-file-webpack-plugin": "^3.1.8",
+    "babel-core": "^6.13.2",
+    "url-loader": "^0.5.7"
   },
   "scripts": {
-    "build": "npm install && webpack --config webpack-configs/webpack.prod.js && find . ! -name 'wordpress' -maxdepth 1 -type d -exec rm -rf {} + && find . -type f -maxdepth 1 -exec rm {} + && mv wordpress/* .",
-    "build-test": "webpack --config webpack-configs/webpack.prod.js",
+    "build": "webpack --config webpack-configs/webpack.prod.js",
     "dev": "webpack-dashboard -- webpack-dev-server --inline --hot --port=3000 --config webpack-configs/webpack.dev.js",
-    "stage": "webpack --config webpack-configs/webpack.stage.js",
-    "stage-test": "webpack --config webpack-configs/webpack.stage.js"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git://github.com/kentcdodds/intro-to-webpack.git"
-  },
-  "author": "Sloan Sparger"
+    "setup": "cd wordpress && wp core download && cd ..",
+    "stage": "webpack --config webpack-configs/webpack.stage.js"
+  }
 }

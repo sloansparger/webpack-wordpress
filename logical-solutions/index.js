@@ -1,5 +1,0 @@
-require('./styles/index.sass')
-require('./js/dev-env')
-require('./js/map')
-require('./js/vues')
-window.initMap = require('./js/map')
