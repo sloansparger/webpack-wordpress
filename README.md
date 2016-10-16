@@ -1,3 +1,4 @@
+![Webpack and Webpack Dashboard being used to develop Wordpress Themes!](https://cloud.githubusercontent.com/assets/7104357/19415177/947d09fa-932d-11e6-8614-d1efe38333fc.png)
 # Wordpress Webpack
 This project aims to bring the best features of the latest tooling to Wordpress theme development. Namely, this project gives you the ability to have hot module replacement provided by Webpack to allow you to develop javascript rich themes that without having to constantly reload the page. Additionally you can import any npm module and have it available on the front-end. This project also allows you to write your styling using SASS and use ES2015, and utilizes the awesome webpack-dashboard tool so you feel cool too.
 
