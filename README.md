@@ -1,5 +1,5 @@
 # Wordpress Webpack
-This project aims to bring the best features of the latest tooling to Wordpress theme development. Namely, this project gives you the ability to have hot module replacement provided by Webpack to allow you to develop javascript rich themes that without having to constantly reload the page. Additionally you can import any npm module and have it available on the front-end. This project also allows you to write your styling using SASS and use ES2015, and utilizes the awesome webpack-dashboard tool so you feel cool too. 
+This project aims to bring the best features of the latest tooling to Wordpress theme development. Namely, this project gives you the ability to have hot module replacement provided by Webpack to allow you to develop javascript rich themes that without having to constantly reload the page. Additionally you can import any npm module and have it available on the front-end. This project also allows you to write your styling using SASS and use ES2015, and utilizes the awesome webpack-dashboard tool so you feel cool too.
 
 # Getting Started
 To start using the project simply run:
@@ -24,13 +24,13 @@ To style your webpages you simply go into the awesome-theme/styling folder. Any 
 ### Javascript
 In awesome-theme/index.js you can import any and all javascript that you would like. Import npm packages or import your own files. Take advantage of having a modern ecosystem to create web apps using Wordpress.
 
-### Php and Template Files
+### PHP and Template Files
 All edits to php files will require a manual refresh to see changes. The hope is that in future versions of this tool that this will no longer be a need, but for now it is a requirement.
 
-# TODO
+# Todo
+These are a few things that I think would make this tool just that much better
 - have page refresh when php file is changed, not just sass and js
 - source maps for sass
 - code linting
 - add composer to handle the plugins (php)
-- have a npm start-project script that downloads the freshest version of wordpress
 - fix CopyWebpackPlugin copying \*.hotpush.json files to wordpress/../theme-name-folder/assets/js
