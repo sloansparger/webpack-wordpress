@@ -1,6 +1,6 @@
 module.exports =
   document.addEventListener('DOMContentLoaded', function() {
-    if (window.location.href.indexOf('localhost')) {
+    if (window.location.href.indexOf('localhost:8888') !== -1) {
       const links = [...document.getElementsByTagName('a')]
 
       links.forEach(link => {
