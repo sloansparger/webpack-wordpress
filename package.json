@@ -4,7 +4,10 @@
   "version": "0.0.0",
   "description": "Build Wordpress themes using Webpack and Hot Module Reloading",
   "main": "index.js",
-  "dependencies": {},
+  "dependencies": {
+    "browser-sync": "^2.26.7",
+    "browser-sync-webpack-plugin": "^2.2.2"
+  },
   "devDependencies": {
     "autoprefixer": "^6.4.0",
     "babel-loader": "^6.2.5",

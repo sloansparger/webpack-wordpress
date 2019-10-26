@@ -2,6 +2,7 @@ const webpack           = require('webpack')
 const autoprefixer      = require('autoprefixer')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const WriteFilePlugin   = require('write-file-webpack-plugin')
+const BrowserSyncPlugin = require('browser-sync-webpack-plugin')
 
 const THEME_NAME        = 'awesome-theme'
 exports.THEME_NAME      = THEME_NAME
@@ -32,6 +33,17 @@ exports.compiler = {
     new CopyWebpackPlugin([
       {context: __dirname + '/' + THEME_NAME + '/theme-files', from: './**/*', to: '../'}
     ], {ignore: ['./styles', './js', './index.js']}),
-    new WriteFilePlugin()
+    new WriteFilePlugin(),
+    new BrowserSyncPlugin({
+      // browse to http://localhost:3000/ during development,
+      // ./public directory is being served
+      host: 'localhost',
+      port: 3000,
+      proxy: 'http://localhost:8888',
+      files: ['./wordpress/wp-content/themes/' + THEME_NAME + '/*.php',
+      './wordpress/wp-content/themes/' + THEME_NAME + '/assets/bundle.js'
+    ],
+      // server: { baseDir: ['theme-files'] }
+    })
   ],
 }

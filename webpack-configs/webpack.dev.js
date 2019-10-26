@@ -18,7 +18,7 @@ const proxyConfig = {
 compiler.context = join(__dirname, '../')
 compiler.devtool = 'eval-source-map'
 compiler.plugins.push(new DashboardPlugin())
-compiler.plugins.push(new OpenBrowserPlugin({ url: 'http://localhost:3000' }))
+// compiler.plugins.push(new OpenBrowserPlugin({ url: 'http://localhost:3000' }))
 compiler.devServer = {
   contentBase: './wordpress/wp-content/themes/' + THEME_NAME + '/assets',
 
